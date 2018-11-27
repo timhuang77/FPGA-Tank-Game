@@ -27,7 +27,7 @@ package body tank_functions is
 	function int_to_slv(input, size : in integer)
 		return std_logic_vector is
 		
-		variable retvec : std_logic_vector;
+		variable retvec : std_logic_vector(size - 1 downto 0);
 	begin
 		retvec := std_logic_vector(to_unsigned(input, size));
 		

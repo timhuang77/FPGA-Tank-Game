@@ -25,6 +25,7 @@ constant color_white	 : std_logic_vector(2 downto 0) := "111";
 	
 component display_handler is
 	port(
+		reset: in std_logic;
 		clk : in std_logic;
 		pixel_query_x : in integer;
 		pixel_query_y : in integer;
@@ -34,7 +35,7 @@ end component display_handler;
 
 signal colorAddress : std_logic_vector (2 downto 0);
 signal color        : std_logic_vector (2 downto 0);
-
+signal reset		: std_logic;
 signal pixel_row_int, pixel_column_int : integer;
 
 begin
@@ -58,9 +59,9 @@ begin
 	
 	-- colors : colorROM
 		-- port map(colorAddress, ROM_clk, color);
-
+	reset <= not rst_n;
 --------------------------------------------------------------------------------------------	
-	display_handler_instance : display_handler port map(clk, pixel_column_int, pixel_row_int, color);
+	display_handler_instance : display_handler port map(reset, clk, pixel_column_int, pixel_row_int, color);
 	
 	-- pixelDraw : process(clk, rst_n) is
 	

@@ -8,10 +8,12 @@ package game_components is
 			constant RAM_size : integer := 307200
 		);
 		port (
-			q : out std_logic_vector(23 downto 0);	-- 24-bit color
-			d : in std_logic_vector(23 downto 0);
-			raddr : in std_logic_vector(19 downto 0);	--19-bit address
-			waddr : in std_logic_vector(19 downto 0);
+			q : out std_logic_vector(7 downto 0);	-- 24-bit color
+			d : in std_logic_vector(7 downto 0);
+			-- q : out std_logic;
+			-- d : in std_logic;
+			raddr : in std_logic_vector(18 downto 0);	--19-bit address
+			waddr : in std_logic_vector(18 downto 0);
 			we : in std_logic;
 			clk : in std_logic
 		);
