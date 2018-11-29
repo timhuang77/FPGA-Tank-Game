@@ -8,19 +8,19 @@ entity tank is
 	generic(
 		obj_width : integer;
 		obj_height : integer;
-		x_pos_init : integer;
-		y_pos_init : integer
+		pos_x_init : integer;
+		pos_y_init : integer
 	);
 	port(
 		clk : in std_logic;
-		x_pos : inout integer;
-		y_pos : inout integer;
-		speed : inout integer
+		pos_x_in, pos_y_in, speed_in : in integer;
+		pos_x_out, pos_y_out, speed_out : out integer;
 	);
 	
 --entity description
 	--Generic parameters : object width, height, x and y positions
-	--Function: Stores in a new x and y position to be updated
+	--Function: Stores attributes such as position (x,y) and speed
+	--			
 end entity tank;
 
 architecture behavioral of tank is
