@@ -38,7 +38,15 @@ begin
 	--port map game_logic
 		--updates game_object (position, speed)
 	
-	
+	tank_A : tank
+		generic map(
+			obj_width => 20,
+			obj_height => 10,
+			x_pos_init => 319,
+			y_pos_init => 440
+		)
+		port map(
+			
 	process(clk)
 		
 	begin
