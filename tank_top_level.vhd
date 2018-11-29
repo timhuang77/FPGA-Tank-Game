@@ -10,9 +10,9 @@ entity tank_top_level is
 		clk, reset_n : in std_logic;
 		
 		--LCD
-		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED		: OUT	STD_LOGIC;
-		 LCD_RW						: BUFFER STD_LOGIC;
-		 DATA_BUS				: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
+		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED : out std_logic;
+		 LCD_RW : buffer std_logic;
+		 DATA_BUS : inout std_logic_vector(7 DOWNTO 0);
 		
 		--Keyboard inputs
 		keyboard_clk, keyboard_data, kb_read : in std_logic;
