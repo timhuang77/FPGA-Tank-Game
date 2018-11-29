@@ -26,7 +26,7 @@ entity tank_top_level is
 end entity tank_top_level;
 
 architecture behavioral of tank_top_level is
-
+	signal input_signal
 begin
 	--port map VGA
 	--port map keyboard
@@ -45,8 +45,9 @@ begin
 			x_pos_init => 319,
 			y_pos_init => 440
 		)
-		port map(
-			
+		port map(input_signal)
+	some_other <= input_signal
+	
 	process(clk)
 		
 	begin
