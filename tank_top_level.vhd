@@ -26,7 +26,11 @@ entity tank_top_level is
 end entity tank_top_level;
 
 architecture behavioral of tank_top_level is
-	signal input_signal
+	signal reset : std_logic;
+	
+	--Tank A signals
+	signal tank_A_we, show_tank_A, bullet_fired_A : std_logic;
+	signal tank_A_pos_x_write, tank_A_pos_y_write : integer;
 begin
 	--port map VGA
 	--port map keyboard
@@ -37,15 +41,28 @@ begin
 	--port map game_object (bullet B)
 	--port map game_logic
 		--updates game_object (position, speed)
+	reset <= not reset_n;
 	
 	tank_A : tank
 		generic map(
 			obj_width => 20,
 			obj_height => 10,
-			x_pos_init => 319,
-			y_pos_init => 440
+			pos_x_init => 319,
+			pos_y_init => 440
 		)
-		port map(input_signal)
+		port map(
+			clk => clk,
+			rst => reset,
+			we => tank_A_we,
+			show_tank => show_tank_A, 
+			bullet_fired => bullet_fired_A,
+			pos_x_in => tank_A_pos_x_write,
+			pos_y_in => tank_A_pos_y_write,
+			pos_x_out => tank_A_pos_x_read,
+			pos_y_out => tank_A_pos_y_read
+		);
+		
+	
 	some_other <= input_signal
 	
 	process(clk)
