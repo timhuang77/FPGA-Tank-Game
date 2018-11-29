@@ -7,10 +7,11 @@ use WORK.tank_functions.all;
 
 entity display_handler is
 	port(
-		reset : in std_logic;
-		clk : in std_logic;
-		pixel_query_x : in integer;
-		pixel_query_y : in integer;
+		reset, clk, rw : in std_logic;
+			--rw = 0 (read)
+			--rw = 1 (write)
+		pixel_x : in integer;
+		pixel_y : in integer;
 		pixel_color : out std_logic_vector(2 downto 0)
 	);
 end entity display_handler;
@@ -26,9 +27,6 @@ signal color_in : std_logic_vector(7 downto 0);
 signal pixel_raddr : std_logic_vector(18 downto 0);
 signal pixel_waddr : std_logic_vector(18 downto 0);
 signal colorram_we : std_logic;
-
-signal pixel_x : integer;
-signal pixel_y : integer;
 
 begin
 	color_ram : bram port map(
@@ -51,7 +49,7 @@ begin
 			--pixel_raddr <= (others => '0');
 			colorram_we <= '0';
 		elsif (rising_edge(clk)) then
-			colorram_we <= '1';
+			rea <= '1';
 			pixel_x <= (pixel_x + 1) mod 640;
 			pixel_y <= (pixel_y + 1) mod 480;
 			if (pixel_x >= 0 and pixel_x < 400 and pixel_y >= 0 and pixel_y < 360) then
@@ -63,12 +61,16 @@ begin
 			end if;
 			
 
-			pixel_waddr <= int_to_slv(pixel_x + (pixel_y * 640), pixel_waddr'Length);
 			pixel_color <= color_out(2 downto 0);
+			
+			if (rw = '1') then	--to write to display_handler
+				pixel_waddr <= int_to_slv(pixel_x + (pixel_y * 640), pixel_waddr'Length);
+			else 
+				pixel_raddr <= int_to_slv(pixel_x + (pixel_y * 640), pixel_raddr'Length);
+			end if;
 		end if;
 	end process;
 	
 	pixel_raddr <= int_to_slv(pixel_query_x + (pixel_query_y * 640), pixel_raddr'Length);
-	-- pixel_color <= "110";
 	
 end architecture behavioral;
