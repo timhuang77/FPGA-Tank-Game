@@ -6,9 +6,18 @@ use work.tank_functions.all;
 
 entity tank_top_level is
 	port(
+		--Basic control signals
 		clk, reset_n : in std_logic;
+		
+		--LCD
+		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED		: OUT	STD_LOGIC;
+		 LCD_RW						: BUFFER STD_LOGIC;
+		 DATA_BUS				: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
+		
 		--Keyboard inputs
-		--
+		keyboard_clk, keyboard_data, kb_read : in std_logic;
+		kb_scan_code : out std_logic_vector( 7 DOWNTO 0 );
+		kb_scan_ready : out std_logic;
 		
 		--VGA 
 		VGA_RED, VGA_GREEN, VGA_BLUE 					: out std_logic_vector(7 downto 0); 
@@ -17,7 +26,7 @@ entity tank_top_level is
 end entity tank_top_level;
 
 architecture behavioral of tank_top_level is
-	
+
 begin
 	--port map VGA
 	--port map keyboard
