@@ -19,14 +19,14 @@ entity game_logic is
 		tank_A_pos_in, tank_B_pos_in : in position;
 		tank_A_speed_in, tank_B_speed_in : in integer;
 		
+		--Bullet attribute inputs
+		bullet_A_pos_in, bullet_B_pos_in : in position;
+		bullet_A_fired_in, bullet_B_fired_in : in std_logic;	
+		
 		--Tank attribute outputs
 		tank_A_pos_out, tank_B_pos_out : out position;
 		tank_A_speed_out, tank_B_speed_out : out integer;
 		tank_A_display, tank_B_display : out std_logic;
-		
-		--Bullet attribute inputs
-		bullet_A_pos_in, bullet_B_pos_in : in position;
-		bullet_A_fired_in, bullet_B_fired_in : in std_logic;
 		
 		--Bullet attribute outputs
 		bullet_A_pos_out, bullet_B_pos_out : out position;
@@ -63,33 +63,39 @@ architecture behavioral of game_logic is
 	--Process for UDPATING TANK SPEED
 	speed_update : process(clk, rst) is
 	begin
-		if (rising_edge(clk) and global_write_enable = '0') then
+		if (rising_edge(clk)) then
 			--check only every other cycles
-			if (player_A_speed = '1' and speed_A_updated = '0') then
-				if (tank_A_speed = 30) then
-					tank_A_speed <= 10;
-					speed_A_updated <= '1';
-				else 
-					tank_A_speed <= tank_A_speed + 10;
-					speed_A_updated <= '1';
+			if (global_write_enable = '0') then
+				tank_A_speed <= tank_A_speed_in;
+				tank_B_speed <= tank_B_speed_in;
+			else
+				if (player_A_speed = '1' and speed_A_updated = '0') then
+					if (tank_A_speed = 30) then
+						tank_A_speed <= 10;
+						speed_A_updated <= '1';
+					else 
+						tank_A_speed <= tank_A_speed + 10;
+						speed_A_updated <= '1';
+					end if;
+				elsif (player_A_speed = '0' and speed_A_updated = '1') then
+					--could place a counter here to delay flag unset even more
+					speed_A_updated <= '0';
 				end if;
-			elsif (player_A_speed = '0' and speed_A_updated = '1') then
-				--could place a counter here to delay flag unset even more
-				speed_A_updated <= '0';
-			end if;
-			
-			if (player_B_speed = '1' and speed_B_updated = '0') then
-				if (tank_B_speed = 30) then
-					tank_B_speed <= 10;
-					speed_B_updated <= '1';
-				else 
-					tank_B_speed <= tank_B_speed + 10;
-					speed_B_updated <= '1';
+				
+				if (player_B_speed = '1' and speed_B_updated = '0') then
+					if (tank_B_speed = 30) then
+						tank_B_speed <= 10;
+						speed_B_updated <= '1';
+					else 
+						tank_B_speed <= tank_B_speed + 10;
+						speed_B_updated <= '1';
+					end if;
+				elsif (player_B_speed = '0' and speed_B_updated = '1') then
+					--could place a counter here to delay flag unset even more
+					speed_B_updated <= '0';
 				end if;
-			elsif (player_B_speed = '0' and speed_B_updated = '1') then
-				--could place a counter here to delay flag unset even more
-				speed_B_updated <= '0';
 			end if;
+
 
 		end if;
 	end process;
