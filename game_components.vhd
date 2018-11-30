@@ -2,6 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 package game_components is 
+	type position is array(0 to 1) of integer;
 
 	component bram is
 		generic (

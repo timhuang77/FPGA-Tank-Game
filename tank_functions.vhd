@@ -16,7 +16,7 @@ function collision_detection(tank_height, tank_width, tank_pos_x, tank_pos_y : i
 
 end package tank_functions;
 
-
+	
 
 package body tank_functions is
 

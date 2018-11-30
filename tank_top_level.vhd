@@ -31,6 +31,7 @@ architecture behavioral of tank_top_level is
 	--Tank A signals
 	signal tank_A_we, show_tank_A, bullet_fired_A : std_logic;
 	signal tank_A_pos_x_write, tank_A_pos_y_write : integer;
+	signal global_write_enable : std_logic := '0';
 begin
 	--port map VGA
 	--port map keyboard
@@ -43,6 +44,21 @@ begin
 		--updates game_object (position, speed)
 	reset <= not reset_n;
 	
+	
+	
+	
+	alt_cycle : process(clk, reset) is begin
+		if (global_write_enable = '0') then
+			global_write_enable <= '1';
+		else
+			global_write_enable <= '0';
+		end if;
+	end process;
+	
+	
+	
+	
+	--Port maps: connecting components
 	tank_A : tank
 		generic map(
 			obj_width => 20,
