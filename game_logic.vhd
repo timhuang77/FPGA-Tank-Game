@@ -34,7 +34,7 @@ entity game_logic is
 		bullet_A_display, bullet_B_display : out std_logic;
 		
 		--Score keeping
-		score_A_out, score_B_out : out integer := 0
+		score_A_out, score_B_out : out integer
 
 	);
 end entity game_logic;
@@ -55,7 +55,7 @@ architecture behavioral of game_logic is
 		--right: 1
 	signal bullet_A_fired, bullet_B_fired : std_logic;
 	signal bullet_A_pos, bullet_B_pos : position;
-	signal score_A, score_B : integer;
+	signal score_A, score_B : integer := 0;
 	
 	begin
 
