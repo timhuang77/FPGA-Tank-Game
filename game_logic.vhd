@@ -36,7 +36,7 @@ entity game_logic is
 		bullet_A_display, bullet_B_display : out std_logic;
 		
 		--Score keeping
-		score_A_out, score_B_out : out integer
+		score_A_out, score_B_out : out integer := 0
 
 	);
 end entity game_logic;
@@ -57,7 +57,7 @@ architecture behavioral of game_logic is
 		--right: 1
 	signal bullet_A_fired, bullet_B_fired : std_logic;
 	signal bullet_A_pos, bullet_B_pos : position;
-	signal score_A_out, score_B_out : integer;
+	signal score_A, score_B : integer;
 	
 	begin
 
@@ -171,6 +171,7 @@ architecture behavioral of game_logic is
 				bullet_A_pos <= bullet_A_pos_in + bullet_speed; --bullet A travels downwards
 				bullet_B_fired <= bullet_B_fired_in;
 				bullet_B_pos <= bullet_B_pos_in - bullet_speed; --bullet B travels upwards
+			
 			else --write state
 				if (collision_detection(tank_B_pos, bullet_A_pos) = '1') then
 					-- collision detected, bullet A hit tank B
@@ -195,7 +196,7 @@ architecture behavioral of game_logic is
 				
 				if (collision_detection(tank_A_pos, bulet_B_pos) = '1') then
 					-- collision detected, bullet A hit tank B
-					score_A <= score_A + 1;
+					score_B <= score_B + 1;
 					--don't show bullet	
 					bulet_B_display <= '0';
 				elsif ((bulet_B_pos(1) + BULLET_HEIGHT/2) >= 679) then
@@ -215,6 +216,25 @@ architecture behavioral of game_logic is
 				end if;
 				
 			end if;
+		end if;
+	end process;
+	
+	game_score_update : process(clk, rst) is begin
+		if (rst = '1') then
+			score_A <= 0;
+			score_B <= 0;
+		elsif (rising_edge(clk)) then
+			if (score_A >= MAX_SCORE) then
+				tank_B_display <= '0';
+			else if (score_B >= MAX_SCORE) then
+				tank_A_display <= '0';
+			else
+				tank_A_display <= '1';
+				tank_B_display <= '1';
+			end if;
+			score_A_out <= score_A;
+			score_B_out <= score_B;
+			
 		end if;
 	end process;
 	
