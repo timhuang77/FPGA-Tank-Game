@@ -3,11 +3,9 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use work.game_components.all;
 use work.tank_functions.all;
+use work.tank_const.all;
 
 entity game_logic is
-	generic(
-		tank_width, tank_height, tank_width_buffer : integer
-	);
 	port(
 		clk, rst, global_write_enable : in std_logic;
 		
@@ -26,6 +24,7 @@ entity game_logic is
 		--Tank attribute outputs
 		tank_A_pos_out, tank_B_pos_out : out position;
 		tank_A_speed_out, tank_B_speed_out : out integer;
+		tank_A_display, tank_B_display : out std_logic;
 		
 		--Bullet attribute inputs
 		bullet_A_pos_in, bullet_B_pos_in : in position;
@@ -34,6 +33,7 @@ entity game_logic is
 		--Bullet attribute outputs
 		bullet_A_pos_out, bullet_B_pos_out : out position;
 		bullet_A_fired_out, bullet_B_fired_out : out std_logic;
+		bullet_A_display, bullet_B_display : out std_logic;
 		
 		--Score keeping
 		score_A_out, score_B_out : out integer
@@ -61,6 +61,8 @@ architecture behavioral of game_logic is
 	
 	begin
 
+	
+	--Process for UDPATING TANK SPEED
 	speed_update : process(clk, rst) is
 	begin
 		if (rising_edge(clk) and global_write_enable = '0') then
@@ -93,6 +95,10 @@ architecture behavioral of game_logic is
 
 		end if;
 	end process;
+	
+	
+	
+	--Process for UDPATING TANK POSITION
 	tank_update : process(clk, rst) is
 		variable tank_A_pos_temp : integer;
 	begin 
@@ -122,28 +128,28 @@ architecture behavioral of game_logic is
 				tank_B_pos(1) <= tank_B_pos_in(1);
 			else 								--write state
 				--tank A
-				if ((tank_A_pos(0) - tank_width/2) >= tank_width_buffer and (tank_A_pos(0) + tank_width/2) < (679 - tank_width_buffer)) then  
+				if ((tank_A_pos(0) - TANK_WIDTH/2) >= TANK_WIDTH_BUFFER and (tank_A_pos(0) + TANK_WIDTH/2) < (679 - TANK_WIDTH_BUFFER)) then  
 					--tank within bounds
 					tank_A_pos_out(0) <= tank_A_pos(0);
 				else
 					--tank out of bounds
-					if ((tank_A_pos(0) + tank_width/2) > (679 - tank_width_buffer)) then --position beyond right bound
-						tank_A_pos_out(0) <= 679 - tank_width_buffer - tank_width/2;
+					if ((tank_A_pos(0) + TANK_WIDTH/2) > (679 - TANK_WIDTH_BUFFER)) then --position beyond right bound
+						tank_A_pos_out(0) <= 679 - TANK_WIDTH_BUFFER - TANK_WIDTH/2;
 					else --position beneath left bound
-						tank_A_pos_out(0) <= 0 + tank_width_buffer + tank_width/2;
+						tank_A_pos_out(0) <= 0 + TANK_WIDTH_BUFFER + TANK_WIDTH/2;
 					end if;
 				end if; 
 				
 				--tank B
-				if ((tank_B_pos(0) - tank_width/2) >= tank_width_buffer and (tank_B_pos(0) + tank_width/2) < (679 - tank_width_buffer)) then  
+				if ((tank_B_pos(0) - TANK_WIDTH/2) >= TANK_WIDTH_BUFFER and (tank_B_pos(0) + TANK_WIDTH/2) < (679 - TANK_WIDTH_BUFFER)) then  
 					--tank within bounds
 					tank_B_pos_out(0) <= tank_B_pos(0);
 				else
 					--tank out of bounds
-					if ((tank_B_pos(0) + tank_width/2) > (679 - tank_width_buffer)) then --position beyond right bound
-						tank_B_pos_out(0) <= 679 - tank_width_buffer - tank_width/2;
+					if ((tank_B_pos(0) + TANK_WIDTH/2) > (679 - TANK_WIDTH_BUFFER)) then --position beyond right bound
+						tank_B_pos_out(0) <= 679 - TANK_WIDTH_BUFFER - TANK_WIDTH/2;
 					else --position beneath left bound
-						tank_B_pos_out(0) <= 0 + tank_width_buffer + tank_width/2;
+						tank_B_pos_out(0) <= 0 + TANK_WIDTH_BUFFER + TANK_WIDTH/2;
 					end if;
 				end if; 
 
@@ -154,29 +160,59 @@ architecture behavioral of game_logic is
 		end if;
 	end process;
 	
+	
+	--Process for UPDATING BULLET POSITION
 	bullet_update : process(clk, rst) is
 		variable bullet_A_temp, bullet_B_tmep : integer;
 	begin
 		if (rising_edge(clk)) then
 			if (global_write_enable = '0') then --read state
 				bullet_A_fired <= bullet_A_fired_in;
-				bullet_A_pos <= bullet_A_pos_in + bullet_speed;
+				bullet_A_pos <= bullet_A_pos_in + bullet_speed; --bullet A travels downwards
 				bullet_B_fired <= bullet_B_fired_in;
-				bullet_B_pos <= bullet_B_pos_in - bullet_speed;
+				bullet_B_pos <= bullet_B_pos_in - bullet_speed; --bullet B travels upwards
 			else --write state
-				if () then
+				if (collision_detection(tank_B_pos, bullet_A_pos) = '1') then
 					-- collision detected, bullet A hit tank B
 					score_A <= score_A + 1;
-					--don't show bullet
+					--don't show bullet	
+					bullet_A_display <= '0';
+				elsif ((bullet_A_pos(1) + BULLET_HEIGHT/2) >= 679) then
+					-- bullet out of bounds, don't show bullet
+					--unset bullet fired flag
+					bullet_A_fired_out <= '0';
+					bullet_A_display <= '0';
 				elsif (bullet_A_fired = '0' and player_A_fire = '1') then
 					--player first fires bullet
 					bullet_A_pos_out <= tank_A_pos;
-					--show bullet
+					bullet_A_display <= '1';
+					bullet_A_fired_out <= '1';
 				elsif (bullet_A_fired = '1') then
 					bullet_A_pos_out <= bullet_A_pos;
-					--show bullet
+					bullet_A_display <= '1';
+					bullet_A_fired_out <= '1';
 				end if;
 				
+				if (collision_detection(tank_A_pos, bulet_B_pos) = '1') then
+					-- collision detected, bullet A hit tank B
+					score_A <= score_A + 1;
+					--don't show bullet	
+					bulet_B_display <= '0';
+				elsif ((bulet_B_pos(1) + BULLET_HEIGHT/2) >= 679) then
+					-- bullet out of bounds, don't show bullet
+					--unset bullet fired flag
+					bulet_B_fired_out <= '0';
+					bulet_B_display <= '0';
+				elsif (bulet_B_fired = '0' and player_B_fire = '1') then
+					--player first fires bullet
+					bulet_B_pos_out <= tank_A_pos;
+					bulet_B_display <= '1';
+					bulet_B_fired_out <= '1';
+				elsif (bulet_B_fired = '1') then
+					bulet_B_pos_out <= bulet_B_pos;
+					bulet_B_display <= '1';
+					bulet_B_fired_out <= '1';
+				end if;
 				
 			end if;
 		end if;
