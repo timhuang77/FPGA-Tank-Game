@@ -8,7 +8,7 @@ entity collision_detection is
 	port(
 		clk, rst, we : in std_logic;
 		collision_flag : inout std_logic;
-		collisions : inout integer;
+		collisions : inout integer
 	);
 end entity collision_detection;
 
@@ -25,16 +25,16 @@ begin
 			collisions_register <= 0;
 		elsif (rising_edge(clk)) then
 			if (we = '1') then
-				if (collision_flag = '1') then 
+				if (collision_flag = '1') then
 					collisions_register <= collisions_register + 1;
 				end if;
 
-			else 
+			else
 				co
 			end if;
 		end if;'
-		
-		
+
+
 	end process;
 
 architecture behavioral;
