@@ -1,0 +1,202 @@
+{W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity pixelGenerator
+-- Compiling architecture behavioral of pixelGenerator
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/keyboard.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/keyboard.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity keyboard
+-- Compiling architecture a of keyboard
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bram.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bram.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package tank_const
+-- Loading package game_components
+-- Loading package tank_functions
+-- Compiling entity bram
+-- Compiling architecture rtl of bram
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/vga_sync.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/vga_sync.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity VGA_SYNC
+-- Compiling architecture behavioral of VGA_SYNC
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_const.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_const.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package tank_const
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/colorROM.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/colorROM.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity colorROM
+-- Compiling architecture SYN of colorrom
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package game_components
+-- Loading package tank_const
+-- Loading package tank_functions
+-- Compiling entity tank
+-- Compiling architecture behavioral of tank
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd} {0 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package game_components
+-- Loading package tank_const
+-- Loading package tank_functions
+-- Compiling entity tank_top_level
+-- Compiling architecture behavioral of tank_top_level
+** Error (suppressible): W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd(62): (vcom-1141) Identifier "tank" does not identify a component declaration.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd(82): Illegal target for signal assignment.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd(82): (vcom-1136) Unknown identifier "some_other".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd(84): near "process": (vcom-1576) expecting ';'.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd(92): near ")": syntax error
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd(94): VHDL Compiler exiting
+
+} {13.0 18.0} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity VGA_top_level
+-- Compiling architecture structural of VGA_top_level
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package game_components
+-- Loading package tank_const
+-- Loading package tank_functions
+-- Compiling entity bullet
+-- Compiling architecture behavioral of bullet
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd} {0 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package game_components
+-- Loading package tank_const
+-- Loading package tank_functions
+-- Compiling entity display_handler
+-- Compiling architecture behavioral of display_handler
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(46): Cannot drive signal 'pixel_x' of mode IN.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(47): Cannot drive signal 'pixel_y' of mode IN.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(52): Illegal target for signal assignment.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(52): (vcom-1136) Unknown identifier "rea".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(53): Cannot drive signal 'pixel_x' of mode IN.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(54): Cannot drive signal 'pixel_y' of mode IN.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(74): (vcom-1136) Unknown identifier "pixel_query_y".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(74): (vcom-1136) Unknown identifier "pixel_query_x".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(74): ** Error: (vcom-1590) Bad expression in right operand of infix expression '+'.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(74): (vcom-1600) No feasible entries for subprogram "int_to_slv".
+   Visible subprograms are:
+      (explicit) tank_functions.int_to_slv[INTEGER, INTEGER return STD_LOGIC_VECTOR] at W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_functions.vhd(12)
+** Error (suppressible): W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(35): (vcom-1272) Length of formal "raddr" is 20; length of actual is 19.
+** Error (suppressible): W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(36): (vcom-1272) Length of formal "waddr" is 20; length of actual is 19.
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(76): VHDL Compiler exiting
+
+} {12.0 22.0 26.0 27.0} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity ps2
+-- Compiling architecture structural of ps2
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/de2lcd.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/de2lcd.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity de2lcd
+-- Compiling architecture a of de2lcd
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_functions.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_functions.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package tank_const
+-- Loading package game_components
+-- Compiling package tank_functions
+-- Compiling package body tank_functions
+-- Loading package tank_functions
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/color_RAM.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/color_RAM.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity color_RAM
+-- Compiling architecture two_d_array of color_RAM
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_components.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_components.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package game_components
+-- Compiling package body game_components
+-- Loading package game_components
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/oneshot.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/oneshot.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity oneshot
+-- Compiling architecture dd of oneshot
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/leddcd.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/leddcd.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity leddcd
+-- Compiling architecture data_flow of leddcd
+
+} {} {}}

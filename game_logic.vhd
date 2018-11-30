@@ -10,12 +10,10 @@ entity game_logic is
 		clk, rst, global_write_enable : in std_logic;
 		
 		--Player A inputs
-		player_A_speed : in integer;
-		player_A_fire : in std_logic;
+		player_A_speed, player_A_fire : in std_logic;
 		
 		--Player B inputs
-		player_B_speed : in integer;
-		player_B_fire : in std_logic;
+		player_B_speed, player_B_fire : in std_logic;
 		
 		--Tank attribute inputs
 		tank_A_pos_in, tank_B_pos_in : in position;
@@ -44,9 +42,9 @@ end entity game_logic;
 
 
 architecture behavioral of game_logic is
---types
+	--types
 	
---constants
+	--constants
 	constant bullet_speed : integer := 15;
 	signal speed_A_updated, speed_B_updated : std_logic;
 	signal collision_count_A, collision_count_B : integer := 0;
@@ -100,7 +98,7 @@ architecture behavioral of game_logic is
 	
 	--Process for UDPATING TANK POSITION
 	tank_update : process(clk, rst) is
-		variable tank_A_pos_temp : integer;
+		variable tank_A_pos_temp, tank_B_pos_temp : integer;
 	begin 
 		if (rising_edge(clk)) then
 			if (global_write_enable = '0') then --read state
@@ -168,10 +166,12 @@ architecture behavioral of game_logic is
 		if (rising_edge(clk)) then
 			if (global_write_enable = '0') then --read state
 				bullet_A_fired <= bullet_A_fired_in;
-				bullet_A_pos <= bullet_A_pos_in + bullet_speed; --bullet A travels downwards
+				bullet_A_pos(1) <= bullet_A_pos_in(1) + bullet_speed; --bullet A travels downwards
 				bullet_B_fired <= bullet_B_fired_in;
-				bullet_B_pos <= bullet_B_pos_in - bullet_speed; --bullet B travels upwards
+				bullet_B_pos(1) <= bullet_B_pos_in(1) - bullet_speed; --bullet B travels upwards
 			
+				bullet_A_pos(0) <= bullet_A_pos_in(0);
+				bullet_B_pos(0) <= bullet_B_pos_in(0);
 			else --write state
 				if (collision_detection(tank_B_pos, bullet_A_pos) = '1') then
 					-- collision detected, bullet A hit tank B
@@ -194,39 +194,40 @@ architecture behavioral of game_logic is
 					bullet_A_fired_out <= '1';
 				end if;
 				
-				if (collision_detection(tank_A_pos, bulet_B_pos) = '1') then
+				if (collision_detection(tank_A_pos, bullet_B_pos) = '1') then
 					-- collision detected, bullet A hit tank B
 					score_B <= score_B + 1;
 					--don't show bullet	
-					bulet_B_display <= '0';
-				elsif ((bulet_B_pos(1) + BULLET_HEIGHT/2) >= 679) then
+					bullet_B_display <= '0';
+				elsif ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= 679) then
 					-- bullet out of bounds, don't show bullet
 					--unset bullet fired flag
-					bulet_B_fired_out <= '0';
-					bulet_B_display <= '0';
-				elsif (bulet_B_fired = '0' and player_B_fire = '1') then
+					bullet_B_fired_out <= '0';
+					bullet_B_display <= '0';
+				elsif (bullet_B_fired = '0' and player_B_fire = '1') then
 					--player first fires bullet
-					bulet_B_pos_out <= tank_A_pos;
-					bulet_B_display <= '1';
-					bulet_B_fired_out <= '1';
-				elsif (bulet_B_fired = '1') then
-					bulet_B_pos_out <= bulet_B_pos;
-					bulet_B_display <= '1';
-					bulet_B_fired_out <= '1';
+					bullet_B_pos_out <= tank_A_pos;
+					bullet_B_display <= '1';
+					bullet_B_fired_out <= '1';
+				elsif (bullet_B_fired = '1') then
+					bullet_B_pos_out <= bullet_B_pos;
+					bullet_B_display <= '1';
+					bullet_B_fired_out <= '1';
 				end if;
 				
 			end if;
 		end if;
 	end process;
 	
-	game_score_update : process(clk, rst) is begin
+	game_score_update : process(clk, rst) is 
+	begin
 		if (rst = '1') then
-			score_A <= 0;
-			score_B <= 0;
+			score_A_out <= 0;
+			score_B_out <= 0;
 		elsif (rising_edge(clk)) then
 			if (score_A >= MAX_SCORE) then
 				tank_B_display <= '0';
-			else if (score_B >= MAX_SCORE) then
+			elsif (score_B >= MAX_SCORE) then
 				tank_A_display <= '0';
 			else
 				tank_A_display <= '1';
@@ -237,5 +238,5 @@ architecture behavioral of game_logic is
 			
 		end if;
 	end process;
-	
-architecture behavioral;
+
+end architecture behavioral;

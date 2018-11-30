@@ -2,6 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use work.tank_const.all;
+use work.game_components.all;
 
 package tank_functions is
 
@@ -45,28 +46,28 @@ package body tank_functions is
 
 	function collision_detection(tank_pos, bullet_pos : in position) return std_logic is
 
-		variable collision_flag : std_logic := 0;
-		variable top_collision : std_logic := 0;
-		variable bottom_collision : std_logic := 0;
-		variable left_collision : std_logic := 0;
-		variable right_collision : std_logic := 0;
+		variable collision_flag : std_logic := '0';
+		variable top_collision : std_logic := '0';
+		variable bottom_collision : std_logic := '0';
+		variable left_collision : std_logic := '0';
+		variable right_collision : std_logic := '0';
 
 		begin
 			if (bullet_pos(1) + BULLET_HEIGHT/2 > tank_pos(1) - TANK_HEIGHT/2) then
-				top_collision = '1';
+				top_collision := '1';
 			end if;
 			if (bullet_pos(1) - BULLET_HEIGHT/2 < tank_pos(1) + TANK_HEIGHT/2) then
-				bottom_collision = '1';
+				bottom_collision := '1';
 			end if;
 			if (bullet_pos(0) + BULLET_WIDTH/2 > tank_pos(0) - TANK_WIDTH/2) then
-				left_collision = '1';
+				left_collision := '1';
 			end if;
 			if (bullet_pos(0) - BULLET_WIDTH/2 < tank_pos(0) + TANK_WIDTH/2) then
-				right_collision = '1';
+				right_collision := '1';
 			end if;
 
-			if ((top_collision or bottom_collision) and (left_collision or right_collision)) then
-				collision_flag = '1';
+			if (((top_collision or bottom_collision) and (left_collision or right_collision)) = '1') then
+				collision_flag := '1';
 			end if;
 			
 			return collision_flag;
