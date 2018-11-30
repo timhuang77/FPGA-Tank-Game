@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use work.game_components.all;
 use work.game_logic;
 use work.tank_functions.all;
 use work.tank_const.all;
@@ -43,11 +44,11 @@ architecture behavioral_test_bench of game_logic_tb is
 		);
 	end component game_logic;
 	
-	signal clk, rst, global_write_enable :std_logic;
+	signal clk, rst, global_write_enable :std_logic := '0';
 	signal player_A_speed, player_A_fire :std_logic := '0';
 	signal player_B_speed, player_B_fire :std_logic := '0';
 	signal tank_A_pos_in, tank_B_pos_in :position;
-	signal tank_A_speed_in, tank_B_speed_in :integer;
+	signal tank_A_speed_in, tank_B_speed_in :integer := 10;
 	signal tank_A_pos_out, tank_B_pos_out :position;
 	signal tank_A_speed_out, tank_B_speed_out :integer;
 	signal tank_A_display, tank_B_display :std_logic;
@@ -94,34 +95,48 @@ architecture behavioral_test_bench of game_logic_tb is
 			score_B_out => score_B_out
 		);
 		
-	clk <= not clk after 50 ns;
+	-- clk <= not clk after 50 ns;
 	
-	testbench : process(clk) is begin
-		if(rising_edge(clk)) then
-			case cycle is
-				when 0 => 
-					rst <= '1';
-					global_write_enable <= '0';
-					tank_A_pos_in(0) <= 320;
-					tank_A_pos_in(1) <= 20;
-					tank_B_pos_in(0) <= 320;
-					tank_B_pos_in(1) <= 400;
-					player_A_fire <= '1';
-				when 1 =>
-					rst <= '0';
-					global_write_enable <= '1';
-				when 2 =>
-					global_write_enable <= '0';
-				when 3 =>
-					global_write_enable <= '1';
-				when 4 =>
-					global_write_enable <= '0';
-				when 5 =>
-					global_write_enable <= '1';
-				when 6 =>
-				when others => wait;
-			cycle <= cycle + 1;
-		end if;
+	testbench : process is begin
+		--cycle 0
+			clk <= not clk; wait for 50 ns;
+			clk <= not clk; wait for 50 ns;
+			rst <= '1';
+			global_write_enable <= '0';
+			tank_A_pos_in(0) <= 320;
+			tank_A_pos_in(1) <= 20;
+			tank_B_pos_in(0) <= 320;
+			tank_B_pos_in(1) <= 400;
+			player_A_fire <= '1';
+		--cycle 1
+			clk <= not clk; wait for 50 ns;
+			clk <= not clk; wait for 50 ns;
+			rst <= '0';
+			global_write_enable <= '1';
+		--cycle 2
+			clk <= not clk; wait for 50 ns;
+			clk <= not clk; wait for 50 ns;
+			global_write_enable <= '0';
+			tank_A_pos_in(0) <= 310;
+			tank_A_pos_in(1) <= 20;
+			tank_B_pos_in(0) <= 310;
+			tank_B_pos_in(1) <= 400;
+		--cycle 3
+			clk <= not clk; wait for 50 ns;
+			clk <= not clk; wait for 50 ns;
+			global_write_enable <= '1';
+		--cycle 4
+			clk <= not clk; wait for 50 ns;
+			clk <= not clk; wait for 50 ns;
+			global_write_enable <= '0';
+		--cycle 5
+			clk <= not clk; wait for 50 ns;
+			clk <= not clk; wait for 50 ns;
+			global_write_enable <= '1';
+			clk <= not clk; wait for 50 ns;
+			clk <= not clk; wait for 50 ns;
+		--cycle 6
+									wait;
 	end process;
 		
 		
