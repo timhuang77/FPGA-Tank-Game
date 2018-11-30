@@ -28,7 +28,6 @@ begin
 		else 
 			off_screen_flag <= '1'; 
 		end if;
-		
 	end process;
 	
 architecture behavioral;
