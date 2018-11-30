@@ -9,7 +9,7 @@ function slv_to_uint(input : in std_logic_vector)
 	
 function int_to_slv(input, size : in integer)
 	return std_logic_vector;
-
+	
 end package tank_functions;
 
 package body tank_functions is
