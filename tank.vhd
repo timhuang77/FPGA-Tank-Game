@@ -13,7 +13,9 @@ entity tank is
 	port(
 		clk, rst, we : in std_logic;
 		pos_in : in position;
-		pos_out : out position
+		pos_out : out position;
+		speed_in : in integer;
+		speed_out : out integer
 	);
 	
 --entity description

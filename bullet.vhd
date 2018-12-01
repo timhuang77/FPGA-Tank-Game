@@ -5,10 +5,6 @@ use work.game_components.all;
 use work.tank_functions.all;
 
 entity bullet is
-  generic(
-		pos_x_init : integer;
-		pos_y_init : integer
-	);
 	port(
 		clk, rst, we : in std_logic;
 		pos_in : in position;
@@ -32,8 +28,7 @@ begin
   begin
 
     if (rst = '1') then
-      pos_out(0) <= pos_x_init;
-      pos_out(1) <= pos_y_init;
+      pos_out <= pos_in;
     elsif (rising_edge(clk)) then
 
       if (we = '1') then
