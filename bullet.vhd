@@ -6,8 +6,6 @@ use work.tank_functions.all;
 
 entity bullet is
   generic(
-		obj_width : integer;
-		obj_height : integer;
 		pos_x_init : integer;
 		pos_y_init : integer
 	);

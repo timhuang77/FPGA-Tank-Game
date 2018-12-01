@@ -32,6 +32,43 @@ package game_components is
 			);
 	end component VGA_top_level;
 	
+	component tank is
+		generic(
+			pos_x_init : integer;
+			pos_y_init : integer
+		);
+		port(
+			clk, rst, we : in std_logic;
+			pos_in : in position;
+			pos_out : out position
+		);
+		
+	--entity description
+		--Generic parameters : object width, height, x and y positions
+		--Function: Stores attributes such as position (x,y), bullet_fired
+		--			
+	end component tank;
+	
+	component bullet is
+		generic(
+			pos_x_init : integer;
+			pos_y_init : integer
+		);
+		port(
+			clk, rst, we : in std_logic;
+			pos_in : in position;
+			pos_out : out position;
+			bullet_fired : inout std_logic
+		);
+
+	--entity description:
+	  --Generic parameters: object width, object height, x position, y position
+	  --Function: Stores the x and y position
+	end component bullet;
+	
+	
+
+
 end package game_components;
 
 package body game_components is

@@ -267,9 +267,9 @@ VdbYl`AJ9T=@64kTQc[UKC3
 !s100 j1ToJTV<bKna^9ONNO6_z0
 R10
 32
-Z45 !s110 1543610352
+Z45 !s110 1543628716
 !i10b 1
-Z46 !s108 1543610352.000000
+Z46 !s108 1543628716.000000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd|
 !s107 W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd|
 !i113 1
@@ -315,7 +315,7 @@ R52
 R15
 R16
 Egame_logic
-Z53 w1543608039
+Z53 w1543627873
 R2
 R3
 R1
@@ -331,9 +331,9 @@ VNz4GL69b`2@[S?Ha>6blI1
 !s100 doO>eI<:G4lCHMO;KEWL53
 R10
 32
-Z56 !s110 1543608600
+Z56 !s110 1543627898
 !i10b 1
-Z57 !s108 1543608600.000000
+Z57 !s108 1543627897.000000
 Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd|
 Z59 !s107 W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd|
 !i113 1
@@ -349,8 +349,8 @@ R6
 Z60 DEx4 work 10 game_logic 0 22 Nz4GL69b`2@[S?Ha>6blI1
 l60
 L44
-VLU]AHL<H0mncLlQo1j?<j0
-!s100 7L0zdzk6VWWGfOkzg?5@^2
+VYQnj>El^:b[jTOMb[Q3da3
+!s100 ^>Zo]Z<[EAWf=Xi2LCVYA0
 R10
 32
 R56
@@ -362,7 +362,7 @@ R59
 R15
 R16
 Egame_logic_tb
-Z61 w1543610341
+Z61 w1543628708
 R2
 R3
 R60
@@ -397,8 +397,8 @@ R6
 Z66 DEx4 work 13 game_logic_tb 0 22 4G<iUz`]_35lgb4h78VI:2
 l66
 L12
-VccnFo:6DI<B7`n[EjY9Dg0
-!s100 O0fkl0NcZ<jLMgSLc2ngP1
+V`SQDTEVgP8<=4TO<c8Qfb2
+!s100 biB5JHQio<;mom2mCL2GC3
 R10
 32
 R45

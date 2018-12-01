@@ -137,6 +137,7 @@ architecture behavioral of game_logic is
 					tank_A_pos_out(0) <= tank_A_pos(0);
 				else
 					--tank out of bounds
+					tank_A_dir <= not tank_A_dir;
 					if ((tank_A_pos(0) + TANK_WIDTH/2) > (679 - TANK_WIDTH_BUFFER)) then --position beyond right bound
 						tank_A_pos_out(0) <= 679 - TANK_WIDTH_BUFFER - TANK_WIDTH/2;
 					else --position beneath left bound
@@ -150,6 +151,7 @@ architecture behavioral of game_logic is
 					tank_B_pos_out(0) <= tank_B_pos(0);
 				else
 					--tank out of bounds
+					tank_B_dir <= not tank_B_dir;
 					if ((tank_B_pos(0) + TANK_WIDTH/2) > (679 - TANK_WIDTH_BUFFER)) then --position beyond right bound
 						tank_B_pos_out(0) <= 679 - TANK_WIDTH_BUFFER - TANK_WIDTH/2;
 					else --position beneath left bound
@@ -179,12 +181,13 @@ architecture behavioral of game_logic is
 				bullet_A_pos(0) <= bullet_A_pos_in(0);
 				bullet_B_pos(0) <= bullet_B_pos_in(0);
 			else --write state
-				if (collision_detection(tank_B_pos, bullet_A_pos) = '1') then
-					-- collision detected, bullet A hit tank B
-					score_A <= score_A + 1;
-					--don't show bullet	
-					bullet_A_display <= '0';
-				elsif ((bullet_A_pos(1) + BULLET_HEIGHT/2) >= 679) then
+				-- if (collision_detection(tank_B_pos, bullet_A_pos) = '1') then
+					-- -- collision detected, bullet A hit tank B
+					-- score_A <= score_A + 1;
+					-- --don't show bullet	
+					-- bullet_A_display <= '0';
+				-- els
+				if ((bullet_A_pos(1) + BULLET_HEIGHT/2) >= 679) then
 					-- bullet out of bounds, don't show bullet
 					--unset bullet fired flag
 					bullet_A_fired_out <= '0';
@@ -195,17 +198,19 @@ architecture behavioral of game_logic is
 					bullet_A_display <= '1';
 					bullet_A_fired_out <= '1';
 				elsif (bullet_A_fired = '1') then
+					--bullet already fired
 					bullet_A_pos_out <= bullet_A_pos;
 					bullet_A_display <= '1';
 					bullet_A_fired_out <= '1';
 				end if;
 				
-				if (collision_detection(tank_A_pos, bullet_B_pos) = '1') then
-					-- collision detected, bullet A hit tank B
-					score_B <= score_B + 1;
-					--don't show bullet	
-					bullet_B_display <= '0';
-				elsif ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= 679) then
+				-- if (collision_detection(tank_A_pos, bullet_B_pos) = '1') then
+					-- -- collision detected, bullet A hit tank B
+					-- score_B <= score_B + 1;
+					-- -- don't show bullet	
+					-- bullet_B_display <= '0';
+				-- els
+				if ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= 679) then
 					-- bullet out of bounds, don't show bullet
 					--unset bullet fired flag
 					bullet_B_fired_out <= '0';

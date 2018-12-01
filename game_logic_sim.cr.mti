@@ -39,13 +39,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity VGA_SYNC
 -- Compiling architecture behavioral of VGA_SYNC
 
-} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_const.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_const.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling package tank_const
-
 } {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/colorROM.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/colorROM.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -53,18 +46,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_1164
 -- Compiling entity colorROM
 -- Compiling architecture SYN of colorrom
-
-} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package game_components
--- Loading package tank_const
--- Loading package tank_functions
--- Compiling entity tank
--- Compiling architecture behavioral of tank
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -104,18 +85,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity VGA_top_level
 -- Compiling architecture structural of VGA_top_level
 
-} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package game_components
--- Loading package tank_const
--- Loading package tank_functions
--- Compiling entity bullet
--- Compiling architecture behavioral of bullet
-
 } {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd} {0 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -143,7 +112,20 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 ** Error (suppressible): W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(36): (vcom-1272) Length of formal "waddr" is 20; length of actual is 19.
 ** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/display_handler.vhd(76): VHDL Compiler exiting
 
-} {12.0 22.0 26.0 27.0} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd}
+} {12.0 22.0 26.0 27.0} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package game_components
+-- Loading package tank_const
+-- Loading package tank_functions
+-- Loading entity game_logic
+-- Compiling entity game_logic_tb
+-- Compiling architecture behavioral_test_bench of game_logic_tb
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -183,15 +165,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity color_RAM
 -- Compiling architecture two_d_array of color_RAM
-
-} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_components.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_components.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling package game_components
--- Compiling package body game_components
--- Loading package game_components
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/oneshot.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/oneshot.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
