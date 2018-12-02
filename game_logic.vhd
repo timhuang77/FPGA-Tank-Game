@@ -208,9 +208,9 @@ architecture behavioral of game_logic is
 		if (rising_edge(clk)) then
 			if (global_write_enable = '1') then --read state
 				bullet_A_fired <= bullet_A_fired_in;
-				bullet_A_pos(1) <= bullet_A_pos_in(1) + bullet_speed; --bullet A travels downwards
+				bullet_A_pos(1) <= bullet_A_pos_in(1) - bullet_speed; --bullet A travels upwards
 				bullet_B_fired <= bullet_B_fired_in;
-				bullet_B_pos(1) <= bullet_B_pos_in(1) - bullet_speed; --bullet B travels upwards
+				bullet_B_pos(1) <= bullet_B_pos_in(1) + bullet_speed; --bullet B travels downwards
 			
 				bullet_A_pos(0) <= bullet_A_pos_in(0);
 				bullet_B_pos(0) <= bullet_B_pos_in(0);
@@ -221,7 +221,7 @@ architecture behavioral of game_logic is
 					-- --don't show bullet	
 					-- bullet_A_display <= '0';
 				-- els
-				if ((bullet_A_pos(1) + BULLET_HEIGHT/2) >= 679) then
+				if ((bullet_A_pos(1) + BULLET_HEIGHT/2) <= 0) then
 					-- bullet out of bounds, don't show bullet
 					--unset bullet fired flag
 					bullet_A_fired_out <= '0';

@@ -5,11 +5,16 @@ use work.game_components.all;
 use work.tank_functions.all;
 
 entity bullet is
+	generic(
+		default_pos_x : integer;
+		default_pos_y : integer
+	);
 	port(
 		clk, rst, we : in std_logic;
 		pos_in : in position;
 		pos_out : out position;
-		bullet_fired : inout std_logic
+		bullet_fired_in : in std_logic;
+		bullet_fired_out : out std_logic
 	);
 
 --entity description:
@@ -19,7 +24,7 @@ end entity bullet;
 
 architecture behavioral of bullet is
 
-  signal bullet_fired_signal, bullet_on_screen_signal : std_logic;
+  signal bullet_fired_signal : std_logic;
   signal curr_pos : position;
 
 begin
@@ -28,17 +33,19 @@ begin
   begin
 
     if (rst = '1') then
-      pos_out <= pos_in;
+      curr_pos(0) <= default_pos_x;
+	  curr_pos(1) <= default_pos_y;
+	  bullet_fired_signal <= '0';
     elsif (rising_edge(clk)) then
 
       if (we = '1') then
-        if (bullet_fired = '1') then
+        if (bullet_fired_in = '1') then
           curr_pos <= pos_in;
-          bullet_fired_signal <= bullet_fired;
+          bullet_fired_signal <= bullet_fired_in;
         end if;
       else
         pos_out <= curr_pos;
-        bullet_fired <= bullet_fired_signal;
+        bullet_fired_out <= bullet_fired_signal;
       end if;
     end if;
 

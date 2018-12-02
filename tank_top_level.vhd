@@ -45,6 +45,8 @@ architecture structural of tank_top_level is
 	signal player_B_speed, player_B_fire, tank_B_display_flag, bullet_B_fired_inout, bullet_B_fired_outin, bullet_B_display_flag : std_logic;
 	signal score_B_signal : integer;
 	
+	signal bullet_fired_signal : std_logic;
+	
 	signal cycle : integer := 0;
 begin
 	--port map VGA
@@ -128,15 +130,20 @@ begin
 			speed_out => tank_A_speed_inout
 		);
 	
-	-- bullet_A : bullet
-		-- port map(
-			-- clk => clk,
-			-- rst => reset,
-			-- we => global_write_enable,
-			-- pos_in => bullet_A_pos_outin,
-			-- pos_out => bullet_A_pos_inout
-			-- bullet_fired => 
-		-- );
+	bullet_A : bullet
+		generic map(
+			default_pos_x => TANK_A_INIT_POS_X,
+			default_pos_y => TANK_A_INIT_POS_Y
+		)
+		port map(
+			clk => clk,
+			rst => reset,
+			we => global_write_enable,
+			pos_in => bullet_A_pos_outin,
+			pos_out => bullet_A_pos_inout,
+			bullet_fired_in => bullet_A_fired_outin,
+			bullet_fired_out => bullet_A_fired_inout
+		);
 
 
 	-- );

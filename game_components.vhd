@@ -52,11 +52,16 @@ package game_components is
 	end component tank;
 	
 	component bullet is
+		generic(
+			default_pos_x : integer;
+			default_pos_y : integer
+		);
 		port(
 			clk, rst, we : in std_logic;
 			pos_in : in position;
 			pos_out : out position;
-			bullet_fired : inout std_logic
+			bullet_fired_in : in std_logic;
+			bullet_fired_out : out std_logic
 		);
 
 	--entity description:

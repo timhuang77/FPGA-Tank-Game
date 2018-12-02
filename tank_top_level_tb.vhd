@@ -46,6 +46,7 @@ begin
 			end loop;
 		--cycle 10
 			-- player_speed <= '1';
+			player_fire <= '1';
 			for i in 0 to 2000 loop
 				clk <= not clk; wait for 20 ns;
 			end loop;
