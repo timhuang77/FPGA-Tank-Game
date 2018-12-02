@@ -26,25 +26,26 @@ end entity tank;
 
 architecture behavioral of tank is
 	signal curr_pos : position;
-
+	signal curr_speed : integer;
 begin
 	process(clk, rst)
 		
 	begin
 		if (rst = '1') then
-			pos_out(0) <= pos_x_init;
-			pos_out(1) <= pos_y_init;
-			
+			curr_pos(0) <= pos_x_init;
+			curr_pos(1) <= pos_y_init;
+			curr_speed <= TANK_INIT_SPEED;
 		elsif (rising_edge(clk)) then
 		
-			if (we = '1') then --write to tank
+			if (we = '1') then --read inputs
 				curr_pos <= pos_in;
-				
-			else 	-- read from tank
+				curr_speed <= speed_in;
+			else 	-- write to outputs
 				pos_out <= curr_pos;
+				speed_out <= curr_speed;
 			end if;
 			
-		end if;
+		end if;	
 	end process;
 	
 end architecture behavioral;

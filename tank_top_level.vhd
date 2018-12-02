@@ -45,6 +45,7 @@ architecture structural of tank_top_level is
 	signal player_B_speed, player_B_fire, tank_B_display_flag, bullet_B_fired_inout, bullet_B_fired_outin, bullet_B_display_flag : std_logic;
 	signal score_B_signal : integer;
 	
+	signal cycle : integer := 0;
 begin
 	--port map VGA
 	--port map keyboard
@@ -57,16 +58,21 @@ begin
 		--updates game_object (position, speed)
 	reset <= not reset_n;
 	
-	
-	
+	player_A_speed <= player_speed;
+	player_A_fire <= player_fire;
 	
 	alt_cycle : process(clk, reset) is begin
-		if (global_write_enable = '0') then
-			global_write_enable <= '1';
-		else
+		if (reset = '1') then
 			global_write_enable <= '0';
+			cycle <= 0;
+		elsif (rising_edge(clk) and (cycle /= 3)) then
+			cycle <= cycle + 1;
+		elsif (rising_edge(clk) and (cycle = 3)) then
+			global_write_enable <= not global_write_enable;
+			cycle <= 0;
 		end if;
 	end process;
+	
 	global_read_enable <= not global_write_enable;
 	
 	--Port maps: connecting components
