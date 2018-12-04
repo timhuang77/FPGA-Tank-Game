@@ -8,7 +8,7 @@ entity ps2 is
 			reset : in std_logic;--, read : in std_logic;
 			
 			--LED's 
-			LED_out : out std_logic_vector(7*8 - 1 downto 0);
+			--LED_out : out std_logic_vector(7*8 - 1 downto 0);
 			--8 LED's, 6 bits each
 			--
 			
@@ -97,16 +97,16 @@ hists(0) <= history0;
 hists(1) <= history1;
 hists(2) <= history2;
 hists(3) <= history3;
-generate_LED_per_hist : for i in 0 to 3 generate
-	map_LED_1 : leddcd port map(
-		hists(i)(3 downto 0),
-		LED_out(i*14 + 6 downto i*14 + 0)
-	);
-	map_LED_2 : leddcd port map(
-		hists(i)(7 downto 4),
-		LED_out(i*14 + 13 downto i*14 + 7)
-	);
-end generate generate_LED_per_hist;
+--generate_LED_per_hist : for i in 0 to 3 generate
+--	map_LED_1 : leddcd port map(
+--		hists(i)(3 downto 0),
+--		LED_out(i*14 + 6 downto i*14 + 0)
+--	);
+--	map_LED_2 : leddcd port map(
+--		hists(i)(7 downto 4),
+--		LED_out(i*14 + 13 downto i*14 + 7)
+--	);
+--end generate generate_LED_per_hist;
 
 
 end architecture structural;
