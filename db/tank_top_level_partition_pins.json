@@ -116,7 +116,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "A_fire_pb_n",
+					"strict" : false
+				},
+				{
 					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "B_fire_pb_n",
 					"strict" : false
 				},
 				{

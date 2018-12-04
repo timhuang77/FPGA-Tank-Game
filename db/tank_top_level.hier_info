@@ -105,8 +105,8 @@ HORIZ_SYNC << VGA_top_level:VGA_component.HORIZ_SYNC
 VERT_SYNC << VGA_top_level:VGA_component.VERT_SYNC
 VGA_BLANK << VGA_top_level:VGA_component.VGA_BLANK
 VGA_CLK << VGA_top_level:VGA_component.VGA_CLK
-player_speed => ~NO_FANOUT~
-player_fire => ~NO_FANOUT~
+B_fire_pb_n => game_logic:logic_component.player_B_fire
+A_fire_pb_n => game_logic:logic_component.player_A_fire
 
 
 |tank_top_level|VGA_top_level:VGA_component
@@ -1293,7 +1293,6 @@ clk => bullet_B_pos_out[0][28]~reg0.CLK
 clk => bullet_B_pos_out[0][29]~reg0.CLK
 clk => bullet_B_pos_out[0][30]~reg0.CLK
 clk => bullet_B_pos_out[0][31]~reg0.CLK
-clk => bullet_B_fired_out~reg0.CLK
 clk => bullet_A_pos_out[1][0]~reg0.CLK
 clk => bullet_A_pos_out[1][1]~reg0.CLK
 clk => bullet_A_pos_out[1][2]~reg0.CLK
@@ -1358,7 +1357,6 @@ clk => bullet_A_pos_out[0][28]~reg0.CLK
 clk => bullet_A_pos_out[0][29]~reg0.CLK
 clk => bullet_A_pos_out[0][30]~reg0.CLK
 clk => bullet_A_pos_out[0][31]~reg0.CLK
-clk => bullet_A_fired_out~reg0.CLK
 clk => bullet_B_pos[1][0].CLK
 clk => bullet_B_pos[1][1].CLK
 clk => bullet_B_pos[1][2].CLK
@@ -1489,6 +1487,8 @@ clk => bullet_A_pos[0][29].CLK
 clk => bullet_A_pos[0][30].CLK
 clk => bullet_A_pos[0][31].CLK
 clk => bullet_A_fired.CLK
+clk => bullet_B_fired_out~reg0.CLK
+clk => bullet_A_fired_out~reg0.CLK
 clk => bullet_B_display~reg0.CLK
 clk => bullet_A_display~reg0.CLK
 clk => tank_B_pos_out[1][0]~reg0.CLK
@@ -1945,6 +1945,8 @@ rst => score_A_out[28]~reg0.ACLR
 rst => score_A_out[29]~reg0.ACLR
 rst => score_A_out[30]~reg0.ACLR
 rst => score_A_out[31]~reg0.ACLR
+rst => bullet_B_fired_out~reg0.ACLR
+rst => bullet_A_fired_out~reg0.ACLR
 rst => bullet_B_display~reg0.ACLR
 rst => bullet_A_display~reg0.ACLR
 rst => \speed_update:speed_B_updated.ACLR
@@ -2208,7 +2210,6 @@ rst => bullet_B_pos[1][3].ENA
 rst => bullet_B_pos[1][2].ENA
 rst => bullet_B_pos[1][1].ENA
 rst => bullet_B_pos[1][0].ENA
-rst => bullet_A_fired_out~reg0.ENA
 rst => bullet_A_pos_out[0][31]~reg0.ENA
 rst => bullet_A_pos_out[0][30]~reg0.ENA
 rst => bullet_A_pos_out[0][29]~reg0.ENA
@@ -2273,7 +2274,6 @@ rst => bullet_A_pos_out[1][3]~reg0.ENA
 rst => bullet_A_pos_out[1][2]~reg0.ENA
 rst => bullet_A_pos_out[1][1]~reg0.ENA
 rst => bullet_A_pos_out[1][0]~reg0.ENA
-rst => bullet_B_fired_out~reg0.ENA
 rst => bullet_B_pos_out[0][31]~reg0.ENA
 rst => bullet_B_pos_out[0][30]~reg0.ENA
 rst => bullet_B_pos_out[0][29]~reg0.ENA
@@ -2601,7 +2601,6 @@ global_write_enable => bullet_B_pos.OUTPUTSELECT
 global_write_enable => bullet_B_pos.OUTPUTSELECT
 global_write_enable => bullet_B_pos.OUTPUTSELECT
 global_write_enable => bullet_B_pos.OUTPUTSELECT
-global_write_enable => bullet_A_fired_out.OUTPUTSELECT
 global_write_enable => bullet_A_pos_out.OUTPUTSELECT
 global_write_enable => bullet_A_pos_out.OUTPUTSELECT
 global_write_enable => bullet_A_pos_out.OUTPUTSELECT
@@ -2666,7 +2665,6 @@ global_write_enable => bullet_A_pos_out.OUTPUTSELECT
 global_write_enable => bullet_A_pos_out.OUTPUTSELECT
 global_write_enable => bullet_A_pos_out.OUTPUTSELECT
 global_write_enable => bullet_A_pos_out.OUTPUTSELECT
-global_write_enable => bullet_B_fired_out.OUTPUTSELECT
 global_write_enable => bullet_B_pos_out.OUTPUTSELECT
 global_write_enable => bullet_B_pos_out.OUTPUTSELECT
 global_write_enable => bullet_B_pos_out.OUTPUTSELECT
@@ -2734,6 +2732,8 @@ global_write_enable => bullet_B_pos_out.OUTPUTSELECT
 global_write_enable => tank_B_pos_out[1][0]~reg0.ENA
 global_write_enable => bullet_A_display~reg0.ENA
 global_write_enable => bullet_B_display~reg0.ENA
+global_write_enable => bullet_A_fired_out~reg0.ENA
+global_write_enable => bullet_B_fired_out~reg0.ENA
 global_write_enable => tank_B_pos_out[1][1]~reg0.ENA
 global_write_enable => tank_B_pos_out[1][2]~reg0.ENA
 global_write_enable => tank_B_pos_out[1][3]~reg0.ENA
@@ -6156,7 +6156,7 @@ bullet_fired_in => curr_pos.OUTPUTSELECT
 bullet_fired_in => curr_pos.OUTPUTSELECT
 bullet_fired_in => curr_pos.OUTPUTSELECT
 bullet_fired_in => curr_pos.OUTPUTSELECT
-bullet_fired_in => bullet_fired_signal.OUTPUTSELECT
+bullet_fired_in => bullet_fired_signal.DATAIN
 bullet_fired_out <= bullet_fired_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -6743,7 +6743,7 @@ bullet_fired_in => curr_pos.OUTPUTSELECT
 bullet_fired_in => curr_pos.OUTPUTSELECT
 bullet_fired_in => curr_pos.OUTPUTSELECT
 bullet_fired_in => curr_pos.OUTPUTSELECT
-bullet_fired_in => bullet_fired_signal.OUTPUTSELECT
+bullet_fired_in => bullet_fired_signal.DATAIN
 bullet_fired_out <= bullet_fired_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

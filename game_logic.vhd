@@ -30,7 +30,7 @@ entity game_logic is
 		
 		--Bullet attribute outputs
 		bullet_A_pos_out, bullet_B_pos_out : out position;
-		bullet_A_fired_out, bullet_B_fired_out : out std_logic;
+		bullet_A_fired_out, bullet_B_fired_out : out std_logic := '0';
 		bullet_A_display, bullet_B_display : out std_logic;
 		
 		--Score keeping
@@ -208,6 +208,8 @@ architecture behavioral of game_logic is
 		if (rst = '1') then
 			bullet_A_display <= '0';
 			bullet_B_display <= '0';
+			bullet_A_fired_out <= '0';
+			bullet_B_fired_out <= '0';
 		elsif (rising_edge(clk)) then
 			if (global_write_enable = '1') then --read state
 				bullet_A_fired <= bullet_A_fired_in;
@@ -217,7 +219,7 @@ architecture behavioral of game_logic is
 			
 				bullet_A_pos(0) <= bullet_A_pos_in(0);
 				bullet_B_pos(0) <= bullet_B_pos_in(0);
-			else --write state
+			else 								--write state
 				-- if (collision_detection(tank_B_pos, bullet_A_pos) = '1') then
 					-- -- collision detected, bullet A hit tank B
 					-- score_A <= score_A + 1;
@@ -225,10 +227,12 @@ architecture behavioral of game_logic is
 					-- bullet_A_display <= '0';
 				-- els
 				if ((bullet_A_pos(1) + BULLET_HEIGHT/2 + 1) <= 0) then
-					-- bullet out of bounds, don't show bullet
+					-- bullet out of bounds, reset conditions
 					--unset bullet fired flag
 					bullet_A_fired_out <= '0';
 					bullet_A_display <= '0';
+					bullet_A_fired <= '0';
+					bullet_A_pos_out <= tank_A_pos;
 				elsif (bullet_A_fired = '0' and player_A_fire = '1') then
 					--player first fires bullet
 					bullet_A_pos_out <= tank_A_pos;
@@ -247,11 +251,13 @@ architecture behavioral of game_logic is
 					-- -- don't show bullet	
 					-- bullet_B_display <= '0';
 				-- els
-				if ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= (col_size - 1)) then
-					-- bullet out of bounds, don't show bullet
+				if ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= (row_size - 1)) then
+					-- bullet out of bounds, reset conditions
 					--unset bullet fired flag
 					bullet_B_fired_out <= '0';
 					bullet_B_display <= '0';
+					bullet_B_fired <= '0';
+					bullet_B_pos_out <= tank_B_pos;
 				elsif (bullet_B_fired = '0' and player_B_fire = '1') then
 					--player first fires bullet
 					bullet_B_pos_out <= tank_B_pos;

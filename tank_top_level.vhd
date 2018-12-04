@@ -23,7 +23,7 @@ entity tank_top_level is
 		VGA_RED, VGA_GREEN, VGA_BLUE : out std_logic_vector(7 downto 0); 
 		HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic;
 		
-		player_speed, player_fire : in std_logic
+		B_fire_pb_n, A_fire_pb_n : in std_logic
 	);
 end entity tank_top_level;
 
@@ -31,7 +31,8 @@ architecture structural of tank_top_level is
 	signal reset : std_logic := '0';
 	signal global_write_enable : std_logic := '0';
 	signal global_read_enable : std_logic;
-
+	signal A_fire_pb, B_fire_pb : std_logic;
+	
 	--Player A signals
 	signal tank_A_pos_inout, tank_A_pos_outin, bullet_A_pos_inout, bullet_A_pos_outin : position;
 	signal tank_A_speed_inout, tank_A_speed_outin : integer;
@@ -75,7 +76,8 @@ begin
 		--updates game_object (position, speed)
 		
 	reset <= not reset_n;
-
+	A_fire_pb <= not A_fire_pb_n;
+	B_fire_pb <= not B_fire_pb_n;
 	
 	alt_cycle : process(clock_divided, reset) is begin
 		if (reset = '1') then
@@ -112,17 +114,13 @@ begin
 	keyboard_process: process(clk, reset) is begin
 		if (hist10 = key_W) then
 			player_A_fire <= '1';
-			-- debug_flag_A <= '1';
 		elsif (hist10 = key_D) then
-			player_A_speed <= '1';
-			-- debug_flag_B <= '1';
+			-- player_A_speed <= '1';
 		elsif (hist10 = key_5) then
 			player_B_fire <= '1';
-			-- debug_flag_A <= '1';
 		elsif (hist10 = key_3) then
-			player_B_fire <= '1';
-			-- debug_flag_B <= '1';
-		-- else
+			-- player_B_speed <= '1';
+  		-- else
 			-- player_A_fire <= '0';
 			-- player_A_speed <= '0';
 			-- player_B_fire <= '0';
@@ -180,7 +178,8 @@ begin
 
 			--Player A
 			player_A_speed => player_A_speed,
-			player_A_fire => player_A_fire,
+			-- player_A_fire => player_A_fire,
+			player_A_fire => A_fire_pb,
 			tank_A_pos_in => tank_A_pos_inout,
 			tank_A_pos_out => tank_A_pos_outin,
 			tank_A_speed_in => tank_A_speed_inout,
@@ -196,7 +195,8 @@ begin
 			
 			--Player B
 			player_B_speed => player_B_speed,
-			player_B_fire => player_B_fire,
+			-- player_B_fire => player_B_fire,
+			player_B_fire => B_fire_pb,
 			tank_B_pos_in => tank_B_pos_inout,
 			tank_B_pos_out => tank_B_pos_outin,
 			tank_B_speed_in => tank_B_speed_inout,

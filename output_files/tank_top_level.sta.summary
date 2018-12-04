@@ -3,27 +3,27 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock_divided'
-Slack : -7.257
-TNS   : -3545.039
+Slack : -7.665
+TNS   : -3181.667
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.965
-TNS   : -67.304
+Slack : -4.081
+TNS   : -66.886
 
 Type  : Slow 1200mV 85C Model Setup 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.877
-TNS   : -79.229
+Slack : -2.740
+TNS   : -78.550
 
 Type  : Slow 1200mV 85C Model Hold 'clock_divided'
-Slack : 0.384
+Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.386
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.654
+Slack : 0.653
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -32,34 +32,34 @@ TNS   : -46.690
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divided'
 Slack : -1.285
-TNS   : -1233.600
+TNS   : -1065.265
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.285
 TNS   : -57.825
 
 Type  : Slow 1200mV 0C Model Setup 'clock_divided'
-Slack : -6.519
-TNS   : -3148.899
+Slack : -6.811
+TNS   : -2820.293
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.578
-TNS   : -57.041
+Slack : -3.667
+TNS   : -56.640
 
 Type  : Slow 1200mV 0C Model Setup 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.550
-TNS   : -67.824
+Slack : -2.442
+TNS   : -67.599
 
 Type  : Slow 1200mV 0C Model Hold 'clock_divided'
-Slack : 0.336
+Slack : 0.353
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.337
+Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.598
+Slack : 0.597
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -68,30 +68,30 @@ TNS   : -46.690
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divided'
 Slack : -1.285
-TNS   : -1233.600
+TNS   : -1065.265
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.285
 TNS   : -57.825
 
 Type  : Fast 1200mV 0C Model Setup 'clock_divided'
-Slack : -3.030
-TNS   : -1300.259
+Slack : -3.261
+TNS   : -1179.327
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.520
-TNS   : -16.658
+Slack : -1.562
+TNS   : -16.319
 
 Type  : Fast 1200mV 0C Model Setup 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -0.867
-TNS   : -16.946
-
-Type  : Fast 1200mV 0C Model Hold 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.173
-TNS   : 0.000
+Slack : -0.818
+TNS   : -16.192
 
 Type  : Fast 1200mV 0C Model Hold 'clock_divided'
-Slack : 0.173
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
@@ -100,11 +100,11 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -39.081
+TNS   : -39.069
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divided'
 Slack : -1.000
-TNS   : -960.000
+TNS   : -829.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.000

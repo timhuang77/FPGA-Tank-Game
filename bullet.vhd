@@ -41,8 +41,8 @@ begin
       if (we = '1') then
         if (bullet_fired_in = '1') then
           curr_pos <= pos_in;
-          bullet_fired_signal <= bullet_fired_in;
         end if;
+		  bullet_fired_signal <= bullet_fired_in;
       else
         pos_out <= curr_pos;
         bullet_fired_out <= bullet_fired_signal;
