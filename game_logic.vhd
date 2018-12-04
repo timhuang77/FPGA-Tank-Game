@@ -69,7 +69,7 @@ architecture behavioral of game_logic is
 			speed_A_updated := '0';
 			speed_B_updated := '0';
 		elsif (rising_edge(clk)) then
-			--check only every other cycles
+			--check only every other cycle
 			if (global_write_enable = '1') then
 				speed_A_temp := tank_A_speed_in;
 				speed_B_temp := tank_B_speed_in;
@@ -148,7 +148,7 @@ architecture behavioral of game_logic is
 				tank_B_dir_flag := '0';
 			else 								--write state
 				--tank A
-				if (((tank_A_pos(0) - TANK_WIDTH/2) >= TANK_WIDTH_BUFFER) and ((tank_A_pos(0) + TANK_WIDTH/2) < (679 - TANK_WIDTH_BUFFER))) then  
+				if (((tank_A_pos(0) - TANK_WIDTH/2) >= TANK_WIDTH_BUFFER) and ((tank_A_pos(0) + TANK_WIDTH/2) < (col_size - 1 - TANK_WIDTH_BUFFER))) then  
 					--tank within bounds
 					tank_A_pos_out(0) <= tank_A_pos(0);
 					-- tank_A_pos_out(0) <= 800; --for debugging
@@ -162,8 +162,8 @@ architecture behavioral of game_logic is
 						tank_A_dir_flag := '1';
 					end if;
 					
-					if ((tank_A_pos(0) + TANK_WIDTH/2) > (679 - TANK_WIDTH_BUFFER)) then --position beyond right bound
-						tank_A_pos_out(0) <= 679 - TANK_WIDTH_BUFFER - TANK_WIDTH/2;
+					if ((tank_A_pos(0) + TANK_WIDTH/2) > (col_size - 1 - TANK_WIDTH_BUFFER)) then --position beyond right bound
+						tank_A_pos_out(0) <= col_size - 1 - TANK_WIDTH_BUFFER - TANK_WIDTH/2;
 						-- tank_A_pos_out(0) <= 800; --for debugging
 
 					else --position beneath left bound
@@ -173,7 +173,7 @@ architecture behavioral of game_logic is
 				end if; 
 				
 				--tank B
-				if ((tank_B_pos(0) - TANK_WIDTH/2) >= TANK_WIDTH_BUFFER and (tank_B_pos(0) + TANK_WIDTH/2) <= (679 - TANK_WIDTH_BUFFER)) then  
+				if ((tank_B_pos(0) - TANK_WIDTH/2) >= TANK_WIDTH_BUFFER and (tank_B_pos(0) + TANK_WIDTH/2) <= (col_size - 1 - TANK_WIDTH_BUFFER)) then  
 					--tank within bounds
 					tank_B_pos_out(0) <= tank_B_pos(0);
 				else
@@ -185,8 +185,8 @@ architecture behavioral of game_logic is
 						tank_B_dir_flag := '1';
 					end if;
 					
-					if ((tank_B_pos(0) + TANK_WIDTH/2) > (679 - TANK_WIDTH_BUFFER)) then --position beyond right bound
-						tank_B_pos_out(0) <= 679 - TANK_WIDTH_BUFFER - TANK_WIDTH/2;
+					if ((tank_B_pos(0) + TANK_WIDTH/2) > (col_size - 1 - TANK_WIDTH_BUFFER)) then --position beyond right bound
+						tank_B_pos_out(0) <= col_size - 1 - TANK_WIDTH_BUFFER - TANK_WIDTH/2;
 					else --position beneath left bound
 						tank_B_pos_out(0) <= 0 + TANK_WIDTH_BUFFER + TANK_WIDTH/2;
 					end if;
@@ -244,7 +244,7 @@ architecture behavioral of game_logic is
 					-- -- don't show bullet	
 					-- bullet_B_display <= '0';
 				-- els
-				if ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= 679) then
+				if ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= (col_size - 1)) then
 					-- bullet out of bounds, don't show bullet
 					--unset bullet fired flag
 					bullet_B_fired_out <= '0';

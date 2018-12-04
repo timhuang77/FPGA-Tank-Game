@@ -50,8 +50,11 @@ architecture structural of tank_top_level is
 	signal cycle : integer := 0;
 	
 	--Signals for 25 fps clock
-	signal clock_divided											: std_logic;
-	signal counter													: integer := 0;
+	signal clock_divided											: std_logic := '0';
+	--signal counter													: integer := 0;
+	
+	signal tank_A_fixed : position;
+	signal tank_B_fixed : position;
 begin
 	--port map VGA
 	--port map keyboard
@@ -62,20 +65,25 @@ begin
 	--port map game_object (bullet B)
 	--port map game_logic
 		--updates game_object (position, speed)
+	tank_A_fixed(0) <= 320;
+	tank_A_fixed(1) <= 400;
+	tank_B_fixed(0) <= 550;
+	tank_B_fixed(1) <= 50;
+		
 	reset <= not reset_n;
 	
-	player_A_speed <= player_speed;
-	player_A_fire <= player_fire;
+--	player_A_speed <= player_speed;
+--	player_A_fire <= player_fire;
 	
-	alt_cycle : process(clk, reset) is begin
+	alt_cycle : process(clock_divided, reset) is begin
 		if (reset = '1') then
 			global_write_enable <= '0';
 			cycle <= 0;
-		elsif (rising_edge(clk) and (cycle /= 3)) then
+		elsif (rising_edge(clock_divided) and (cycle /= 3)) then
 			cycle <= cycle + 1;
 			-- if (cycle = 2) then
 			
-		elsif (rising_edge(clk) and (cycle = 3)) then
+		elsif (rising_edge(clock_divided) and (cycle = 3)) then
 			global_write_enable <= not global_write_enable;
 			cycle <= 0;
 		end if;
@@ -84,12 +92,15 @@ begin
 	global_read_enable <= not global_write_enable;
 	
 	process(clk, reset)
+		variable counter : integer := 0;
 	begin
-		if (counter = 250000) then
-			clock_divided <= not clock_divided;
-			counter <= 0;
-		else
-			counter <= counter + 1;
+		if (rising_edge(clk)) then
+			if (counter = DIVIDE_CONSTANT) then
+				clock_divided <= not clock_divided;
+				counter := 0;
+			else
+				counter := counter + 1;
+			end if;
 		end if;
 	end process;
 	
