@@ -80,16 +80,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY tank_top_level
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:10:29  DECEMBER 03, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
-set_global_assignment -name VHDL_FILE VGA_top_level.vhd
-set_global_assignment -name VHDL_FILE vga_sync.vhd
-set_global_assignment -name VHDL_FILE tank_top_level.vhd
-set_global_assignment -name VHDL_FILE tank_functions.vhd
-set_global_assignment -name VHDL_FILE tank_const.vhd
-set_global_assignment -name VHDL_FILE tank.vhd
-set_global_assignment -name VHDL_FILE pixelGenerator.vhd
-set_global_assignment -name VHDL_FILE game_logic.vhd
-set_global_assignment -name VHDL_FILE game_components.vhd
-set_global_assignment -name VHDL_FILE bullet.vhd
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -132,4 +122,16 @@ set_location_assignment PIN_E12 -to VGA_RED[0]
 set_location_assignment PIN_G13 -to HORIZ_SYNC
 set_location_assignment PIN_Y2 -to clk
 set_location_assignment PIN_R24 -to reset_n
+set_global_assignment -name VHDL_FILE VGA_top_level.vhd
+set_global_assignment -name VHDL_FILE vga_sync.vhd
+set_global_assignment -name VHDL_FILE tank_top_level.vhd
+set_global_assignment -name VHDL_FILE tank_functions.vhd
+set_global_assignment -name VHDL_FILE tank_const.vhd
+set_global_assignment -name VHDL_FILE tank.vhd
+set_global_assignment -name VHDL_FILE pixelGenerator.vhd
+set_global_assignment -name VHDL_FILE game_logic.vhd
+set_global_assignment -name VHDL_FILE game_components.vhd
+set_global_assignment -name VHDL_FILE bullet.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

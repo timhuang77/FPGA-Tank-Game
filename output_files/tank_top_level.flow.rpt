@@ -1,5 +1,5 @@
 Flow report for tank_top_level
-Mon Dec 03 22:45:08 2018
+Tue Dec 04 00:51:55 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 03 22:45:04 2018       ;
+; Flow Status                        ; Successful - Tue Dec 04 00:51:51 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; tank_top_level                              ;
 ; Top-level Entity Name              ; tank_top_level                              ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 109 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 108 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 36 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 36                                          ;
+; Total logic elements               ; 800 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 703 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 388 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 388                                         ;
 ; Total pins                         ; 32 / 529 ( 6 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/03/2018 22:44:15 ;
+; Start date & time ; 12/04/2018 00:50:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tank_top_level      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+---------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name   ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+---------------+------------+
-; COMPILER_SIGNATURE_ID               ; 92526995083489.154389865508016         ; --            ; --            ; --         ;
+; COMPILER_SIGNATURE_ID               ; 92526995083489.154390625700952         ; --            ; --            ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --            ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --            ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --            ; --         ;
@@ -85,6 +85,8 @@ refer to the applicable agreement for further details.
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --            ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; VGA_top_level ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --            ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --            ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --            ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --            ; --         ;
 +-------------------------------------+----------------------------------------+---------------+---------------+------------+
 
@@ -94,11 +96,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 671 MB              ; 00:00:46                           ;
-; Fitter               ; 00:00:21     ; 1.0                     ; 1231 MB             ; 00:00:29                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 545 MB              ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 676 MB              ; 00:00:03                           ;
-; Total                ; 00:00:51     ; --                      ; --                  ; 00:01:23                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 663 MB              ; 00:00:44                           ;
+; Fitter               ; 00:00:26     ; 1.0                     ; 1243 MB             ; 00:00:36                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 546 MB              ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 679 MB              ; 00:00:03                           ;
+; Total                ; 00:00:55     ; --                      ; --                  ; 00:01:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
