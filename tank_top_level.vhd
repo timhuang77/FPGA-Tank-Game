@@ -48,6 +48,10 @@ architecture structural of tank_top_level is
 	signal bullet_fired_signal : std_logic;
 	
 	signal cycle : integer := 0;
+	
+	--Signals for 25 fps clock
+	signal clock_divided											: std_logic;
+	signal counter													: integer := 0;
 begin
 	--port map VGA
 	--port map keyboard
@@ -79,6 +83,16 @@ begin
 	
 	global_read_enable <= not global_write_enable;
 	
+	process(clk, reset)
+	begin
+		if (counter = 250000) then
+			clock_divided <= not clock_divided;
+			counter <= 0;
+		else
+			counter <= counter + 1;
+		end if;
+	end process;
+	
 	VGA_component : VGA_top_level
 		port map(
 			CLOCK_50 => clk,
@@ -103,7 +117,7 @@ begin
 	--Port maps: connecting components
 	logic_component : game_logic
 		port map(
-			clk => clk,
+			clk => clock_divided,
 			rst => reset,
 			global_write_enable => global_read_enable,
 
@@ -144,7 +158,7 @@ begin
 			pos_y_init => TANK_A_INIT_POS_Y
 		)
 		port map(
-			clk => clk,
+			clk => clock_divided,
 			rst => reset,
 			we => global_write_enable,
 			pos_in => tank_A_pos_outin,
@@ -159,7 +173,7 @@ begin
 			pos_y_init => TANK_B_INIT_POS_Y
 		)
 		port map(
-			clk => clk,
+			clk => clock_divided,
 			rst => reset,
 			we => global_write_enable,
 			pos_in => tank_B_pos_outin,
@@ -174,7 +188,7 @@ begin
 			default_pos_y => TANK_A_INIT_POS_Y
 		)
 		port map(
-			clk => clk,
+			clk => clock_divided,
 			rst => reset,
 			we => global_write_enable,
 			pos_in => bullet_A_pos_outin,
@@ -189,7 +203,7 @@ begin
 			default_pos_y => TANK_B_INIT_POS_Y
 		)
 		port map(
-			clk => clk,
+			clk => clock_divided,
 			rst => reset,
 			we => global_write_enable,
 			pos_in => bullet_B_pos_outin,

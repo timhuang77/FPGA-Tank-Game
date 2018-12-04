@@ -63,7 +63,7 @@ signal pixel_row_int 										: std_logic_vector(9 downto 0);
 signal pixel_column_int 									: std_logic_vector(9 downto 0);
 signal video_on_int											: std_logic;
 signal VGA_clk_int											: std_logic;
-signal eof													: std_logic;
+signal eof														: std_logic;
 
 -- signal tank_A_pos_temp, tank_B_pos_temp, bullet_A_pos_temp, bullet_B_pos_temp : position;
 -- signal tank_A_display_temp, tank_B_display_temp, bullet_A_display_temp, bullet_B_display_temp : std_logic;

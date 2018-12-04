@@ -64,7 +64,9 @@ begin
 		for i in (tank_A_pos(1) - TANK_HEIGHT/2) to (tank_A_pos(1) + TANK_HEIGHT/2) loop
 			tank_A_pixel_gen_innerloop : 
 			for j in (tank_A_pos(0) - TANK_WIDTH/2) to (tank_A_pos(0) + TANK_WIDTH/2) loop
-				color_ram(i)(j) <= red and tank_A_display_2bit;
+				if (i >= 0 and i < 480) and (j >= 0 and j < 640) then
+					color_ram(i)(j) <= red and tank_A_display_2bit;
+				end if;
 			end loop tank_A_pixel_gen_innerloop;
 		end loop tank_A_pixel_gen;
 		
@@ -72,7 +74,9 @@ begin
 		for i in (tank_B_pos(1) - TANK_HEIGHT/2) to (tank_B_pos(1) + TANK_HEIGHT/2) loop
 			tank_B_pixel_gen_innerloop : 
 			for j in (tank_B_pos(0) - TANK_WIDTH/2) to (tank_B_pos(0) + TANK_WIDTH/2) loop
-				color_ram(i)(j) <= blue and tank_B_display_2bit;
+				if (i >= 0 and i < 480) and (j >= 0 and j < 640) then
+					color_ram(i)(j) <= blue and tank_B_display_2bit;
+				end if;
 			end loop tank_B_pixel_gen_innerloop;
 		end loop tank_B_pixel_gen;
 		
