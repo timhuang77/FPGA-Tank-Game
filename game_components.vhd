@@ -24,7 +24,17 @@ package game_components is
 		port(
 				CLOCK_50 										: in std_logic;
 				RESET_N											: in std_logic;
-		
+
+				--tank inputs
+				tank_A_pos : in position;
+				tank_B_pos : in position;
+				tank_A_display, tank_B_display : in std_logic;
+				
+				--bullet inputs
+				bullet_A_pos : in position;
+				bullet_B_pos : in position;
+				bullet_A_display, bullet_B_display : in std_logic;
+				
 				--VGA 
 				VGA_RED, VGA_GREEN, VGA_BLUE 					: out std_logic_vector(7 downto 0); 
 				HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK		: out std_logic

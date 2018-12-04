@@ -79,6 +79,27 @@ begin
 	
 	global_read_enable <= not global_write_enable;
 	
+	VGA_component : VGA_top_level
+		port map(
+			CLOCK_50 => clk,
+			RESET_N => reset_n,
+			tank_A_pos => tank_A_pos_outin,
+			tank_B_pos => tank_B_pos_outin,
+			tank_A_display => tank_A_display_flag,
+			tank_B_display => tank_B_display_flag,
+			bullet_A_pos => bullet_A_pos_outin,
+			bullet_B_pos => bullet_B_pos_outin,
+			bullet_A_display => bullet_A_display_flag,
+			bullet_B_display => bullet_B_display_flag,
+			VGA_RED => VGA_RED,
+			VGA_GREEN => VGA_GREEN,
+			VGA_BLUE => VGA_BLUE,
+			HORIZ_SYNC => HORIZ_SYNC,
+			VERT_SYNC => VERT_SYNC,
+			VGA_BLANK => VGA_BLANK,
+			VGA_CLK => VGA_CLK
+		);
+		
 	--Port maps: connecting components
 	logic_component : game_logic
 		port map(
@@ -162,6 +183,20 @@ begin
 			bullet_fired_out => bullet_A_fired_inout
 		);
 
+	bullet_B : bullet
+		generic map(
+			default_pos_x => TANK_A_INIT_POS_X,
+			default_pos_y => TANK_B_INIT_POS_Y
+		)
+		port map(
+			clk => clk,
+			rst => reset,
+			we => global_write_enable,
+			pos_in => bullet_B_pos_outin,
+			pos_out => bullet_B_pos_inout,
+			bullet_fired_in => bullet_B_fired_outin,
+			bullet_fired_out => bullet_B_fired_inout
+		);
 
 	-- );
 	
