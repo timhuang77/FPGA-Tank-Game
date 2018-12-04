@@ -33,7 +33,7 @@ begin
   begin
 
     if (rst = '1') then
-      curr_pos(0) <= default_pos_x;
+    curr_pos(0) <= default_pos_x;
 	  curr_pos(1) <= default_pos_y;
 	  bullet_fired_signal <= '0';
     elsif (rising_edge(clk)) then
@@ -43,6 +43,7 @@ begin
           curr_pos <= pos_in;
         end if;
 		  bullet_fired_signal <= bullet_fired_in;
+			-- bullet_fired_signal <= '0';
       else
         pos_out <= curr_pos;
         bullet_fired_out <= bullet_fired_signal;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tank_top_level
-Tue Dec 04 16:41:41 2018
+Tue Dec 04 17:35:56 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,13 +52,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 04 16:41:41 2018       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 04 17:35:56 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; tank_top_level                              ;
 ; Top-level Entity Name              ; tank_top_level                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,862                                       ;
-;     Total combinational functions  ; 1,437                                       ;
+; Total logic elements               ; 1,861                                       ;
+;     Total combinational functions  ; 1,436                                       ;
 ;     Dedicated logic registers      ; 908                                         ;
 ; Total registers                    ; 908                                         ;
 ; Total pins                         ; 35                                          ;
@@ -161,38 +161,36 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                             ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
-; ps2.vhd                          ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd             ;         ;
-; oneshot.vhd                      ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/oneshot.vhd         ;         ;
-; keyboard.vhd                     ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/keyboard.vhd        ;         ;
-; VGA_top_level.vhd                ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd   ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/vga_sync.vhd        ;         ;
-; tank_top_level.vhd               ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd  ;         ;
-; tank_functions.vhd               ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_functions.vhd  ;         ;
-; tank_const.vhd                   ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_const.vhd      ;         ;
-; tank.vhd                         ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd            ;         ;
-; pixelGenerator.vhd               ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd  ;         ;
-; game_logic.vhd                   ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd      ;         ;
-; game_components.vhd              ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_components.vhd ;         ;
-; bullet.vhd                       ; yes             ; User VHDL File  ; //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd          ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
+; ps2.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd             ;         ;
+; oneshot.vhd                      ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/oneshot.vhd         ;         ;
+; keyboard.vhd                     ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/keyboard.vhd        ;         ;
+; VGA_top_level.vhd                ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/VGA_top_level.vhd   ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/vga_sync.vhd        ;         ;
+; tank_top_level.vhd               ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd  ;         ;
+; tank_functions.vhd               ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/tank_functions.vhd  ;         ;
+; tank_const.vhd                   ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/tank_const.vhd      ;         ;
+; tank.vhd                         ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd            ;         ;
+; pixelGenerator.vhd               ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd  ;         ;
+; game_logic.vhd                   ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd      ;         ;
+; game_components.vhd              ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/game_components.vhd ;         ;
+; bullet.vhd                       ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd          ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -200,16 +198,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 1,862         ;
+; Estimated Total logic elements              ; 1,861         ;
 ;                                             ;               ;
-; Total combinational functions               ; 1437          ;
+; Total combinational functions               ; 1436          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 294           ;
-;     -- 3 input functions                    ; 314           ;
-;     -- <=2 input functions                  ; 829           ;
+;     -- 4 input functions                    ; 329           ;
+;     -- 3 input functions                    ; 279           ;
+;     -- <=2 input functions                  ; 828           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 571           ;
+;     -- normal mode                          ; 570           ;
 ;     -- arithmetic mode                      ; 866           ;
 ;                                             ;               ;
 ; Total registers                             ; 908           ;
@@ -222,8 +220,8 @@ refer to the applicable agreement for further details.
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clock_divided ;
 ; Maximum fan-out                             ; 830           ;
-; Total fan-out                               ; 6609          ;
-; Average fan-out                             ; 2.74          ;
+; Total fan-out                               ; 6694          ;
+; Average fan-out                             ; 2.77          ;
 +---------------------------------------------+---------------+
 
 
@@ -232,13 +230,13 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name    ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
-; |tank_top_level                  ; 1437 (95)           ; 908 (66)                  ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |tank_top_level                                                     ; tank_top_level ; work         ;
+; |tank_top_level                  ; 1436 (95)           ; 908 (66)                  ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |tank_top_level                                                     ; tank_top_level ; work         ;
 ;    |VGA_top_level:VGA_component| ; 639 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component                         ; VGA_top_level  ; work         ;
 ;       |VGA_SYNC:videoSync|       ; 59 (59)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync      ; VGA_SYNC       ; work         ;
 ;       |pixelGenerator:videoGen|  ; 580 (580)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component|pixelGenerator:videoGen ; pixelGenerator ; work         ;
 ;    |bullet:bullet_A|             ; 21 (21)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_A                                     ; bullet         ; work         ;
 ;    |bullet:bullet_B|             ; 22 (22)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_B                                     ; bullet         ; work         ;
-;    |game_logic:logic_component|  ; 636 (636)           ; 400 (400)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|game_logic:logic_component                          ; game_logic     ; work         ;
+;    |game_logic:logic_component|  ; 635 (635)           ; 400 (400)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|game_logic:logic_component                          ; game_logic     ; work         ;
 ;    |tank:tank_A|                 ; 16 (16)             ; 72 (72)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|tank:tank_A                                         ; tank           ; work         ;
 ;    |tank:tank_B|                 ; 8 (8)               ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|tank:tank_B                                         ; tank           ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
@@ -661,7 +659,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 908   ;
-; Number of registers using Synchronous Clear  ; 2     ;
+; Number of registers using Synchronous Clear  ; 54    ;
 ; Number of registers using Synchronous Load   ; 2     ;
 ; Number of registers using Asynchronous Clear ; 233   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -675,64 +673,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+---------+
 ; Inverted Register                                        ; Fan out ;
 +----------------------------------------------------------+---------+
+; game_logic:logic_component|bullet_B_pos_out[0][0]        ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[1][0]        ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[0][31]       ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[1][31]       ; 3       ;
 ; game_logic:logic_component|bullet_A_pos_out[0][0]        ; 3       ;
 ; game_logic:logic_component|bullet_A_pos_out[1][0]        ; 3       ;
 ; game_logic:logic_component|bullet_A_pos_out[0][31]       ; 3       ;
 ; game_logic:logic_component|bullet_A_pos_out[1][31]       ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[0][0]        ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[1][0]        ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[1][31]       ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[0][31]       ; 3       ;
 ; game_logic:logic_component|tank_A_pos_out[0][31]         ; 3       ;
 ; game_logic:logic_component|tank_A_pos_out[0][0]          ; 4       ;
 ; game_logic:logic_component|tank_A_pos_out[1][0]          ; 3       ;
 ; game_logic:logic_component|tank_B_pos_out[0][0]          ; 4       ;
 ; game_logic:logic_component|tank_B_pos_out[0][31]         ; 3       ;
-; game_logic:logic_component|bullet_A_pos[1][0]            ; 3       ;
-; game_logic:logic_component|bullet_A_pos[1][31]           ; 2       ;
-; game_logic:logic_component|tank_A_pos[0][0]              ; 4       ;
-; game_logic:logic_component|bullet_A_pos[0][0]            ; 1       ;
-; game_logic:logic_component|tank_A_pos[1][0]              ; 5       ;
-; game_logic:logic_component|tank_A_pos[0][31]             ; 4       ;
-; game_logic:logic_component|bullet_A_pos[0][31]           ; 1       ;
 ; game_logic:logic_component|bullet_B_pos[1][31]           ; 2       ;
 ; game_logic:logic_component|bullet_B_pos[1][0]            ; 2       ;
 ; game_logic:logic_component|tank_B_pos[0][0]              ; 4       ;
 ; game_logic:logic_component|bullet_B_pos[0][0]            ; 1       ;
+; game_logic:logic_component|tank_A_pos[1][0]              ; 5       ;
 ; game_logic:logic_component|tank_B_pos[0][31]             ; 4       ;
 ; game_logic:logic_component|bullet_B_pos[0][31]           ; 1       ;
+; game_logic:logic_component|bullet_A_pos[1][31]           ; 2       ;
+; game_logic:logic_component|bullet_A_pos[1][0]            ; 3       ;
+; game_logic:logic_component|bullet_A_pos[0][0]            ; 1       ;
+; game_logic:logic_component|tank_A_pos[0][0]              ; 4       ;
+; game_logic:logic_component|bullet_A_pos[0][31]           ; 1       ;
+; game_logic:logic_component|tank_A_pos[0][31]             ; 4       ;
 ; tank:tank_A|speed_out[0]                                 ; 3       ;
-; tank:tank_A|pos_out[0][0]                                ; 1       ;
-; bullet:bullet_A|pos_out[1][0]                            ; 2       ;
-; bullet:bullet_A|pos_out[1][31]                           ; 1       ;
-; bullet:bullet_A|pos_out[0][0]                            ; 1       ;
-; tank:tank_A|pos_out[1][0]                                ; 1       ;
-; tank:tank_A|pos_out[0][31]                               ; 1       ;
-; bullet:bullet_A|pos_out[0][31]                           ; 1       ;
 ; tank:tank_B|pos_out[0][0]                                ; 1       ;
 ; bullet:bullet_B|pos_out[1][31]                           ; 1       ;
 ; bullet:bullet_B|pos_out[1][0]                            ; 2       ;
 ; bullet:bullet_B|pos_out[0][0]                            ; 1       ;
+; tank:tank_A|pos_out[1][0]                                ; 1       ;
 ; tank:tank_B|pos_out[0][31]                               ; 1       ;
 ; bullet:bullet_B|pos_out[0][31]                           ; 1       ;
-; tank:tank_A|curr_pos[0][8]                               ; 1       ;
-; tank:tank_A|curr_pos[0][6]                               ; 1       ;
-; tank:tank_A|curr_speed[1]                                ; 1       ;
-; bullet:bullet_A|curr_pos[1][8]                           ; 1       ;
-; bullet:bullet_A|curr_pos[1][7]                           ; 1       ;
-; bullet:bullet_A|curr_pos[1][6]                           ; 1       ;
-; bullet:bullet_A|curr_pos[1][1]                           ; 1       ;
-; bullet:bullet_A|curr_pos[0][8]                           ; 1       ;
-; bullet:bullet_A|curr_pos[0][6]                           ; 1       ;
-; tank:tank_A|curr_pos[1][1]                               ; 1       ;
+; tank:tank_A|pos_out[0][0]                                ; 1       ;
+; bullet:bullet_A|pos_out[1][31]                           ; 1       ;
+; bullet:bullet_A|pos_out[1][0]                            ; 2       ;
+; bullet:bullet_A|pos_out[0][0]                            ; 1       ;
+; bullet:bullet_A|pos_out[0][31]                           ; 1       ;
+; tank:tank_A|pos_out[0][31]                               ; 1       ;
 ; tank:tank_B|curr_pos[0][8]                               ; 1       ;
 ; tank:tank_B|curr_pos[0][6]                               ; 1       ;
+; tank:tank_A|curr_speed[1]                                ; 1       ;
 ; bullet:bullet_B|curr_pos[1][4]                           ; 1       ;
 ; bullet:bullet_B|curr_pos[1][3]                           ; 1       ;
 ; bullet:bullet_B|curr_pos[1][2]                           ; 1       ;
 ; bullet:bullet_B|curr_pos[1][1]                           ; 1       ;
 ; bullet:bullet_B|curr_pos[0][8]                           ; 1       ;
 ; bullet:bullet_B|curr_pos[0][6]                           ; 1       ;
+; tank:tank_A|curr_pos[1][1]                               ; 1       ;
+; tank:tank_A|curr_pos[0][8]                               ; 1       ;
+; tank:tank_A|curr_pos[0][6]                               ; 1       ;
+; bullet:bullet_A|curr_pos[1][8]                           ; 1       ;
+; bullet:bullet_A|curr_pos[1][7]                           ; 1       ;
+; bullet:bullet_A|curr_pos[1][6]                           ; 1       ;
+; bullet:bullet_A|curr_pos[1][1]                           ; 1       ;
+; bullet:bullet_A|curr_pos[0][8]                           ; 1       ;
+; bullet:bullet_A|curr_pos[0][6]                           ; 1       ;
 ; game_logic:logic_component|tank_A_speed_out[0]           ; 1       ;
 ; game_logic:logic_component|\speed_update:speed_A_temp[0] ; 1       ;
 ; Total number of inverted registers = 60                  ;         ;
@@ -744,15 +742,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[0][13]        ;
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][4]         ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync|v_count[4] ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[12] ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[25] ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[1][29]        ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[1][24]        ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[0][29]        ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][30]        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync|v_count[3] ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[14] ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[13] ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[1][31]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][0]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][31]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
@@ -832,23 +828,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 35                          ;
 ; cycloneiii_ff         ; 908                         ;
 ;     CLR               ; 33                          ;
-;     ENA               ; 611                         ;
+;     ENA               ; 559                         ;
 ;     ENA CLR           ; 200                         ;
+;     ENA SCLR          ; 52                          ;
 ;     ENA SLD           ; 2                           ;
 ;     SCLR              ; 2                           ;
 ;     plain             ; 60                          ;
-; cycloneiii_lcell_comb ; 1439                        ;
+; cycloneiii_lcell_comb ; 1438                        ;
 ;     arith             ; 866                         ;
 ;         2 data inputs ; 691                         ;
 ;         3 data inputs ; 175                         ;
-;     normal            ; 573                         ;
+;     normal            ; 572                         ;
 ;         1 data inputs ; 100                         ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 139                         ;
-;         4 data inputs ; 294                         ;
+;         2 data inputs ; 39                          ;
+;         3 data inputs ; 104                         ;
+;         4 data inputs ; 329                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.50                       ;
-; Average LUT depth     ; 6.44                        ;
+; Average LUT depth     ; 6.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -857,7 +854,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -867,153 +864,153 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 04 16:41:23 2018
+    Info: Processing started: Tue Dec 04 17:35:32 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tank_top_level -c tank_top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ps2.vhd
-    Info (12022): Found design unit 1: ps2-structural File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 25
-    Info (12023): Found entity 1: ps2 File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 6
+    Info (12022): Found design unit 1: ps2-structural File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 25
+    Info (12023): Found entity 1: ps2 File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file oneshot.vhd
-    Info (12022): Found design unit 1: oneshot-dd File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/oneshot.vhd Line: 14
-    Info (12023): Found entity 1: oneshot File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/oneshot.vhd Line: 6
+    Info (12022): Found design unit 1: oneshot-dd File: C:/intelFPGA_lite/18.1/Final_Project/git/oneshot.vhd Line: 14
+    Info (12023): Found entity 1: oneshot File: C:/intelFPGA_lite/18.1/Final_Project/git/oneshot.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file keyboard.vhd
-    Info (12022): Found design unit 1: keyboard-a File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/keyboard.vhd Line: 14
-    Info (12023): Found entity 1: keyboard File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/keyboard.vhd Line: 6
+    Info (12022): Found design unit 1: keyboard-a File: C:/intelFPGA_lite/18.1/Final_Project/git/keyboard.vhd Line: 14
+    Info (12023): Found entity 1: keyboard File: C:/intelFPGA_lite/18.1/Final_Project/git/keyboard.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file vga_top_level.vhd
-    Info (12022): Found design unit 1: VGA_top_level-structural File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd Line: 31
-    Info (12023): Found entity 1: VGA_top_level File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd Line: 9
+    Info (12022): Found design unit 1: VGA_top_level-structural File: C:/intelFPGA_lite/18.1/Final_Project/git/VGA_top_level.vhd Line: 31
+    Info (12023): Found entity 1: VGA_top_level File: C:/intelFPGA_lite/18.1/Final_Project/git/VGA_top_level.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-behavioral File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/vga_sync.vhd Line: 16
-    Info (12023): Found entity 1: VGA_SYNC File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-behavioral File: C:/intelFPGA_lite/18.1/Final_Project/git/vga_sync.vhd Line: 16
+    Info (12023): Found entity 1: VGA_SYNC File: C:/intelFPGA_lite/18.1/Final_Project/git/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file tank_top_level.vhd
-    Info (12022): Found design unit 1: tank_top_level-structural File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 30
-    Info (12023): Found entity 1: tank_top_level File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 8
+    Info (12022): Found design unit 1: tank_top_level-structural File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 30
+    Info (12023): Found entity 1: tank_top_level File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 8
 Info (12021): Found 2 design units, including 0 entities, in source file tank_functions.vhd
-    Info (12022): Found design unit 1: tank_functions File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_functions.vhd Line: 7
-    Info (12022): Found design unit 2: tank_functions-body File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_functions.vhd Line: 21
+    Info (12022): Found design unit 1: tank_functions File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_functions.vhd Line: 7
+    Info (12022): Found design unit 2: tank_functions-body File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_functions.vhd Line: 21
 Info (12021): Found 1 design units, including 0 entities, in source file tank_const.vhd
-    Info (12022): Found design unit 1: tank_const File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_const.vhd Line: 4
+    Info (12022): Found design unit 1: tank_const File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_const.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file tank.vhd
-    Info (12022): Found design unit 1: tank-behavioral File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 27
-    Info (12023): Found entity 1: tank File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 8
+    Info (12022): Found design unit 1: tank-behavioral File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 27
+    Info (12023): Found entity 1: tank File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file pixelgenerator.vhd
-    Info (12022): Found design unit 1: pixelGenerator-behavioral File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 27
-    Info (12023): Found entity 1: pixelGenerator File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 8
+    Info (12022): Found design unit 1: pixelGenerator-behavioral File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 27
+    Info (12023): Found entity 1: pixelGenerator File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file game_logic.vhd
-    Info (12022): Found design unit 1: game_logic-behavioral File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd Line: 44
-    Info (12023): Found entity 1: game_logic File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd Line: 8
+    Info (12022): Found design unit 1: game_logic-behavioral File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 44
+    Info (12023): Found entity 1: game_logic File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 8
 Info (12021): Found 2 design units, including 0 entities, in source file game_components.vhd
-    Info (12022): Found design unit 1: game_components File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_components.vhd Line: 4
-    Info (12022): Found design unit 2: game_components-body File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_components.vhd Line: 138
+    Info (12022): Found design unit 1: game_components File: C:/intelFPGA_lite/18.1/Final_Project/git/game_components.vhd Line: 4
+    Info (12022): Found design unit 2: game_components-body File: C:/intelFPGA_lite/18.1/Final_Project/git/game_components.vhd Line: 138
 Info (12021): Found 2 design units, including 1 entities, in source file bullet.vhd
-    Info (12022): Found design unit 1: bullet-behavioral File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 25
-    Info (12023): Found entity 1: bullet File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 7
+    Info (12022): Found design unit 1: bullet-behavioral File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 25
+    Info (12023): Found entity 1: bullet File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 7
 Info (12127): Elaborating entity "tank_top_level" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at tank_top_level.vhd(39): used implicit default value for signal "player_A_speed" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 39
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(39): object "player_A_fire" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 39
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(40): object "score_A_signal" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 40
-Warning (10541): VHDL Signal Declaration warning at tank_top_level.vhd(45): used implicit default value for signal "player_B_speed" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 45
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(45): object "player_B_fire" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 45
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(46): object "score_B_signal" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 46
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(56): object "hist3" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(56): object "hist2" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(57): object "kb_scan_code" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 57
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(58): object "kb_scan_ready" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 58
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(60): object "bullet_A_fixed" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 60
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(61): object "bullet_B_fixed" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(86): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(90): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 90
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(115): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 115
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(117): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 117
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(119): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 119
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(121): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 121
-Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:VGA_component" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 131
-Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:VGA_component|pixelGenerator:videoGen" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd Line: 83
-Warning (10036): Verilog HDL or VHDL warning at pixelGenerator.vhd(44): object "tank_A_display_2bit" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 44
-Warning (10036): Verilog HDL or VHDL warning at pixelGenerator.vhd(44): object "tank_B_display_2bit" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 44
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(75): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(75): signal "tank_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(76): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(76): signal "tank_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(77): signal "tank_A_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(82): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 82
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(82): signal "tank_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 82
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(83): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 83
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(83): signal "tank_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 83
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(84): signal "tank_B_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 84
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(93): signal "bullet_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(93): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(94): signal "bullet_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(94): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(95): signal "bullet_B_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 95
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(97): signal "bullet_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(97): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(98): signal "bullet_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 98
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(98): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 98
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(99): signal "bullet_A_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 99
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:VGA_component|VGA_SYNC:videoSync" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd Line: 110
-Info (12128): Elaborating entity "ps2" for hierarchy "ps2:Keyboard" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 158
-Warning (10036): Verilog HDL or VHDL warning at ps2.vhd(56): object "hists" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 56
-Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:Keyboard|keyboard:u1" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 62
-Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:Keyboard|oneshot:pulser" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 72
-Info (12128): Elaborating entity "game_logic" for hierarchy "game_logic:logic_component" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 173
-Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(58): used explicit default value for signal "score_A" because signal was never assigned a value File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd Line: 58
-Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(58): used explicit default value for signal "score_B" because signal was never assigned a value File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd Line: 58
-Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_A" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 214
-Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_B" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 229
-Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_A" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 244
-Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_B" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 259
-Info (13000): Registers with preset signals will power-up high File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+Warning (10541): VHDL Signal Declaration warning at tank_top_level.vhd(39): used implicit default value for signal "player_A_speed" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 39
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(39): object "player_A_fire" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 39
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(40): object "score_A_signal" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 40
+Warning (10541): VHDL Signal Declaration warning at tank_top_level.vhd(45): used implicit default value for signal "player_B_speed" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 45
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(45): object "player_B_fire" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 45
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(46): object "score_B_signal" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 46
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(56): object "hist3" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(56): object "hist2" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(57): object "kb_scan_code" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(58): object "kb_scan_ready" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 58
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(60): object "bullet_A_fixed" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 60
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(61): object "bullet_B_fixed" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(86): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(90): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(115): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(117): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 117
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(119): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 119
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(121): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 121
+Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:VGA_component" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 131
+Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:VGA_component|pixelGenerator:videoGen" File: C:/intelFPGA_lite/18.1/Final_Project/git/VGA_top_level.vhd Line: 83
+Warning (10036): Verilog HDL or VHDL warning at pixelGenerator.vhd(44): object "tank_A_display_2bit" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 44
+Warning (10036): Verilog HDL or VHDL warning at pixelGenerator.vhd(44): object "tank_B_display_2bit" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(75): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(75): signal "tank_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(76): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(76): signal "tank_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(77): signal "tank_A_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(82): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(82): signal "tank_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(83): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(83): signal "tank_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(84): signal "tank_B_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(93): signal "bullet_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(93): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(94): signal "bullet_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(94): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(95): signal "bullet_B_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(97): signal "bullet_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(97): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(98): signal "bullet_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(98): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(99): signal "bullet_A_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 99
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:VGA_component|VGA_SYNC:videoSync" File: C:/intelFPGA_lite/18.1/Final_Project/git/VGA_top_level.vhd Line: 110
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:Keyboard" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 158
+Warning (10036): Verilog HDL or VHDL warning at ps2.vhd(56): object "hists" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 56
+Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:Keyboard|keyboard:u1" File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 62
+Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:Keyboard|oneshot:pulser" File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 72
+Info (12128): Elaborating entity "game_logic" for hierarchy "game_logic:logic_component" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 173
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(58): used explicit default value for signal "score_A" because signal was never assigned a value File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 58
+Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(58): used explicit default value for signal "score_B" because signal was never assigned a value File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 58
+Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_A" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 214
+Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_B" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 229
+Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_A" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 244
+Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_B" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 259
+Info (13000): Registers with preset signals will power-up high File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][4] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][3] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][2] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register tank:tank_A|curr_pos[1][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[1][1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register tank:tank_A|curr_speed[0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_speed[1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][7] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register tank:tank_A|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-    Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][4] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][3] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][2] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][1] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register tank:tank_A|curr_pos[1][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_pos[1][1] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register tank:tank_A|curr_speed[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_pos[0][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_pos[0][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_pos[0][6] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_speed[1] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_pos[0][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][6] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][7] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][6] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][1] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register tank:tank_A|curr_pos[0][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_pos[0][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_pos[0][6] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_pos[0][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][6] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
+    Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "keyboard_clk" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 19
-    Warning (15610): No output dependent on input pin "keyboard_data" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 19
-    Warning (15610): No output dependent on input pin "clock_50MHZ" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 19
+    Warning (15610): No output dependent on input pin "keyboard_clk" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 19
+    Warning (15610): No output dependent on input pin "keyboard_data" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 19
+    Warning (15610): No output dependent on input pin "clock_50MHZ" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 19
 Info (21057): Implemented 1899 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 28 output pins
     Info (21061): Implemented 1864 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 81 warnings
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Tue Dec 04 16:41:41 2018
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 665 megabytes
+    Info: Processing ended: Tue Dec 04 17:35:56 2018
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:49
 
 

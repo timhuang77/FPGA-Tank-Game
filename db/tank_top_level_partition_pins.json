@@ -116,7 +116,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A_fire_pb_n",
+					"name" : "B_fire_pb_n",
 					"strict" : false
 				},
 				{
@@ -124,7 +124,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "B_fire_pb_n",
+					"name" : "A_fire_pb_n",
 					"strict" : false
 				},
 				{

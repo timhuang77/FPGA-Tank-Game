@@ -1,5 +1,5 @@
 Flow report for tank_top_level
-Tue Dec 04 16:42:16 2018
+Tue Dec 04 17:36:46 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 04 16:42:11 2018       ;
+; Flow Status                        ; Successful - Tue Dec 04 17:36:38 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; tank_top_level                              ;
 ; Top-level Entity Name              ; tank_top_level                              ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,747 / 114,480 ( 2 % )                     ;
-;     Total combinational functions  ; 1,437 / 114,480 ( 1 % )                     ;
+; Total logic elements               ; 1,775 / 114,480 ( 2 % )                     ;
+;     Total combinational functions  ; 1,436 / 114,480 ( 1 % )                     ;
 ;     Dedicated logic registers      ; 908 / 114,480 ( < 1 % )                     ;
 ; Total registers                    ; 908                                         ;
 ; Total pins                         ; 35 / 529 ( 7 % )                            ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/04/2018 16:41:24 ;
+; Start date & time ; 12/04/2018 17:35:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tank_top_level      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+---------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name   ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+---------------+------------+
-; COMPILER_SIGNATURE_ID               ; 121369419512.154396328406440           ; --            ; --            ; --         ;
+; COMPILER_SIGNATURE_ID               ; 92526995083489.154396653309104         ; --            ; --            ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --            ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --            ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --            ; --         ;
@@ -96,24 +96,24 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4825 MB             ; 00:00:31                           ;
-; Fitter               ; 00:00:23     ; 1.0                     ; 5761 MB             ; 00:00:38                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4708 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 4883 MB             ; 00:00:04                           ;
-; Total                ; 00:00:48     ; --                      ; --                  ; 00:01:17                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 665 MB              ; 00:00:48                           ;
+; Fitter               ; 00:00:34     ; 1.0                     ; 1256 MB             ; 00:00:46                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 552 MB              ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 687 MB              ; 00:00:05                           ;
+; Total                ; 00:01:08     ; --                      ; --                  ; 00:01:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; TIMHUANG3E7D     ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; TIMHUANG3E7D     ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; TIMHUANG3E7D     ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; TIMHUANG3E7D     ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; Matt-PC          ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter               ; Matt-PC          ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler            ; Matt-PC          ; Windows 7 ; 6.1        ; x86_64         ;
+; Timing Analyzer      ; Matt-PC          ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
