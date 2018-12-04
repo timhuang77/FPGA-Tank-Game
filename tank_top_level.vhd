@@ -15,10 +15,11 @@ entity tank_top_level is
 		 -- LCD_RW : buffer std_logic;
 		 -- DATA_BUS : inout std_logic_vector(7 DOWNTO 0);
 		
-		-- --Keyboard inputs
-		-- keyboard_clk, keyboard_data, kb_read : in std_logic;
-		-- kb_scan_code : out std_logic_vector( 7 DOWNTO 0 );
-		-- kb_scan_ready : out std_logic;
+		--Keyboard inputs
+		keyboard_clk, keyboard_data, clock_50MHZ, reset : in std_logic;
+		kb_scan_code : out std_logic_vector( 7 DOWNTO 0 );
+		kb_scan_ready : out std_logic;
+		hist3, hist2, hist1, hist0 : out std_logic_vector (7 downto 0);
 		
 		--VGA 
 		VGA_RED, VGA_GREEN, VGA_BLUE : out std_logic_vector(7 downto 0); 
@@ -113,6 +114,14 @@ begin
 		-- clock_divided <= not clock_divided;
 	end process;
 	
+	keyboard_process: process(clk, reset)
+	
+	begin
+	
+		if (
+	
+	end process;
+	
 	VGA_component : VGA_top_level
 		port map(
 			CLOCK_50 => clk,
@@ -132,6 +141,20 @@ begin
 			VERT_SYNC => VERT_SYNC,
 			VGA_BLANK => VGA_BLANK,
 			VGA_CLK => VGA_CLK
+		);
+		
+	Keyboard : ps2
+		port map(
+		keyboard_clk => keyboard_clk,
+		keyboard_data => keyboard_data
+		clock_50MHz => clk,
+		reset => reset_n,
+		scan_code => kb_scan_code,
+		scan_readyo => kb_scan_ready,
+		hist3 => hist3,
+		hist2 => hist2,
+		hist1 => hist1,
+		hist0 => hist0
 		);
 		
 	--Port maps: connecting components
