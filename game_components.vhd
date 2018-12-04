@@ -42,6 +42,25 @@ package game_components is
 			);
 	end component VGA_top_level;
 	
+	component ps2 is
+		port( 	keyboard_clk, keyboard_data, clock_50MHz ,
+				reset : in std_logic;--, read : in std_logic;
+				
+				--LED's 
+				--LED_out : out std_logic_vector(7*8 - 1 downto 0);
+				--8 LED's, 6 bits each
+				--
+				
+				scan_code : out std_logic_vector( 7 downto 0 );
+				scan_readyo : out std_logic;
+				hist3 : out std_logic_vector(7 downto 0);
+				hist2 : out std_logic_vector(7 downto 0);
+				hist1 : out std_logic_vector(7 downto 0);
+				hist0 : out std_logic_vector(7 downto 0)
+			);
+	end component ps2;
+	
+	
 	component tank is
 		generic(
 			pos_x_init : integer;

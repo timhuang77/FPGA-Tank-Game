@@ -21,5 +21,10 @@ package tank_const is
 	constant row_size : integer := 480;
 	constant col_size : integer := 640;
 	
-	
+	--Keyboard scan code
+	constant key_W : std_logic_vector (15 downto 0) := x"F01D";
+	constant key_D : std_logic_vector (15 downto 0) := x"F023";
+	constant key_5 : std_logic_vector (15 downto 0) := x"F073";
+	constant key_3 : std_logic_vector (15 downto 0) := x"F07A";
+	constant break_key : std_logic_vector (7 downto 0) := x"F0";
 end package tank_const;

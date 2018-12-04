@@ -16,10 +16,8 @@ entity tank_top_level is
 		 -- DATA_BUS : inout std_logic_vector(7 DOWNTO 0);
 		
 		--Keyboard inputs
-		keyboard_clk, keyboard_data, clock_50MHZ, reset : in std_logic;
-		kb_scan_code : out std_logic_vector( 7 DOWNTO 0 );
-		kb_scan_ready : out std_logic;
-		hist3, hist2, hist1, hist0 : out std_logic_vector (7 downto 0);
+		keyboard_clk, keyboard_data, clock_50MHZ : in std_logic;
+		
 		
 		--VGA 
 		VGA_RED, VGA_GREEN, VGA_BLUE : out std_logic_vector(7 downto 0); 
@@ -52,14 +50,12 @@ architecture structural of tank_top_level is
 	
 	--Signals for 25 fps clock
 	signal clock_divided											: std_logic := '0';
-<<<<<<< HEAD
-	-- signal counter													: integer := 0;
-=======
-	--signal counter													: integer := 0;
 	
-	signal tank_A_fixed : position;
-	signal tank_B_fixed : position;
->>>>>>> de6fefb46c013bb24075e89efb5db517465048de
+	--Keyboard input
+	signal hist3, hist2, hist1, hist0 :  std_logic_vector(7 downto 0);
+	signal kb_scan_code :  std_logic_vector(7 DOWNTO 0);
+	signal kb_scan_ready : std_logic;
+	signal hist10 : std_logic_vector(15 downto 0);
 begin
 	--port map VGA
 	--port map keyboard
@@ -70,15 +66,9 @@ begin
 	--port map game_object (bullet B)
 	--port map game_logic
 		--updates game_object (position, speed)
-	tank_A_fixed(0) <= 320;
-	tank_A_fixed(1) <= 400;
-	tank_B_fixed(0) <= 550;
-	tank_B_fixed(1) <= 50;
 		
 	reset <= not reset_n;
-	
---	player_A_speed <= player_speed;
---	player_A_fire <= player_fire;
+
 	
 	alt_cycle : process(clock_divided, reset) is begin
 		if (reset = '1') then
@@ -100,26 +90,33 @@ begin
 		variable counter : integer := 0;
 	begin
 		if (rising_edge(clk)) then
-<<<<<<< HEAD
-			if (counter = 0) then
-=======
 			if (counter = DIVIDE_CONSTANT) then
->>>>>>> de6fefb46c013bb24075e89efb5db517465048de
+
 				clock_divided <= not clock_divided;
 				counter := 0;
 			else
 				counter := counter + 1;
 			end if;
 		end if;
-		-- clock_divided <= not clock_divided;
 	end process;
 	
-	keyboard_process: process(clk, reset)
 	
-	begin
-	
-		if (
-	
+	hist10 <= hist1 & hist0;
+	keyboard_process: process(clk, reset) is begin
+		if (hist10 = key_W) then
+			player_A_fire <= '1';
+		elsif (hist10 = key_D) then
+			player_A_speed <= '1';
+		elsif (hist10 = key_5) then
+			player_B_fire <= '1';
+		elsif (hist10 = key_3) then
+			player_B_fire <= '1';
+		else
+			player_A_fire <= '0';
+			player_A_speed <= '0';
+			player_B_fire <= '0';
+			player_B_speed <= '0';
+		end if;
 	end process;
 	
 	VGA_component : VGA_top_level
@@ -146,9 +143,9 @@ begin
 	Keyboard : ps2
 		port map(
 		keyboard_clk => keyboard_clk,
-		keyboard_data => keyboard_data
+		keyboard_data => keyboard_data,
 		clock_50MHz => clk,
-		reset => reset_n,
+		reset => reset,
 		scan_code => kb_scan_code,
 		scan_readyo => kb_scan_ready,
 		hist3 => hist3,
