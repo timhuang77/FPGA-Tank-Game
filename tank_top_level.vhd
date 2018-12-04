@@ -20,9 +20,9 @@ entity tank_top_level is
 		-- kb_scan_code : out std_logic_vector( 7 DOWNTO 0 );
 		-- kb_scan_ready : out std_logic;
 		
-		-- --VGA 
-		-- VGA_RED, VGA_GREEN, VGA_BLUE : out std_logic_vector(7 downto 0); 
-		-- HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic
+		--VGA 
+		VGA_RED, VGA_GREEN, VGA_BLUE : out std_logic_vector(7 downto 0); 
+		HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic
 		
 		player_speed, player_fire : in std_logic
 	);
@@ -128,6 +128,21 @@ begin
 			pos_out => tank_A_pos_inout,
 			speed_in => tank_A_speed_outin,
 			speed_out => tank_A_speed_inout
+		);
+		
+	tank_B : tank
+		generic map (
+			pos_x_init => TANK_B_INIT_POS_X,
+			pos_y_init => TANK_B_INIT_POS_Y
+		)
+		port map(
+			clk => clk,
+			rst => reset,
+			we => global_write_enable,
+			pos_in => tank_B_pos_outin,
+			pos_out => tank_B_pos_inout,
+			speed_in => tank_B_speed_outin,
+			speed_out => tank_B_speed_inout
 		);
 	
 	bullet_A : bullet

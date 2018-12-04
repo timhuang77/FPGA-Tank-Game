@@ -1,13 +1,4 @@
-{W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity pixelGenerator
--- Compiling architecture behavioral of pixelGenerator
-
-} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/keyboard.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/keyboard.vhd}
+{W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/keyboard.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/keyboard.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -65,26 +56,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package tank_functions
 -- Compiling entity tank
 -- Compiling architecture behavioral of tank
-
-} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package game_components
--- Loading package tank_const
--- Loading package tank_functions
--- Compiling entity tank_top_level
--- Compiling architecture structural of tank_top_level
-
-} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity VGA_top_level
--- Compiling architecture structural of VGA_top_level
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
