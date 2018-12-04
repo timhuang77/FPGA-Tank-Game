@@ -40,7 +40,7 @@ signal color        : std_logic_vector (2 downto 0);
 signal reset		: std_logic;
 
 signal color_out : std_logic_vector (1 downto 0);
-signal pixel_row_int, pixel_column_int : integer;
+signal pixel_row_int, pixel_column_int : integer := 0;
 signal tank_A_display_2bit, tank_B_display_2bit : std_logic_vector(1 downto 0);
 signal bullet_A_display_2bit, bullet_B_display_2bit : std_logic_vector(1 downto 0);
 
@@ -92,9 +92,9 @@ begin
 	
 	end process;
 	
-	pixel_row_int <= to_integer(signed(pixel_row));
-	pixel_column_int <= to_integer(signed(pixel_row));
-	
+	pixel_row_int <= to_integer(unsigned(pixel_row));
+	pixel_column_int <= to_integer(unsigned(pixel_column));
+
 	color_out <= color_ram(pixel_row_int)(pixel_column_int);
 	
 	red_out <=	x"FF" when color_out = red else x"00";
