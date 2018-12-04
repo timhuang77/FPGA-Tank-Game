@@ -3,6 +3,8 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use work.game_components.all;
 use work.tank_const.all;
+use work.pixelGenerator;
+
 
 entity VGA_top_level is
 	port(
@@ -32,6 +34,17 @@ component pixelGenerator is
 	port(
 			clk, ROM_clk, rst_n, video_on, eof 				: in std_logic;
 			pixel_row, pixel_column						    : in std_logic_vector(9 downto 0);
+			
+			--tank inputs
+			tank_A_pos : in position;
+			tank_B_pos : in position;
+			tank_A_display, tank_B_display : in std_logic;
+			
+			--bullet inputs
+			bullet_A_pos : in position;
+			bullet_B_pos : in position;
+			bullet_A_display, bullet_B_display : in std_logic;
+			
 			red_out, green_out, blue_out					: out std_logic_vector(7 downto 0)
 		);
 end component pixelGenerator;
@@ -52,8 +65,19 @@ signal video_on_int											: std_logic;
 signal VGA_clk_int											: std_logic;
 signal eof													: std_logic;
 
-begin
+-- signal tank_A_pos_temp, tank_B_pos_temp, bullet_A_pos_temp, bullet_B_pos_temp : position;
+-- signal tank_A_display_temp, tank_B_display_temp, bullet_A_display_temp, bullet_B_display_temp : std_logic;
 
+
+begin
+	-- tank_A_pos_temp <= tank_A_pos;
+	-- tank_B_pos_temp <= tank_B_pos;
+	-- tank_A_display_temp <= tank_A_display;
+	-- tank_B_display_temp <= tank_B_display;
+	-- bullet_A_pos_temp <= bullet_A_pos;
+	-- bullet_B_pos_temp <= bullet_B_pos;
+	-- bullet_A_display_temp <= bullet_A_display;
+	-- bullet_B_display_temp <= bullet_B_display;
 --------------------------------------------------------------------------------------------
 
 	videoGen : pixelGenerator

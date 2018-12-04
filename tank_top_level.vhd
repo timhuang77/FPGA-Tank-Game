@@ -22,7 +22,7 @@ entity tank_top_level is
 		
 		--VGA 
 		VGA_RED, VGA_GREEN, VGA_BLUE : out std_logic_vector(7 downto 0); 
-		HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic
+		HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic;
 		
 		player_speed, player_fire : in std_logic
 	);
@@ -69,6 +69,8 @@ begin
 			cycle <= 0;
 		elsif (rising_edge(clk) and (cycle /= 3)) then
 			cycle <= cycle + 1;
+			-- if (cycle = 2) then
+			
 		elsif (rising_edge(clk) and (cycle = 3)) then
 			global_write_enable <= not global_write_enable;
 			cycle <= 0;

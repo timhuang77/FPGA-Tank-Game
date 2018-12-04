@@ -57,7 +57,51 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity tank
 -- Compiling architecture behavioral of tank
 
-} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd}
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd} {0 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package game_components
+** Error: (vcom-13) Recompile work.tank_functions because work.tank_const has changed.
+** Error (suppressible): W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd(5): (vcom-1195) Cannot find expanded name "work.tank_functions".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd(5): Unknown expanded name.
+-- Loading package tank_const
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd(8): VHDL Compiler exiting
+
+} {8.0 9.0 10.0 11.0 12.0 13.0} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package game_components
+-- Loading package tank_const
+-- Loading package tank_functions
+-- Compiling entity game_logic
+-- Compiling architecture behavioral of game_logic
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd} {0 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package game_components
+-- Loading package tank_const
+-- Compiling entity VGA_top_level
+-- Compiling architecture structural of VGA_top_level
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd(68): (vcom-1484) Unknown formal identifier "tank_A_pos".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd(69): (vcom-1484) Unknown formal identifier "tank_B_pos".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd(70): (vcom-1484) Unknown formal identifier "tank_A_display".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd(71): (vcom-1484) Unknown formal identifier "tank_B_display".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd(72): (vcom-1484) Unknown formal identifier "bullet_A_pos".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd(73): (vcom-1484) Unknown formal identifier "bullet_B_pos".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd(74): (vcom-1484) Unknown formal identifier "bullet_A_display".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd(75): (vcom-1484) Unknown formal identifier "bullet_B_display".
+** Error: W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd(95): VHDL Compiler exiting
+
+} {10.0 19.0} {}} {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO

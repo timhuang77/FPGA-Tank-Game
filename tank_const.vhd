@@ -15,4 +15,10 @@ package tank_const is
 	constant TANK_B_INIT_POS_Y : integer := 0 + TANK_HEIGHT;
 	constant TANK_INIT_SPEED : integer := 10;
 	
+	
+	--Screen dimensions
+	constant row_size : integer := 480;
+	constant col_size : integer := 640;
+	
+	
 end package tank_const;
