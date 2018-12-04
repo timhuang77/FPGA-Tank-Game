@@ -56,7 +56,14 @@ architecture structural of tank_top_level is
 	signal kb_scan_code :  std_logic_vector(7 DOWNTO 0);
 	signal kb_scan_ready : std_logic;
 	signal hist10 : std_logic_vector(15 downto 0);
+	signal bullet_A_fixed : position;
+	signal bullet_B_fixed : position;
+	signal debug_flag_A, debug_flag_B : std_logic := '0';
 begin
+	bullet_A_fixed(0) <= 300;
+	bullet_A_fixed(1) <= 120;
+	bullet_B_fixed(0) <= 250;
+	bullet_B_fixed(1) <= 290;
 	--port map VGA
 	--port map keyboard
 	--port map LCD
@@ -105,17 +112,21 @@ begin
 	keyboard_process: process(clk, reset) is begin
 		if (hist10 = key_W) then
 			player_A_fire <= '1';
+			-- debug_flag_A <= '1';
 		elsif (hist10 = key_D) then
 			player_A_speed <= '1';
+			-- debug_flag_B <= '1';
 		elsif (hist10 = key_5) then
 			player_B_fire <= '1';
+			-- debug_flag_A <= '1';
 		elsif (hist10 = key_3) then
 			player_B_fire <= '1';
-		else
-			player_A_fire <= '0';
-			player_A_speed <= '0';
-			player_B_fire <= '0';
-			player_B_speed <= '0';
+			-- debug_flag_B <= '1';
+		-- else
+			-- player_A_fire <= '0';
+			-- player_A_speed <= '0';
+			-- player_B_fire <= '0';
+			-- player_B_speed <= '0';
 		end if;
 	end process;
 	
@@ -127,10 +138,16 @@ begin
 			tank_B_pos => tank_B_pos_outin,
 			tank_A_display => tank_A_display_flag,
 			tank_B_display => tank_B_display_flag,
+			-- tank_A_display => debug_flag_A,
+			-- tank_B_display => debug_flag_B,
 			bullet_A_pos => bullet_A_pos_outin,
 			bullet_B_pos => bullet_B_pos_outin,
+			-- bullet_A_pos => bullet_A_fixed,
+			-- bullet_B_pos => bullet_B_fixed,
 			bullet_A_display => bullet_A_display_flag,
 			bullet_B_display => bullet_B_display_flag,
+			-- bullet_A_display => '1',
+			-- bullet_B_display => '1',
 			VGA_RED => VGA_RED,
 			VGA_GREEN => VGA_GREEN,
 			VGA_BLUE => VGA_BLUE,
@@ -171,6 +188,7 @@ begin
 			tank_A_display => tank_A_display_flag,
 			bullet_A_pos_in => bullet_A_pos_inout,
 			bullet_A_pos_out => bullet_A_pos_outin,
+			-- bullet_A_fired_in => '1',
 			bullet_A_fired_in => bullet_A_fired_inout,
 			bullet_A_fired_out => bullet_A_fired_outin,
 			bullet_A_display => bullet_A_display_flag,
@@ -186,6 +204,7 @@ begin
 			tank_B_display => tank_B_display_flag,
 			bullet_B_pos_in => bullet_B_pos_inout,
 			bullet_B_pos_out => bullet_B_pos_outin,
+			-- bullet_B_fired_in => '1',
 			bullet_B_fired_in => bullet_B_fired_inout,
 			bullet_B_fired_out => bullet_B_fired_outin,
 			bullet_B_display => bullet_B_display_flag,
@@ -239,7 +258,7 @@ begin
 
 	bullet_B : bullet
 		generic map(
-			default_pos_x => TANK_A_INIT_POS_X,
+			default_pos_x => TANK_B_INIT_POS_X,
 			default_pos_y => TANK_B_INIT_POS_Y
 		)
 		port map(

@@ -73,27 +73,31 @@ begin
 	begin
 
 		if (pixel_row_int > (tank_A_pos(1) - TANK_HEIGHT/2)) then
-			if ((pixel_column_int > (tank_A_pos(0) - TANK_WIDTH/2)) and (pixel_column_int < (tank_A_pos(0) + (TANK_WIDTH/2)))) then
+			if ((pixel_column_int > (tank_A_pos(0) - TANK_WIDTH/2)) and (pixel_column_int < (tank_A_pos(0) + (TANK_WIDTH/2)))
+				and tank_A_display = '1') then
 				color_out_temp := red;
 			else
 				color_out_temp := black;
 			end if;
 		elsif (pixel_row_int < (tank_B_pos(1) + TANK_HEIGHT/2)) then
-			if ((pixel_column_int > (tank_B_pos(0) - TANK_WIDTH/2)) and (pixel_column_int < (tank_B_pos(0) + (TANK_WIDTH/2)))) then
+			if ((pixel_column_int > (tank_B_pos(0) - TANK_WIDTH/2)) and (pixel_column_int < (tank_B_pos(0) + (TANK_WIDTH/2)))
+				and tank_B_display = '1') then
 				color_out_temp := blue;
 			else
 				color_out_temp := black;
 			end if;
-		elsif ((bullet_B_pos(0) - BULLET_WIDTH) < pixel_column_int and pixel_column_int < (bullet_B_pos(0) + BULLET_WIDTH) and
+		else
+			color_out_temp := black;
+		end if;
+		
+		if ((bullet_B_pos(0) - BULLET_WIDTH) < pixel_column_int and pixel_column_int < (bullet_B_pos(0) + BULLET_WIDTH) and
 				(bullet_B_pos(1) - BULLET_HEIGHT) < pixel_row_int and pixel_row_int < (bullet_B_pos(1) + BULLET_HEIGHT) and 
 				bullet_B_display = '1') then
-				color_out_temp := green;
+			color_out_temp := green;
 		elsif ((bullet_A_pos(0) - BULLET_WIDTH) < pixel_column_int and pixel_column_int < (bullet_A_pos(0) + BULLET_WIDTH) and
 				(bullet_A_pos(1) - BULLET_HEIGHT) < pixel_row_int and pixel_row_int < (bullet_A_pos(1) + BULLET_HEIGHT) and
 				bullet_A_display = '1') then
-				color_out_temp := green;
-		else
-			color_out_temp := black;
+			color_out_temp := green;
 		end if;
 		
 		color_out <= color_out_temp;

@@ -116,19 +116,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
 					"name" : "reset_n",
 					"strict" : false
 				},
 				{
-					"name" : "keyboard_data",
-					"strict" : false
-				},
-				{
-					"name" : "keyboard_clk",
+					"name" : "clk",
 					"strict" : false
 				}
 			]

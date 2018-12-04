@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tank_top_level
-Tue Dec 04 02:13:03 2018
+Tue Dec 04 15:58:39 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,21 +13,20 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: tank:tank_A
- 15. Parameter Settings for User Entity Instance: tank:tank_B
- 16. Parameter Settings for User Entity Instance: bullet:bullet_A
- 17. Parameter Settings for User Entity Instance: bullet:bullet_B
- 18. Port Connectivity Checks: "game_logic:logic_component"
- 19. Port Connectivity Checks: "ps2:Keyboard"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: tank:tank_A
+ 14. Parameter Settings for User Entity Instance: tank:tank_B
+ 15. Parameter Settings for User Entity Instance: bullet:bullet_A
+ 16. Parameter Settings for User Entity Instance: bullet:bullet_B
+ 17. Port Connectivity Checks: "game_logic:logic_component"
+ 18. Port Connectivity Checks: "ps2:Keyboard"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -53,15 +52,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 04 02:13:03 2018       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 04 15:58:38 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; tank_top_level                              ;
 ; Top-level Entity Name              ; tank_top_level                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,118                                       ;
-;     Total combinational functions  ; 1,561                                       ;
-;     Dedicated logic registers      ; 1,089                                       ;
-; Total registers                    ; 1089                                        ;
+; Total logic elements               ; 2,058                                       ;
+;     Total combinational functions  ; 1,540                                       ;
+;     Dedicated logic registers      ; 1,039                                       ;
+; Total registers                    ; 1039                                        ;
 ; Total pins                         ; 35                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -169,7 +168,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -201,20 +200,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 2,118         ;
+; Estimated Total logic elements              ; 2,058         ;
 ;                                             ;               ;
-; Total combinational functions               ; 1561          ;
+; Total combinational functions               ; 1540          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 352           ;
-;     -- 3 input functions                    ; 300           ;
-;     -- <=2 input functions                  ; 909           ;
+;     -- 4 input functions                    ; 259           ;
+;     -- 3 input functions                    ; 274           ;
+;     -- <=2 input functions                  ; 1007          ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 696           ;
-;     -- arithmetic mode                      ; 865           ;
+;     -- normal mode                          ; 644           ;
+;     -- arithmetic mode                      ; 896           ;
 ;                                             ;               ;
-; Total registers                             ; 1089          ;
-;     -- Dedicated logic registers            ; 1089          ;
+; Total registers                             ; 1039          ;
+;     -- Dedicated logic registers            ; 1039          ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 35            ;
@@ -222,9 +221,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clock_divided ;
-; Maximum fan-out                             ; 959           ;
-; Total fan-out                               ; 7497          ;
-; Average fan-out                             ; 2.76          ;
+; Maximum fan-out                             ; 961           ;
+; Total fan-out                               ; 7175          ;
+; Average fan-out                             ; 2.71          ;
 +---------------------------------------------+---------------+
 
 
@@ -233,322 +232,356 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name    ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
-; |tank_top_level                  ; 1561 (113)          ; 1089 (66)                 ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |tank_top_level                                                     ; tank_top_level ; work         ;
-;    |VGA_top_level:VGA_component| ; 644 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component                         ; VGA_top_level  ; work         ;
+; |tank_top_level                  ; 1540 (95)           ; 1039 (66)                 ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |tank_top_level                                                     ; tank_top_level ; work         ;
+;    |VGA_top_level:VGA_component| ; 639 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component                         ; VGA_top_level  ; work         ;
 ;       |VGA_SYNC:videoSync|       ; 59 (59)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync      ; VGA_SYNC       ; work         ;
-;       |pixelGenerator:videoGen|  ; 585 (585)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component|pixelGenerator:videoGen ; pixelGenerator ; work         ;
+;       |pixelGenerator:videoGen|  ; 580 (580)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component|pixelGenerator:videoGen ; pixelGenerator ; work         ;
 ;    |bullet:bullet_A|             ; 21 (21)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_A                                     ; bullet         ; work         ;
 ;    |bullet:bullet_B|             ; 22 (22)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_B                                     ; bullet         ; work         ;
-;    |game_logic:logic_component|  ; 710 (710)           ; 465 (465)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|game_logic:logic_component                          ; game_logic     ; work         ;
-;    |ps2:Keyboard|                ; 19 (0)              ; 52 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|ps2:Keyboard                                        ; ps2            ; work         ;
-;       |keyboard:u1|              ; 17 (17)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|ps2:Keyboard|keyboard:u1                            ; keyboard       ; work         ;
-;       |oneshot:pulser|           ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|ps2:Keyboard|oneshot:pulser                         ; oneshot        ; work         ;
+;    |game_logic:logic_component|  ; 731 (731)           ; 467 (467)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|game_logic:logic_component                          ; game_logic     ; work         ;
 ;    |tank:tank_A|                 ; 20 (20)             ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|tank:tank_A                                         ; tank           ; work         ;
 ;    |tank:tank_B|                 ; 12 (12)             ; 68 (68)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|tank:tank_B                                         ; tank           ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; player_B_fire                                      ; player_B_fire       ; yes                    ;
-; player_A_fire                                      ; player_B_speed      ; yes                    ;
-; player_A_speed                                     ; player_A_speed      ; yes                    ;
-; Number of user-specified and inferred latches = 3  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                    ;
++----------------------------------------------------------------+----------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal                                                   ;
++----------------------------------------------------------------+----------------------------------------------------------------------+
+; game_logic:logic_component|tank_B_display                      ; Stuck at VCC due to stuck port data_in                               ;
+; game_logic:logic_component|tank_A_display                      ; Stuck at VCC due to stuck port data_in                               ;
+; game_logic:logic_component|tank_A_pos_out[1][31]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][0]          ;
+; game_logic:logic_component|tank_B_pos_out[1][0]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][0]          ;
+; game_logic:logic_component|tank_B_pos_out[1][31]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][0]          ;
+; game_logic:logic_component|tank_A_pos_out[1][6]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]          ;
+; game_logic:logic_component|tank_A_pos_out[1][7]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]          ;
+; game_logic:logic_component|tank_A_pos_out[1][8]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]          ;
+; game_logic:logic_component|tank_B_pos_out[1][1]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]          ;
+; game_logic:logic_component|tank_B_pos_out[1][2]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]          ;
+; game_logic:logic_component|tank_B_pos_out[1][3]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]          ;
+; game_logic:logic_component|tank_B_pos_out[1][4]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]          ;
+; game_logic:logic_component|tank_A_pos[1][31]                   ; Merged with game_logic:logic_component|tank_A_pos[1][0]              ;
+; game_logic:logic_component|tank_B_pos[1][0]                    ; Merged with game_logic:logic_component|tank_A_pos[1][0]              ;
+; game_logic:logic_component|tank_B_pos[1][31]                   ; Merged with game_logic:logic_component|tank_A_pos[1][0]              ;
+; game_logic:logic_component|tank_A_pos[1][6]                    ; Merged with game_logic:logic_component|tank_A_pos[1][1]              ;
+; game_logic:logic_component|tank_A_pos[1][7]                    ; Merged with game_logic:logic_component|tank_A_pos[1][1]              ;
+; game_logic:logic_component|tank_A_pos[1][8]                    ; Merged with game_logic:logic_component|tank_A_pos[1][1]              ;
+; game_logic:logic_component|tank_B_pos[1][1]                    ; Merged with game_logic:logic_component|tank_A_pos[1][1]              ;
+; game_logic:logic_component|tank_B_pos[1][2]                    ; Merged with game_logic:logic_component|tank_A_pos[1][1]              ;
+; game_logic:logic_component|tank_B_pos[1][3]                    ; Merged with game_logic:logic_component|tank_A_pos[1][1]              ;
+; game_logic:logic_component|tank_B_pos[1][4]                    ; Merged with game_logic:logic_component|tank_A_pos[1][1]              ;
+; tank:tank_A|pos_out[1][31]                                     ; Merged with tank:tank_A|pos_out[1][0]                                ;
+; tank:tank_B|pos_out[1][0]                                      ; Merged with tank:tank_A|pos_out[1][0]                                ;
+; tank:tank_B|pos_out[1][31]                                     ; Merged with tank:tank_A|pos_out[1][0]                                ;
+; tank:tank_A|pos_out[1][6]                                      ; Merged with tank:tank_A|pos_out[1][1]                                ;
+; tank:tank_A|pos_out[1][7]                                      ; Merged with tank:tank_A|pos_out[1][1]                                ;
+; tank:tank_A|pos_out[1][8]                                      ; Merged with tank:tank_A|pos_out[1][1]                                ;
+; tank:tank_B|pos_out[1][1]                                      ; Merged with tank:tank_A|pos_out[1][1]                                ;
+; tank:tank_B|pos_out[1][2]                                      ; Merged with tank:tank_A|pos_out[1][1]                                ;
+; tank:tank_B|pos_out[1][3]                                      ; Merged with tank:tank_A|pos_out[1][1]                                ;
+; tank:tank_B|pos_out[1][4]                                      ; Merged with tank:tank_A|pos_out[1][1]                                ;
+; tank:tank_A|curr_pos[1][31]                                    ; Merged with tank:tank_A|curr_pos[1][0]                               ;
+; tank:tank_B|curr_pos[1][0]                                     ; Merged with tank:tank_A|curr_pos[1][0]                               ;
+; tank:tank_B|curr_pos[1][31]                                    ; Merged with tank:tank_A|curr_pos[1][0]                               ;
+; tank:tank_A|curr_pos[1][6]                                     ; Merged with tank:tank_A|curr_pos[1][1]                               ;
+; tank:tank_A|curr_pos[1][7]                                     ; Merged with tank:tank_A|curr_pos[1][1]                               ;
+; tank:tank_A|curr_pos[1][8]                                     ; Merged with tank:tank_A|curr_pos[1][1]                               ;
+; tank:tank_B|curr_pos[1][1]                                     ; Merged with tank:tank_A|curr_pos[1][1]                               ;
+; tank:tank_B|curr_pos[1][2]                                     ; Merged with tank:tank_A|curr_pos[1][1]                               ;
+; tank:tank_B|curr_pos[1][3]                                     ; Merged with tank:tank_A|curr_pos[1][1]                               ;
+; tank:tank_B|curr_pos[1][4]                                     ; Merged with tank:tank_A|curr_pos[1][1]                               ;
+; game_logic:logic_component|tank_A_pos_out[1][11]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][12]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][13]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][14]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][15]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][16]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][17]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][18]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][19]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][20]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][21]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][22]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][23]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][24]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][25]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][26]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][27]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][28]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][29]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][2]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][30]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][3]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][4]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][5]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos_out[1][9]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][10]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][11]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][12]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][13]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][14]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][15]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][16]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][17]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][18]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][19]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][20]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][21]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][22]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][23]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][24]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][25]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][26]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][27]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][28]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][29]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][30]               ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][5]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][6]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][7]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][8]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_B_pos_out[1][9]                ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]         ;
+; game_logic:logic_component|tank_A_pos[1][11]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][12]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][13]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][14]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][15]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][16]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][17]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][18]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][19]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][20]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][21]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][22]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][23]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][24]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][25]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][26]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][27]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][28]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][29]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][2]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][30]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][3]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][4]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][5]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_A_pos[1][9]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][10]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][11]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][12]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][13]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][14]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][15]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][16]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][17]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][18]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][19]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][20]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][21]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][22]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][23]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][24]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][25]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][26]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][27]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][28]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][29]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][30]                   ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][5]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][6]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][7]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][8]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; game_logic:logic_component|tank_B_pos[1][9]                    ; Merged with game_logic:logic_component|tank_A_pos[1][10]             ;
+; tank:tank_A|pos_out[1][11]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][12]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][13]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][14]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][15]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][16]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][17]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][18]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][19]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][20]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][21]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][22]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][23]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][24]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][25]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][26]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][27]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][28]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][29]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][2]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][30]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][3]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][4]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][5]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|pos_out[1][9]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][10]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][11]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][12]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][13]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][14]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][15]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][16]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][17]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][18]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][19]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][20]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][21]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][22]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][23]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][24]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][25]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][26]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][27]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][28]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][29]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][30]                                     ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][5]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][6]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][7]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][8]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_B|pos_out[1][9]                                      ; Merged with tank:tank_A|pos_out[1][10]                               ;
+; tank:tank_A|curr_pos[1][11]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][12]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][13]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][14]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][15]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][16]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][17]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][18]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][19]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][20]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][21]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][22]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][23]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][24]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][25]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][26]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][27]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][28]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][29]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][2]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][30]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][3]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][4]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][5]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|curr_pos[1][9]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][10]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][11]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][12]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][13]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][14]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][15]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][16]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][17]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][18]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][19]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][20]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][21]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][22]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][23]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][24]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][25]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][26]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][27]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][28]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][29]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][30]                                    ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][5]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][6]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][7]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][8]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_B|curr_pos[1][9]                                     ; Merged with tank:tank_A|curr_pos[1][10]                              ;
+; tank:tank_A|pos_out[1][10]                                     ; Stuck at GND due to stuck port data_in                               ;
+; game_logic:logic_component|tank_A_pos[1][10]                   ; Stuck at GND due to stuck port data_in                               ;
+; game_logic:logic_component|tank_A_pos_out[1][10]               ; Stuck at GND due to stuck port data_in                               ;
+; tank:tank_A|curr_pos[1][10]                                    ; Stuck at GND due to stuck port data_in                               ;
+; game_logic:logic_component|\speed_update:speed_B_updated       ; Stuck at GND due to stuck port data_in                               ;
+; game_logic:logic_component|\speed_update:speed_B_temp[2,4..30] ; Stuck at GND due to stuck port data_in                               ;
+; game_logic:logic_component|tank_B_speed_out[2,4..30]           ; Stuck at GND due to stuck port data_in                               ;
+; tank:tank_B|curr_speed[2,4..30]                                ; Stuck at GND due to stuck port data_in                               ;
+; tank:tank_B|speed_out[2,4..30]                                 ; Stuck at GND due to stuck port data_in                               ;
+; VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_row[9]    ; Stuck at GND due to stuck port data_in                               ;
+; tank:tank_B|speed_out[31]                                      ; Merged with tank:tank_B|speed_out[0]                                 ;
+; tank:tank_B|speed_out[3]                                       ; Merged with tank:tank_B|speed_out[1]                                 ;
+; tank:tank_B|curr_speed[31]                                     ; Merged with tank:tank_B|curr_speed[0]                                ;
+; tank:tank_B|curr_speed[3]                                      ; Merged with tank:tank_B|curr_speed[1]                                ;
+; game_logic:logic_component|tank_B_speed_out[31]                ; Merged with game_logic:logic_component|tank_B_speed_out[0]           ;
+; game_logic:logic_component|tank_B_speed_out[3]                 ; Merged with game_logic:logic_component|tank_B_speed_out[1]           ;
+; game_logic:logic_component|\speed_update:speed_B_temp[31]      ; Merged with game_logic:logic_component|\speed_update:speed_B_temp[0] ;
+; game_logic:logic_component|\speed_update:speed_B_temp[3]       ; Merged with game_logic:logic_component|\speed_update:speed_B_temp[1] ;
+; Total Number of Removed Registers = 372                        ;                                                                      ;
++----------------------------------------------------------------+----------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                           ;
-+----------------------------------------------------------------------+-----------------------------------------------------------------------+
-; Register name                                                        ; Reason for Removal                                                    ;
-+----------------------------------------------------------------------+-----------------------------------------------------------------------+
-; game_logic:logic_component|\speed_update:speed_B_updated             ; Lost fanout                                                           ;
-; game_logic:logic_component|bullet_A_fired_out                        ; Merged with game_logic:logic_component|bullet_A_display               ;
-; game_logic:logic_component|bullet_B_fired_out                        ; Merged with game_logic:logic_component|bullet_B_display               ;
-; game_logic:logic_component|tank_A_pos_out[1][31]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][0]           ;
-; game_logic:logic_component|tank_B_pos_out[1][0]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][0]           ;
-; game_logic:logic_component|tank_B_pos_out[1][31]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][0]           ;
-; game_logic:logic_component|tank_A_pos_out[1][6]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]           ;
-; game_logic:logic_component|tank_A_pos_out[1][7]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]           ;
-; game_logic:logic_component|tank_A_pos_out[1][8]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]           ;
-; game_logic:logic_component|tank_B_pos_out[1][1]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]           ;
-; game_logic:logic_component|tank_B_pos_out[1][2]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]           ;
-; game_logic:logic_component|tank_B_pos_out[1][3]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]           ;
-; game_logic:logic_component|tank_B_pos_out[1][4]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][1]           ;
-; game_logic:logic_component|tank_A_pos[1][11]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][12]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][13]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][14]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][15]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][16]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][17]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][18]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][19]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][20]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][21]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][22]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][23]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][24]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][25]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][26]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][27]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][28]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][29]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][2]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][30]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][3]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][4]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][5]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][9]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][10]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][11]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][12]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][13]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][14]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][15]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][16]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][17]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][18]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][19]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][20]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][21]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][22]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][23]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][24]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][25]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][26]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][27]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][28]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][29]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][30]                         ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][5]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][6]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][7]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][8]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_B_pos[1][9]                          ; Merged with game_logic:logic_component|tank_A_pos[1][10]              ;
-; game_logic:logic_component|tank_A_pos[1][6]                          ; Merged with game_logic:logic_component|tank_A_pos[1][1]               ;
-; game_logic:logic_component|tank_A_pos[1][7]                          ; Merged with game_logic:logic_component|tank_A_pos[1][1]               ;
-; game_logic:logic_component|tank_A_pos[1][8]                          ; Merged with game_logic:logic_component|tank_A_pos[1][1]               ;
-; game_logic:logic_component|tank_B_pos[1][1]                          ; Merged with game_logic:logic_component|tank_A_pos[1][1]               ;
-; game_logic:logic_component|tank_B_pos[1][2]                          ; Merged with game_logic:logic_component|tank_A_pos[1][1]               ;
-; game_logic:logic_component|tank_B_pos[1][3]                          ; Merged with game_logic:logic_component|tank_A_pos[1][1]               ;
-; game_logic:logic_component|tank_B_pos[1][4]                          ; Merged with game_logic:logic_component|tank_A_pos[1][1]               ;
-; tank:tank_A|pos_out[1][11]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][12]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][13]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][14]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][15]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][16]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][17]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][18]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][19]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][20]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][21]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][22]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][23]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][24]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][25]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][26]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][27]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][28]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][29]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][2]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][30]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][3]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][4]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][5]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][9]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][10]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][11]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][12]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][13]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][14]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][15]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][16]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][17]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][18]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][19]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][20]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][21]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][22]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][23]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][24]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][25]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][26]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][27]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][28]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][29]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][30]                                           ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][5]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][6]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][7]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][8]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_B|pos_out[1][9]                                            ; Merged with tank:tank_A|pos_out[1][10]                                ;
-; tank:tank_A|pos_out[1][6]                                            ; Merged with tank:tank_A|pos_out[1][1]                                 ;
-; tank:tank_A|pos_out[1][7]                                            ; Merged with tank:tank_A|pos_out[1][1]                                 ;
-; tank:tank_A|pos_out[1][8]                                            ; Merged with tank:tank_A|pos_out[1][1]                                 ;
-; tank:tank_B|pos_out[1][1]                                            ; Merged with tank:tank_A|pos_out[1][1]                                 ;
-; tank:tank_B|pos_out[1][2]                                            ; Merged with tank:tank_A|pos_out[1][1]                                 ;
-; tank:tank_B|pos_out[1][3]                                            ; Merged with tank:tank_A|pos_out[1][1]                                 ;
-; tank:tank_B|pos_out[1][4]                                            ; Merged with tank:tank_A|pos_out[1][1]                                 ;
-; tank:tank_B|speed_out[31]                                            ; Merged with tank:tank_B|speed_out[0]                                  ;
-; tank:tank_B|speed_out[3]                                             ; Merged with tank:tank_B|speed_out[1]                                  ;
-; tank:tank_A|curr_pos[1][11]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][12]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][13]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][14]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][15]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][16]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][17]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][18]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][19]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][20]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][21]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][22]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][23]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][24]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][25]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][26]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][27]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][28]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][29]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][2]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][30]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][3]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][4]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][5]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][9]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][10]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][11]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][12]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][13]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][14]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][15]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][16]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][17]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][18]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][19]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][20]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][21]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][22]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][23]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][24]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][25]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][26]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][27]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][28]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][29]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][30]                                          ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][5]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][6]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][7]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][8]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_B|curr_pos[1][9]                                           ; Merged with tank:tank_A|curr_pos[1][10]                               ;
-; tank:tank_A|curr_pos[1][6]                                           ; Merged with tank:tank_A|curr_pos[1][1]                                ;
-; tank:tank_A|curr_pos[1][7]                                           ; Merged with tank:tank_A|curr_pos[1][1]                                ;
-; tank:tank_A|curr_pos[1][8]                                           ; Merged with tank:tank_A|curr_pos[1][1]                                ;
-; tank:tank_B|curr_pos[1][1]                                           ; Merged with tank:tank_A|curr_pos[1][1]                                ;
-; tank:tank_B|curr_pos[1][2]                                           ; Merged with tank:tank_A|curr_pos[1][1]                                ;
-; tank:tank_B|curr_pos[1][3]                                           ; Merged with tank:tank_A|curr_pos[1][1]                                ;
-; tank:tank_B|curr_pos[1][4]                                           ; Merged with tank:tank_A|curr_pos[1][1]                                ;
-; tank:tank_B|curr_speed[31]                                           ; Merged with tank:tank_B|curr_speed[0]                                 ;
-; tank:tank_B|curr_speed[3]                                            ; Merged with tank:tank_B|curr_speed[1]                                 ;
-; game_logic:logic_component|tank_B_speed_out[31]                      ; Merged with game_logic:logic_component|tank_B_speed_out[0]            ;
-; game_logic:logic_component|tank_B_speed_out[3]                       ; Merged with game_logic:logic_component|tank_B_speed_out[1]            ;
-; game_logic:logic_component|\speed_update:speed_B_temp[31]            ; Merged with game_logic:logic_component|\speed_update:speed_B_temp[0]  ;
-; game_logic:logic_component|\speed_update:speed_B_temp[3]             ; Merged with game_logic:logic_component|\speed_update:speed_B_temp[1]  ;
-; game_logic:logic_component|tank_A_pos_out[1][11]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][12]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][13]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][14]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][15]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][16]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][17]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][18]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][19]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][20]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][21]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][22]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][23]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][24]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][25]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][26]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][27]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][28]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][29]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][2]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][30]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][3]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][4]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][5]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos_out[1][9]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][10]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][11]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][12]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][13]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][14]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][15]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][16]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][17]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][18]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][19]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][20]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][21]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][22]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][23]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][24]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][25]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][26]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][27]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][28]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][29]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][30]                     ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][5]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][6]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][7]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][8]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_B_pos_out[1][9]                      ; Merged with game_logic:logic_component|tank_A_pos_out[1][10]          ;
-; game_logic:logic_component|tank_A_pos[1][31]                         ; Merged with game_logic:logic_component|tank_A_pos[1][0]               ;
-; game_logic:logic_component|tank_B_pos[1][0]                          ; Merged with game_logic:logic_component|tank_A_pos[1][0]               ;
-; game_logic:logic_component|tank_B_pos[1][31]                         ; Merged with game_logic:logic_component|tank_A_pos[1][0]               ;
-; tank:tank_A|pos_out[1][31]                                           ; Merged with tank:tank_A|pos_out[1][0]                                 ;
-; tank:tank_B|pos_out[1][0]                                            ; Merged with tank:tank_A|pos_out[1][0]                                 ;
-; tank:tank_B|pos_out[1][31]                                           ; Merged with tank:tank_A|pos_out[1][0]                                 ;
-; tank:tank_B|speed_out[2,4..9,11..30]                                 ; Merged with tank:tank_B|speed_out[10]                                 ;
-; tank:tank_A|curr_pos[1][31]                                          ; Merged with tank:tank_A|curr_pos[1][0]                                ;
-; tank:tank_B|curr_pos[1][0]                                           ; Merged with tank:tank_A|curr_pos[1][0]                                ;
-; tank:tank_B|curr_pos[1][31]                                          ; Merged with tank:tank_A|curr_pos[1][0]                                ;
-; tank:tank_B|curr_speed[2,4..9,11..30]                                ; Merged with tank:tank_B|curr_speed[10]                                ;
-; game_logic:logic_component|tank_B_speed_out[2,4..9,11..30]           ; Merged with game_logic:logic_component|tank_B_speed_out[10]           ;
-; game_logic:logic_component|\speed_update:speed_B_temp[2,4..9,11..30] ; Merged with game_logic:logic_component|\speed_update:speed_B_temp[10] ;
-; tank:tank_B|speed_out[10]                                            ; Stuck at GND due to stuck port data_in                                ;
-; tank:tank_A|pos_out[1][10]                                           ; Stuck at GND due to stuck port data_in                                ;
-; game_logic:logic_component|\speed_update:speed_B_temp[10]            ; Stuck at GND due to stuck port data_in                                ;
-; game_logic:logic_component|tank_B_speed_out[10]                      ; Stuck at GND due to stuck port data_in                                ;
-; game_logic:logic_component|tank_A_pos[1][10]                         ; Stuck at GND due to stuck port data_in                                ;
-; tank:tank_B|curr_speed[10]                                           ; Stuck at GND due to stuck port data_in                                ;
-; game_logic:logic_component|tank_A_pos_out[1][10]                     ; Stuck at GND due to stuck port data_in                                ;
-; tank:tank_A|curr_pos[1][10]                                          ; Stuck at GND due to stuck port data_in                                ;
-; VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_row[9]          ; Stuck at GND due to stuck port data_in                                ;
-; Total Number of Removed Registers = 372                              ;                                                                       ;
-+----------------------------------------------------------------------+-----------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                            ;
-+----------------------------+---------------------------+-------------------------------------------------------------------------------+
-; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                        ;
-+----------------------------+---------------------------+-------------------------------------------------------------------------------+
-; tank:tank_B|speed_out[10]  ; Stuck at GND              ; game_logic:logic_component|\speed_update:speed_B_temp[10],                    ;
-;                            ; due to stuck port data_in ; game_logic:logic_component|tank_B_speed_out[10], tank:tank_B|curr_speed[10]   ;
-; tank:tank_A|pos_out[1][10] ; Stuck at GND              ; game_logic:logic_component|tank_A_pos[1][10],                                 ;
-;                            ; due to stuck port data_in ; game_logic:logic_component|tank_A_pos_out[1][10], tank:tank_A|curr_pos[1][10] ;
-+----------------------------+---------------------------+-------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                           ;
++-----------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; Register name                                             ; Reason for Removal        ; Registers Removed due to This Register                                        ;
++-----------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; tank:tank_A|pos_out[1][10]                                ; Stuck at GND              ; game_logic:logic_component|tank_A_pos[1][10],                                 ;
+;                                                           ; due to stuck port data_in ; game_logic:logic_component|tank_A_pos_out[1][10], tank:tank_A|curr_pos[1][10] ;
+; game_logic:logic_component|\speed_update:speed_B_temp[2]  ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[2], tank:tank_B|curr_speed[2],    ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[2]                                                      ;
+; game_logic:logic_component|\speed_update:speed_B_temp[4]  ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[4], tank:tank_B|curr_speed[4],    ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[4]                                                      ;
+; game_logic:logic_component|\speed_update:speed_B_temp[5]  ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[5], tank:tank_B|curr_speed[5],    ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[5]                                                      ;
+; game_logic:logic_component|\speed_update:speed_B_temp[6]  ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[6], tank:tank_B|curr_speed[6],    ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[6]                                                      ;
+; game_logic:logic_component|\speed_update:speed_B_temp[7]  ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[7], tank:tank_B|curr_speed[7],    ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[7]                                                      ;
+; game_logic:logic_component|\speed_update:speed_B_temp[8]  ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[8], tank:tank_B|curr_speed[8],    ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[8]                                                      ;
+; game_logic:logic_component|\speed_update:speed_B_temp[9]  ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[9], tank:tank_B|curr_speed[9],    ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[9]                                                      ;
+; game_logic:logic_component|\speed_update:speed_B_temp[10] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[10], tank:tank_B|curr_speed[10],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[10]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[11] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[11], tank:tank_B|curr_speed[11],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[11]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[12] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[12], tank:tank_B|curr_speed[12],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[12]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[13] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[13], tank:tank_B|curr_speed[13],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[13]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[14] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[14], tank:tank_B|curr_speed[14],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[14]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[15] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[15], tank:tank_B|curr_speed[15],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[15]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[16] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[16], tank:tank_B|curr_speed[16],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[16]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[17] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[17], tank:tank_B|curr_speed[17],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[17]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[18] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[18], tank:tank_B|curr_speed[18],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[18]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[19] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[19], tank:tank_B|curr_speed[19],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[19]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[20] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[20], tank:tank_B|curr_speed[20],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[20]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[21] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[21], tank:tank_B|curr_speed[21],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[21]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[22] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[22], tank:tank_B|curr_speed[22],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[22]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[23] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[23], tank:tank_B|curr_speed[23],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[23]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[24] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[24], tank:tank_B|curr_speed[24],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[24]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[25] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[25], tank:tank_B|curr_speed[25],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[25]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[26] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[26], tank:tank_B|curr_speed[26],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[26]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[27] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[27], tank:tank_B|curr_speed[27],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[27]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[28] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[28], tank:tank_B|curr_speed[28],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[28]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[29] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[29], tank:tank_B|curr_speed[29],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[29]                                                     ;
+; game_logic:logic_component|\speed_update:speed_B_temp[30] ; Stuck at GND              ; game_logic:logic_component|tank_B_speed_out[30], tank:tank_B|curr_speed[30],  ;
+;                                                           ; due to stuck port data_in ; tank:tank_B|speed_out[30]                                                     ;
++-----------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -556,12 +589,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1089  ;
-; Number of registers using Synchronous Clear  ; 3     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 265   ;
+; Total registers                              ; 1039  ;
+; Number of registers using Synchronous Clear  ; 2     ;
+; Number of registers using Synchronous Load   ; 30    ;
+; Number of registers using Asynchronous Clear ; 266   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 972   ;
+; Number of registers using Clock Enable       ; 944   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -571,53 +604,48 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------------------------+---------+
 ; Inverted Register                                         ; Fan out ;
 +-----------------------------------------------------------+---------+
+; game_logic:logic_component|bullet_B_pos_out[0][0]         ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[1][0]         ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[0][31]        ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[1][31]        ; 3       ;
+; game_logic:logic_component|bullet_A_pos_out[0][0]         ; 3       ;
+; game_logic:logic_component|bullet_A_pos_out[1][0]         ; 3       ;
+; game_logic:logic_component|bullet_A_pos_out[0][31]        ; 3       ;
+; game_logic:logic_component|bullet_A_pos_out[1][31]        ; 3       ;
 ; game_logic:logic_component|tank_A_pos_out[0][31]          ; 3       ;
 ; game_logic:logic_component|tank_A_pos_out[0][0]           ; 4       ;
-; game_logic:logic_component|tank_A_pos_out[1][0]           ; 4       ;
-; game_logic:logic_component|tank_B_pos_out[0][31]          ; 3       ;
+; game_logic:logic_component|tank_A_pos_out[1][0]           ; 3       ;
 ; game_logic:logic_component|tank_B_pos_out[0][0]           ; 4       ;
-; game_logic:logic_component|bullet_B_pos_out[0][31]        ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[0][0]         ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[1][31]        ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[1][0]         ; 3       ;
-; game_logic:logic_component|bullet_A_pos_out[0][31]        ; 3       ;
-; game_logic:logic_component|bullet_A_pos_out[0][0]         ; 3       ;
-; game_logic:logic_component|bullet_A_pos_out[1][31]        ; 3       ;
-; game_logic:logic_component|bullet_A_pos_out[1][0]         ; 3       ;
-; game_logic:logic_component|tank_A_pos[0][31]              ; 4       ;
-; game_logic:logic_component|tank_A_pos[0][0]               ; 4       ;
-; game_logic:logic_component|tank_A_pos[1][0]               ; 5       ;
-; game_logic:logic_component|tank_B_pos[0][31]              ; 4       ;
-; game_logic:logic_component|tank_B_pos[0][0]               ; 4       ;
-; game_logic:logic_component|bullet_B_pos[0][31]            ; 1       ;
+; game_logic:logic_component|tank_B_pos_out[0][31]          ; 3       ;
 ; game_logic:logic_component|bullet_B_pos[1][31]            ; 2       ;
 ; game_logic:logic_component|bullet_B_pos[1][0]             ; 2       ;
+; game_logic:logic_component|tank_B_pos[0][0]               ; 4       ;
 ; game_logic:logic_component|bullet_B_pos[0][0]             ; 1       ;
-; game_logic:logic_component|bullet_A_pos[0][31]            ; 1       ;
-; game_logic:logic_component|bullet_A_pos[1][0]             ; 2       ;
+; game_logic:logic_component|tank_A_pos[1][0]               ; 5       ;
+; game_logic:logic_component|tank_B_pos[0][31]              ; 4       ;
+; game_logic:logic_component|bullet_B_pos[0][31]            ; 1       ;
+; game_logic:logic_component|bullet_A_pos[1][0]             ; 3       ;
 ; game_logic:logic_component|bullet_A_pos[1][31]            ; 2       ;
+; game_logic:logic_component|tank_A_pos[0][0]               ; 4       ;
 ; game_logic:logic_component|bullet_A_pos[0][0]             ; 1       ;
-; tank:tank_A|speed_out[31]                                 ; 4       ;
-; tank:tank_A|pos_out[0][31]                                ; 1       ;
-; tank:tank_A|speed_out[0]                                  ; 2       ;
-; tank:tank_A|pos_out[0][0]                                 ; 1       ;
-; tank:tank_A|pos_out[1][0]                                 ; 1       ;
+; game_logic:logic_component|tank_A_pos[0][31]              ; 4       ;
+; game_logic:logic_component|bullet_A_pos[0][31]            ; 1       ;
 ; tank:tank_B|speed_out[0]                                  ; 2       ;
-; tank:tank_B|pos_out[0][31]                                ; 1       ;
 ; tank:tank_B|pos_out[0][0]                                 ; 1       ;
-; bullet:bullet_B|pos_out[0][31]                            ; 1       ;
 ; bullet:bullet_B|pos_out[1][31]                            ; 1       ;
 ; bullet:bullet_B|pos_out[1][0]                             ; 2       ;
 ; bullet:bullet_B|pos_out[0][0]                             ; 1       ;
-; bullet:bullet_A|pos_out[0][31]                            ; 1       ;
+; tank:tank_A|pos_out[1][0]                                 ; 1       ;
+; tank:tank_B|pos_out[0][31]                                ; 1       ;
+; bullet:bullet_B|pos_out[0][31]                            ; 1       ;
+; tank:tank_A|speed_out[0]                                  ; 2       ;
+; tank:tank_A|pos_out[0][0]                                 ; 1       ;
 ; bullet:bullet_A|pos_out[1][0]                             ; 2       ;
 ; bullet:bullet_A|pos_out[1][31]                            ; 1       ;
 ; bullet:bullet_A|pos_out[0][0]                             ; 1       ;
-; tank:tank_A|curr_pos[0][8]                                ; 1       ;
-; tank:tank_A|curr_pos[0][6]                                ; 1       ;
-; tank:tank_A|curr_speed[3]                                 ; 1       ;
-; tank:tank_A|curr_speed[1]                                 ; 1       ;
-; tank:tank_A|curr_pos[1][1]                                ; 1       ;
+; tank:tank_A|speed_out[31]                                 ; 4       ;
+; tank:tank_A|pos_out[0][31]                                ; 1       ;
+; bullet:bullet_A|pos_out[0][31]                            ; 1       ;
 ; tank:tank_B|curr_pos[0][8]                                ; 1       ;
 ; tank:tank_B|curr_pos[0][6]                                ; 1       ;
 ; tank:tank_B|curr_speed[1]                                 ; 1       ;
@@ -627,18 +655,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; bullet:bullet_B|curr_pos[1][1]                            ; 1       ;
 ; bullet:bullet_B|curr_pos[0][8]                            ; 1       ;
 ; bullet:bullet_B|curr_pos[0][6]                            ; 1       ;
-; bullet:bullet_A|curr_pos[1][1]                            ; 1       ;
-; bullet:bullet_A|curr_pos[1][6]                            ; 1       ;
-; bullet:bullet_A|curr_pos[1][7]                            ; 1       ;
+; tank:tank_A|curr_pos[1][1]                                ; 1       ;
+; tank:tank_A|curr_pos[0][8]                                ; 1       ;
+; tank:tank_A|curr_pos[0][6]                                ; 1       ;
+; tank:tank_A|curr_speed[3]                                 ; 1       ;
+; tank:tank_A|curr_speed[1]                                 ; 1       ;
 ; bullet:bullet_A|curr_pos[1][8]                            ; 1       ;
+; bullet:bullet_A|curr_pos[1][7]                            ; 1       ;
+; bullet:bullet_A|curr_pos[1][6]                            ; 1       ;
+; bullet:bullet_A|curr_pos[1][1]                            ; 1       ;
 ; bullet:bullet_A|curr_pos[0][8]                            ; 1       ;
 ; bullet:bullet_A|curr_pos[0][6]                            ; 1       ;
-; game_logic:logic_component|tank_A_speed_out[31]           ; 1       ;
-; game_logic:logic_component|tank_A_speed_out[0]            ; 1       ;
 ; game_logic:logic_component|tank_B_speed_out[0]            ; 1       ;
-; game_logic:logic_component|\speed_update:speed_A_temp[31] ; 1       ;
-; game_logic:logic_component|\speed_update:speed_A_temp[0]  ; 1       ;
+; game_logic:logic_component|tank_A_speed_out[0]            ; 1       ;
+; game_logic:logic_component|tank_A_speed_out[31]           ; 1       ;
 ; game_logic:logic_component|\speed_update:speed_B_temp[0]  ; 1       ;
+; game_logic:logic_component|\speed_update:speed_A_temp[0]  ; 1       ;
+; game_logic:logic_component|\speed_update:speed_A_temp[31] ; 1       ;
 ; Total number of inverted registers = 68                   ;         ;
 +-----------------------------------------------------------+---------+
 
@@ -648,15 +681,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync|v_count[9] ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[10] ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[1][13]        ;
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[0][19]        ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[1][7]         ;
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][14]        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|ps2:Keyboard|keyboard:u1|INCNT[3]                         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[0][31]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][31]        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync|v_count[4] ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[12] ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[10] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
@@ -709,7 +736,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port           ; Type   ; Severity ; Details                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
-; player_b_speed ; Input  ; Info     ; Stuck at GND                                                                        ;
+; player_a_speed ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; player_a_fire  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; player_b_fire  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; score_a_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; score_b_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -724,6 +753,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; scan_readyo ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; hist3       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; hist2       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hist1       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hist0       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -733,24 +764,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 35                          ;
-; cycloneiii_ff         ; 1089                        ;
-;     CLR               ; 35                          ;
-;     ENA               ; 742                         ;
-;     ENA CLR           ; 230                         ;
-;     SCLR              ; 3                           ;
-;     plain             ; 79                          ;
-; cycloneiii_lcell_comb ; 1561                        ;
-;     arith             ; 865                         ;
-;         2 data inputs ; 690                         ;
+; cycloneiii_ff         ; 1039                        ;
+;     CLR               ; 33                          ;
+;     ENA               ; 681                         ;
+;     ENA CLR           ; 233                         ;
+;     ENA SLD           ; 30                          ;
+;     SCLR              ; 2                           ;
+;     plain             ; 60                          ;
+; cycloneiii_lcell_comb ; 1542                        ;
+;     arith             ; 896                         ;
+;         2 data inputs ; 721                         ;
 ;         3 data inputs ; 175                         ;
-;     normal            ; 696                         ;
-;         1 data inputs ; 107                         ;
-;         2 data inputs ; 112                         ;
-;         3 data inputs ; 125                         ;
-;         4 data inputs ; 352                         ;
+;     normal            ; 646                         ;
+;         1 data inputs ; 109                         ;
+;         2 data inputs ; 179                         ;
+;         3 data inputs ; 99                          ;
+;         4 data inputs ; 259                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.50                       ;
-; Average LUT depth     ; 5.34                        ;
+; Average LUT depth     ; 5.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -769,7 +801,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 04 02:12:46 2018
+    Info: Processing started: Tue Dec 04 15:58:22 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tank_top_level -c tank_top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -813,26 +845,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file bullet.
     Info (12023): Found entity 1: bullet File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 7
 Info (12127): Elaborating entity "tank_top_level" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(39): object "score_A_signal" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 39
+Warning (10541): VHDL Signal Declaration warning at tank_top_level.vhd(44): used implicit default value for signal "player_B_speed" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 44
 Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(45): object "score_B_signal" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 45
 Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(55): object "hist3" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 55
 Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(55): object "hist2" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 55
 Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(56): object "kb_scan_code" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 56
 Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(57): object "kb_scan_ready" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(77): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(81): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 81
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(106): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(108): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(110): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 110
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(112): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 112
-Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(105): inferring latch(es) for signal or variable "player_A_fire", which holds its previous value in one or more paths through the process File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 105
-Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(105): inferring latch(es) for signal or variable "player_A_speed", which holds its previous value in one or more paths through the process File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 105
-Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(105): inferring latch(es) for signal or variable "player_B_fire", which holds its previous value in one or more paths through the process File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 105
-Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(105): inferring latch(es) for signal or variable "player_B_speed", which holds its previous value in one or more paths through the process File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 105
-Info (10041): Inferred latch for "player_B_speed" at tank_top_level.vhd(105) File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 105
-Info (10041): Inferred latch for "player_B_fire" at tank_top_level.vhd(105) File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 105
-Info (10041): Inferred latch for "player_A_speed" at tank_top_level.vhd(105) File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 105
-Info (10041): Inferred latch for "player_A_fire" at tank_top_level.vhd(105) File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 105
-Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:VGA_component" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 122
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(59): object "bullet_A_fixed" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 59
+Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(60): object "bullet_B_fixed" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(84): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(88): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(113): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 113
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(116): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(119): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 119
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(122): signal "hist10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 122
+Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(112): inferring latch(es) for signal or variable "player_A_fire", which holds its previous value in one or more paths through the process File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 112
+Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(112): inferring latch(es) for signal or variable "player_A_speed", which holds its previous value in one or more paths through the process File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 112
+Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(112): inferring latch(es) for signal or variable "player_B_fire", which holds its previous value in one or more paths through the process File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 112
+Info (10041): Inferred latch for "player_B_fire" at tank_top_level.vhd(112) File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 112
+Info (10041): Inferred latch for "player_A_speed" at tank_top_level.vhd(112) File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 112
+Info (10041): Inferred latch for "player_A_fire" at tank_top_level.vhd(112) File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 112
+Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:VGA_component" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 133
 Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:VGA_component|pixelGenerator:videoGen" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd Line: 83
 Warning (10036): Verilog HDL or VHDL warning at pixelGenerator.vhd(44): object "tank_A_display_2bit" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 44
 Warning (10036): Verilog HDL or VHDL warning at pixelGenerator.vhd(44): object "tank_B_display_2bit" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 44
@@ -840,65 +873,53 @@ Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(75): signa
 Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(75): signal "tank_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 75
 Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(76): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 76
 Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(76): signal "tank_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(81): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 81
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(81): signal "tank_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 81
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(82): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(77): signal "tank_A_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(82): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 82
 Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(82): signal "tank_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 82
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(87): signal "bullet_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(87): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(88): signal "bullet_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(88): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(89): signal "bullet_B_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 89
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(91): signal "bullet_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 91
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(91): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 91
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(92): signal "bullet_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(92): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(93): signal "bullet_A_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(83): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(83): signal "tank_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(84): signal "tank_B_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(93): signal "bullet_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(93): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(94): signal "bullet_B_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(94): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(95): signal "bullet_B_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(97): signal "bullet_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(97): signal "pixel_column_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(98): signal "bullet_A_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(98): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(99): signal "bullet_A_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/pixelGenerator.vhd Line: 99
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:VGA_component|VGA_SYNC:videoSync" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/VGA_top_level.vhd Line: 110
-Info (12128): Elaborating entity "ps2" for hierarchy "ps2:Keyboard" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 143
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:Keyboard" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 160
 Warning (10036): Verilog HDL or VHDL warning at ps2.vhd(56): object "hists" assigned a value but never read File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 56
 Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:Keyboard|keyboard:u1" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 62
 Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:Keyboard|oneshot:pulser" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 72
-Info (12128): Elaborating entity "game_logic" for hierarchy "game_logic:logic_component" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 158
+Info (12128): Elaborating entity "game_logic" for hierarchy "game_logic:logic_component" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 175
 Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(58): used explicit default value for signal "score_A" because signal was never assigned a value File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd Line: 58
 Warning (10540): VHDL Signal Declaration warning at game_logic.vhd(58): used explicit default value for signal "score_B" because signal was never assigned a value File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/game_logic.vhd Line: 58
-Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_A" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 195
-Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_B" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 210
-Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_A" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 225
-Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_B" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 240
-Warning (13012): Latch player_B_fire has unsafe behavior File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 44
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2:Keyboard|history1[7] File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 88
-Warning (13012): Latch player_A_fire has unsafe behavior File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 38
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal ps2:Keyboard|history1[7] File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 88
-Warning (13012): Latch player_A_speed has unsafe behavior File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 38
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2:Keyboard|history1[7] File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/ps2.vhd Line: 88
+Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_A" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 214
+Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_B" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 229
+Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_A" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 244
+Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_B" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 259
 Info (13000): Registers with preset signals will power-up high File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register tank:tank_A|curr_speed[31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_speed[3] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_speed[1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_speed[0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[1][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_pos[1][1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_speed[0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_speed[1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][4] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][3] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][2] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
+    Critical Warning (18010): Register tank:tank_A|curr_pos[1][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_pos[1][1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
+    Critical Warning (18010): Register tank:tank_B|curr_speed[0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_speed[1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
@@ -909,23 +930,32 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
+    Critical Warning (18010): Register tank:tank_A|curr_speed[31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_pos[0][31] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_speed[3] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_speed[1] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_speed[0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank.vhd Line: 34
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][8] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][6] will power up to High File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][0] will power up to Low File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/bullet.vhd Line: 35
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "keyboard_clk" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 19
+    Warning (15610): No output dependent on input pin "keyboard_data" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 19
     Warning (15610): No output dependent on input pin "clock_50MHZ" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 19
     Warning (15610): No output dependent on input pin "player_speed" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 26
     Warning (15610): No output dependent on input pin "player_fire" File: //Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/tank_top_level.vhd Line: 26
-Info (21057): Implemented 2155 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2097 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 2120 logic cells
+    Info (21061): Implemented 2062 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 87 warnings
     Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Tue Dec 04 02:13:03 2018
+    Info: Processing ended: Tue Dec 04 15:58:39 2018
     Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:29
 

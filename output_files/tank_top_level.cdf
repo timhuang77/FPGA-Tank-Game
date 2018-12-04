@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("C:/intelFPGA_lite/18.1/Final_Project/git/output_files/") File("tank_top_level.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("//Mac/Dropbox/Northwestern/Fall 2018/EECS 355/Final Project/work_dir/output_files/") File("tank_top_level.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
