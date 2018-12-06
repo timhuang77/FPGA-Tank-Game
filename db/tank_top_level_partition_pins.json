@@ -4,6 +4,18 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "LCD_RS",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_E",
+					"strict" : false
+				},
+				{
+					"name" : "RESET_LED",
+					"strict" : false
+				},
+				{
 					"name" : "VGA_RED[0]",
 					"strict" : false
 				},
@@ -169,6 +181,38 @@
 				},
 				{
 					"name" : "segments_out_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[7]",
 					"strict" : false
 				},
 				{

@@ -10,10 +10,10 @@ entity tank_top_level is
 		--Basic control signals
 		clk, reset_n : in std_logic;
 
-		-- --LCD
-		 -- LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED : out std_logic;
-		 -- LCD_RW : buffer std_logic;
-		 -- DATA_BUS : inout std_logic_vector(7 DOWNTO 0);
+		--LCD
+		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED : out std_logic;
+		 LCD_RW : buffer std_logic;
+		 DATA_BUS : inout std_logic_vector(7 DOWNTO 0);
 
 		--Keyboard inputs
 		keyboard_clk, keyboard_data, clock_50MHZ : in std_logic;
@@ -74,7 +74,7 @@ architecture structural of tank_top_level is
 	signal LCD_ON_signal : std_logic;
 	signal RESET_LED_signal : std_logic;
 	signal SEC_LED_signal : std_logic;
-	signal LCD_RW_signal : std_logic := '0';						
+	signal LCD_RW_signal : std_logic;						
 	signal DATA_BUS_signal 	: std_logic_vector(7 downto 0);
 	signal input_reader_signal : std_logic;			
 	signal no_winner_signal : std_logic;	
@@ -96,6 +96,26 @@ begin
 								
 	input_reader_signal <= '1' when (score_A_signal >= MAX_SCORE) else
 									'0';
+									
+	LCD_RS <= LCD_RS_signal; 
+	LCD_E <= LCD_E_signal;
+	LCD_ON <= LCD_ON_signal;
+	RESET_LED <= RESET_LED_signal;
+	SEC_LED <= SEC_LED_signal;
+	LCD_RW <= LCD_RW_signal;
+	DATA_BUS <= DATA_BUS_signal;
+
+--	if ((score_A_signal >= MAX_SCORE) or (score_B_signal >= MAX_SCORE)) then
+--		no_winner_signal <= '0';
+--	else
+--		no_winner_signal <= '1';
+--	end if;
+--	
+--	if (score_A_signal >= MAX_SCORE) then
+--		input_reader_signal <= '1';
+--	else
+--		input_reader_signal <= '0';
+--	end if;
 
 	--port map VGA
 	--port map keyboard

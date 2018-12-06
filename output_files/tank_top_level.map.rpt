@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tank_top_level
-Wed Dec 05 22:14:47 2018
+Thu Dec 06 00:21:56 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -25,11 +25,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  17. Parameter Settings for User Entity Instance: tank:tank_B
  18. Parameter Settings for User Entity Instance: bullet:bullet_A
  19. Parameter Settings for User Entity Instance: bullet:bullet_B
- 20. Port Connectivity Checks: "de2lcd:lcd_message"
- 21. Port Connectivity Checks: "ps2:Keyboard"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+ 20. Port Connectivity Checks: "ps2:Keyboard"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -55,16 +54,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 05 22:14:47 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 06 00:21:56 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; tank_top_level                              ;
 ; Top-level Entity Name              ; tank_top_level                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,909                                       ;
-;     Total combinational functions  ; 2,266                                       ;
-;     Dedicated logic registers      ; 1,317                                       ;
-; Total registers                    ; 1317                                        ;
-; Total pins                         ; 47                                          ;
+; Total logic elements               ; 3,185                                       ;
+;     Total combinational functions  ; 2,485                                       ;
+;     Dedicated logic registers      ; 1,513                                       ;
+; Total registers                    ; 1513                                        ;
+; Total pins                         ; 61                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -203,29 +202,29 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 2,909         ;
+; Estimated Total logic elements              ; 3,185         ;
 ;                                             ;               ;
-; Total combinational functions               ; 2266          ;
+; Total combinational functions               ; 2485          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 563           ;
-;     -- 3 input functions                    ; 431           ;
-;     -- <=2 input functions                  ; 1272          ;
+;     -- 4 input functions                    ; 707           ;
+;     -- 3 input functions                    ; 415           ;
+;     -- <=2 input functions                  ; 1363          ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 946           ;
-;     -- arithmetic mode                      ; 1320          ;
+;     -- normal mode                          ; 1115          ;
+;     -- arithmetic mode                      ; 1370          ;
 ;                                             ;               ;
-; Total registers                             ; 1317          ;
-;     -- Dedicated logic registers            ; 1317          ;
+; Total registers                             ; 1513          ;
+;     -- Dedicated logic registers            ; 1513          ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 47            ;
+; I/O pins                                    ; 61            ;
 ;                                             ;               ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clock_divided ;
-; Maximum fan-out                             ; 1187          ;
-; Total fan-out                               ; 10374         ;
+; Maximum fan-out                             ; 1276          ;
+; Total fan-out                               ; 11627         ;
 ; Average fan-out                             ; 2.82          ;
 +---------------------------------------------+---------------+
 
@@ -235,13 +234,14 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name    ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
-; |tank_top_level                  ; 2266 (120)          ; 1317 (66)                 ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |tank_top_level                                                     ; tank_top_level ; work         ;
+; |tank_top_level                  ; 2485 (141)          ; 1513 (66)                 ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |tank_top_level                                                     ; tank_top_level ; work         ;
 ;    |VGA_top_level:VGA_component| ; 639 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component                         ; VGA_top_level  ; work         ;
 ;       |VGA_SYNC:videoSync|       ; 59 (59)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync      ; VGA_SYNC       ; work         ;
 ;       |pixelGenerator:videoGen|  ; 580 (580)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component|pixelGenerator:videoGen ; pixelGenerator ; work         ;
-;    |bullet:bullet_A|             ; 22 (22)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_A                                     ; bullet         ; work         ;
-;    |bullet:bullet_B|             ; 21 (21)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_B                                     ; bullet         ; work         ;
-;    |game_logic:logic_component|  ; 1395 (1395)         ; 633 (633)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|game_logic:logic_component                          ; game_logic     ; work         ;
+;    |bullet:bullet_A|             ; 21 (21)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_A                                     ; bullet         ; work         ;
+;    |bullet:bullet_B|             ; 22 (22)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_B                                     ; bullet         ; work         ;
+;    |de2lcd:lcd_message|          ; 136 (136)           ; 107 (107)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|de2lcd:lcd_message                                  ; de2lcd         ; work         ;
+;    |game_logic:logic_component|  ; 1457 (1457)         ; 722 (722)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|game_logic:logic_component                          ; game_logic     ; work         ;
 ;    |leddcd:score_decoder_A|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|leddcd:score_decoder_A                              ; leddcd         ; work         ;
 ;    |leddcd:score_decoder_B|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|leddcd:score_decoder_B                              ; leddcd         ; work         ;
 ;    |ps2:Keyboard|                ; 19 (0)              ; 52 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|ps2:Keyboard                                        ; ps2            ; work         ;
@@ -368,6 +368,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------------------------------------+--------------------------------------------------------------+
 ; Register name                                               ; Reason for Removal                                           ;
 +-------------------------------------------------------------+--------------------------------------------------------------+
+; de2lcd:lcd_message|LCD_RW                                   ; Stuck at GND due to stuck port data_in                       ;
 ; game_logic:logic_component|tank_A_pos_out[1][31]            ; Merged with game_logic:logic_component|tank_A_pos_out[1][0]  ;
 ; game_logic:logic_component|tank_B_pos_out[1][0]             ; Merged with game_logic:logic_component|tank_A_pos_out[1][0]  ;
 ; game_logic:logic_component|tank_B_pos_out[1][31]            ; Merged with game_logic:logic_component|tank_A_pos_out[1][0]  ;
@@ -617,102 +618,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; game_logic:logic_component|tank_A_pos_out[1][10]            ; Stuck at GND due to stuck port data_in                       ;
 ; tank:tank_A|curr_pos[1][10]                                 ; Stuck at GND due to stuck port data_in                       ;
 ; VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_row[9] ; Stuck at GND due to stuck port data_in                       ;
-; game_logic:logic_component|score_A_out[4..31]               ; Lost fanout                                                  ;
-; game_logic:logic_component|score_B_out[4..31]               ; Lost fanout                                                  ;
-; de2lcd:lcd_message|CLK_400HZ                                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|CLK_COUNT_400HZ[0..19]                   ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.RESET2                      ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.FUNC_SET                    ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.DISPLAY_ON                  ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.MODE_SET                    ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR1                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR2                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR3                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR4                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR5                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR6                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR7                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR8                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR9                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR10                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR11                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR12                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR13                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR14                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR15                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR16                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR17                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR18                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR19                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR20                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR21                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR22                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR23                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR24                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR25                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR26                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR27                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.WRITE_CHAR28                ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.RETURN_HOME                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.TOGGLE_E                    ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.RESET1                      ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.HOLD                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.RESET3                      ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.DISPLAY_OFF                 ; Lost fanout                                                  ;
-; de2lcd:lcd_message|next_command.DISPLAY_CLEAR               ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.RESET1                             ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.FUNC_SET                           ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.DISPLAY_ON                         ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.MODE_SET                           ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR1                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR2                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR3                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR4                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR5                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR6                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR7                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR8                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR9                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR10                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR11                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR12                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR13                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR14                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR15                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR16                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR17                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR18                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR19                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR20                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR21                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR22                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR23                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR24                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR25                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR26                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR27                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.WRITE_CHAR28                       ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.RETURN_HOME                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.TOGGLE_E                           ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.HOLD                               ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.RESET2                             ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.RESET3                             ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.DISPLAY_OFF                        ; Lost fanout                                                  ;
-; de2lcd:lcd_message|state.DISPLAY_CLEAR                      ; Lost fanout                                                  ;
-; Total Number of Removed Registers = 404                     ;                                                              ;
+; de2lcd:lcd_message|next_command.TOGGLE_E                    ; Merged with de2lcd:lcd_message|next_command.HOLD             ;
+; de2lcd:lcd_message|next_command.HOLD                        ; Stuck at GND due to stuck port data_in                       ;
+; Total Number of Removed Registers = 252                     ;                                                              ;
 +-------------------------------------------------------------+--------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                ;
-+------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; Register name                ; Reason for Removal        ; Registers Removed due to This Register                                          ;
-+------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; de2lcd:lcd_message|CLK_400HZ ; Lost Fanouts              ; de2lcd:lcd_message|CLK_COUNT_400HZ[19], de2lcd:lcd_message|CLK_COUNT_400HZ[18], ;
-;                              ;                           ; de2lcd:lcd_message|CLK_COUNT_400HZ[17], de2lcd:lcd_message|CLK_COUNT_400HZ[16]  ;
-; tank:tank_A|pos_out[1][10]   ; Stuck at GND              ; game_logic:logic_component|tank_A_pos[1][10],                                   ;
-;                              ; due to stuck port data_in ; game_logic:logic_component|tank_A_pos_out[1][10], tank:tank_A|curr_pos[1][10]   ;
-+------------------------------+---------------------------+---------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                            ;
++----------------------------+---------------------------+-------------------------------------------------------------------------------+
+; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                        ;
++----------------------------+---------------------------+-------------------------------------------------------------------------------+
+; tank:tank_A|pos_out[1][10] ; Stuck at GND              ; game_logic:logic_component|tank_A_pos[1][10],                                 ;
+;                            ; due to stuck port data_in ; game_logic:logic_component|tank_A_pos_out[1][10], tank:tank_A|curr_pos[1][10] ;
++----------------------------+---------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -720,12 +639,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1317  ;
-; Number of registers using Synchronous Clear  ; 29    ;
+; Total registers                              ; 1513  ;
+; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 2     ;
-; Number of registers using Asynchronous Clear ; 467   ;
+; Number of registers using Asynchronous Clear ; 556   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1189  ;
+; Number of registers using Clock Enable       ; 1226  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -735,78 +654,78 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------------------+---------+
 ; Inverted Register                                        ; Fan out ;
 +----------------------------------------------------------+---------+
-; game_logic:logic_component|bullet_B_pos_out[0][0]        ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[1][0]        ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[0][31]       ; 3       ;
-; game_logic:logic_component|bullet_B_pos_out[1][31]       ; 3       ;
 ; game_logic:logic_component|bullet_A_pos_out[0][0]        ; 3       ;
 ; game_logic:logic_component|bullet_A_pos_out[1][0]        ; 3       ;
 ; game_logic:logic_component|bullet_A_pos_out[0][31]       ; 3       ;
 ; game_logic:logic_component|bullet_A_pos_out[1][31]       ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[0][0]        ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[1][0]        ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[0][31]       ; 3       ;
+; game_logic:logic_component|bullet_B_pos_out[1][31]       ; 3       ;
 ; game_logic:logic_component|tank_A_pos_out[0][31]         ; 3       ;
 ; game_logic:logic_component|tank_A_pos_out[0][0]          ; 4       ;
 ; game_logic:logic_component|tank_A_pos_out[1][0]          ; 3       ;
 ; game_logic:logic_component|tank_B_pos_out[0][31]         ; 3       ;
 ; game_logic:logic_component|tank_B_pos_out[0][0]          ; 4       ;
-; game_logic:logic_component|bullet_B_pos[1][31]           ; 3       ;
-; game_logic:logic_component|bullet_B_pos[1][0]            ; 4       ;
-; game_logic:logic_component|tank_A_pos[0][31]             ; 4       ;
-; game_logic:logic_component|tank_A_pos[0][0]              ; 4       ;
-; game_logic:logic_component|bullet_B_pos[0][31]           ; 3       ;
-; game_logic:logic_component|bullet_B_pos[0][0]            ; 3       ;
-; game_logic:logic_component|tank_A_pos[1][0]              ; 16      ;
-; game_logic:logic_component|tank_B_pos[0][0]              ; 4       ;
-; game_logic:logic_component|tank_B_pos[0][31]             ; 4       ;
+; game_logic:logic_component|tank_A_pos[1][0]              ; 18      ;
 ; game_logic:logic_component|bullet_A_pos[1][31]           ; 3       ;
 ; game_logic:logic_component|bullet_A_pos[1][0]            ; 5       ;
+; game_logic:logic_component|tank_B_pos[0][31]             ; 4       ;
+; game_logic:logic_component|tank_B_pos[0][0]              ; 4       ;
 ; game_logic:logic_component|bullet_A_pos[0][31]           ; 3       ;
 ; game_logic:logic_component|bullet_A_pos[0][0]            ; 3       ;
-; tank:tank_B|speed_out[0]                                 ; 4       ;
-; tank:tank_B|pos_out[0][0]                                ; 1       ;
-; bullet:bullet_B|pos_out[1][31]                           ; 1       ;
-; bullet:bullet_B|pos_out[1][0]                            ; 2       ;
-; tank:tank_A|speed_out[31]                                ; 4       ;
-; tank:tank_A|pos_out[0][31]                               ; 1       ;
+; game_logic:logic_component|tank_A_pos[0][0]              ; 4       ;
+; game_logic:logic_component|tank_A_pos[0][31]             ; 4       ;
+; game_logic:logic_component|bullet_B_pos[1][31]           ; 3       ;
+; game_logic:logic_component|bullet_B_pos[1][0]            ; 5       ;
+; game_logic:logic_component|bullet_B_pos[0][31]           ; 3       ;
+; game_logic:logic_component|bullet_B_pos[0][0]            ; 3       ;
 ; tank:tank_A|speed_out[0]                                 ; 4       ;
 ; tank:tank_A|pos_out[0][0]                                ; 1       ;
-; bullet:bullet_B|pos_out[0][31]                           ; 1       ;
-; bullet:bullet_B|pos_out[0][0]                            ; 1       ;
-; tank:tank_A|pos_out[1][0]                                ; 1       ;
-; tank:tank_B|speed_out[31]                                ; 4       ;
-; tank:tank_B|pos_out[0][31]                               ; 1       ;
 ; bullet:bullet_A|pos_out[1][0]                            ; 2       ;
+; tank:tank_A|pos_out[1][0]                                ; 1       ;
 ; bullet:bullet_A|pos_out[1][31]                           ; 1       ;
+; tank:tank_B|speed_out[31]                                ; 6       ;
+; tank:tank_B|pos_out[0][31]                               ; 1       ;
+; tank:tank_B|speed_out[0]                                 ; 4       ;
+; tank:tank_B|pos_out[0][0]                                ; 1       ;
 ; bullet:bullet_A|pos_out[0][31]                           ; 1       ;
 ; bullet:bullet_A|pos_out[0][0]                            ; 1       ;
-; tank:tank_B|curr_pos[0][8]                               ; 1       ;
-; tank:tank_B|curr_pos[0][6]                               ; 1       ;
-; tank:tank_B|curr_speed[3]                                ; 1       ;
-; tank:tank_B|curr_speed[1]                                ; 1       ;
-; bullet:bullet_B|curr_pos[1][4]                           ; 1       ;
-; bullet:bullet_B|curr_pos[1][3]                           ; 1       ;
-; bullet:bullet_B|curr_pos[1][2]                           ; 1       ;
-; bullet:bullet_B|curr_pos[1][1]                           ; 1       ;
+; tank:tank_A|speed_out[31]                                ; 4       ;
+; tank:tank_A|pos_out[0][31]                               ; 1       ;
+; bullet:bullet_B|pos_out[1][31]                           ; 1       ;
+; bullet:bullet_B|pos_out[1][0]                            ; 2       ;
+; bullet:bullet_B|pos_out[0][31]                           ; 1       ;
+; bullet:bullet_B|pos_out[0][0]                            ; 1       ;
 ; tank:tank_A|curr_pos[0][8]                               ; 1       ;
 ; tank:tank_A|curr_pos[0][6]                               ; 1       ;
 ; tank:tank_A|curr_speed[3]                                ; 1       ;
 ; tank:tank_A|curr_speed[1]                                ; 1       ;
-; bullet:bullet_B|curr_pos[0][8]                           ; 1       ;
-; bullet:bullet_B|curr_pos[0][6]                           ; 1       ;
-; tank:tank_A|curr_pos[1][1]                               ; 1       ;
 ; bullet:bullet_A|curr_pos[1][8]                           ; 1       ;
 ; bullet:bullet_A|curr_pos[1][7]                           ; 1       ;
 ; bullet:bullet_A|curr_pos[1][6]                           ; 1       ;
 ; bullet:bullet_A|curr_pos[1][1]                           ; 1       ;
+; tank:tank_A|curr_pos[1][1]                               ; 1       ;
+; tank:tank_B|curr_pos[0][8]                               ; 1       ;
+; tank:tank_B|curr_pos[0][6]                               ; 1       ;
+; tank:tank_B|curr_speed[3]                                ; 1       ;
+; tank:tank_B|curr_speed[1]                                ; 1       ;
 ; bullet:bullet_A|curr_pos[0][8]                           ; 1       ;
 ; bullet:bullet_A|curr_pos[0][6]                           ; 1       ;
-; game_logic:logic_component|tank_B_speed_out[0]           ; 1       ;
-; game_logic:logic_component|tank_A_speed_out[31]          ; 1       ;
+; bullet:bullet_B|curr_pos[1][4]                           ; 1       ;
+; bullet:bullet_B|curr_pos[1][3]                           ; 1       ;
+; bullet:bullet_B|curr_pos[1][2]                           ; 1       ;
+; bullet:bullet_B|curr_pos[1][1]                           ; 1       ;
+; bullet:bullet_B|curr_pos[0][8]                           ; 1       ;
+; bullet:bullet_B|curr_pos[0][6]                           ; 1       ;
 ; game_logic:logic_component|tank_A_speed_out[0]           ; 1       ;
 ; game_logic:logic_component|tank_B_speed_out[31]          ; 1       ;
-; game_logic:logic_component|\speed_update:speed_B_temp[2] ; 1       ;
-; game_logic:logic_component|\speed_update:speed_B_temp[0] ; 1       ;
+; game_logic:logic_component|tank_B_speed_out[0]           ; 1       ;
+; game_logic:logic_component|tank_A_speed_out[31]          ; 1       ;
 ; game_logic:logic_component|\speed_update:speed_A_temp[2] ; 1       ;
 ; game_logic:logic_component|\speed_update:speed_A_temp[0] ; 1       ;
+; game_logic:logic_component|\speed_update:speed_B_temp[2] ; 1       ;
+; game_logic:logic_component|\speed_update:speed_B_temp[0] ; 1       ;
 ; Total number of inverted registers = 72                  ;         ;
 +----------------------------------------------------------+---------+
 
@@ -816,17 +735,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[1][8]         ;
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[1][3]         ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[0][19]        ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][23]        ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync|v_count[3] ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |tank_top_level|de2lcd:lcd_message|CLK_COUNT_400HZ[17]                    ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[31] ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[10] ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |tank_top_level|de2lcd:lcd_message|CLK_COUNT_400HZ[3]                     ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[21] ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[13] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|ps2:Keyboard|keyboard:u1|INCNT[3]                         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[0][0]         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][0]         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[0]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[0]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[1][0]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[1][0]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[2]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[2]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tank_top_level|de2lcd:lcd_message|Selector29                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
@@ -875,21 +794,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "de2lcd:lcd_message"                                                                      ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; lcd_rs    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; lcd_e     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; lcd_on    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; reset_led ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; sec_led   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; lcd_rw    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data_bus  ; Bidir  ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ps2:Keyboard"                                                                              ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -907,27 +811,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 47                          ;
-; cycloneiii_ff         ; 1317                        ;
-;     CLR               ; 45                          ;
-;     ENA               ; 739                         ;
-;     ENA CLR           ; 422                         ;
-;     ENA SCLR          ; 26                          ;
+; boundary_port         ; 61                          ;
+; cycloneiii_ff         ; 1513                        ;
+;     CLR               ; 100                         ;
+;     ENA               ; 768                         ;
+;     ENA CLR           ; 456                         ;
 ;     ENA SLD           ; 2                           ;
-;     SCLR              ; 3                           ;
-;     plain             ; 80                          ;
-; cycloneiii_lcell_comb ; 2270                        ;
-;     arith             ; 1320                        ;
-;         2 data inputs ; 1018                        ;
+;     SCLR              ; 24                          ;
+;     plain             ; 163                         ;
+; cycloneiii_io_obuf    ; 8                           ;
+; cycloneiii_lcell_comb ; 2492                        ;
+;     arith             ; 1370                        ;
+;         2 data inputs ; 1068                        ;
 ;         3 data inputs ; 302                         ;
-;     normal            ; 950                         ;
-;         1 data inputs ; 130                         ;
-;         2 data inputs ; 128                         ;
-;         3 data inputs ; 129                         ;
-;         4 data inputs ; 563                         ;
+;     normal            ; 1122                        ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 134                         ;
+;         2 data inputs ; 166                         ;
+;         3 data inputs ; 113                         ;
+;         4 data inputs ; 707                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.70                       ;
-; Average LUT depth     ; 6.33                        ;
+; Max LUT depth         ; 12.60                       ;
+; Average LUT depth     ; 6.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -946,7 +851,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Dec 05 22:14:22 2018
+    Info: Processing started: Thu Dec 06 00:21:31 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tank_top_level -c tank_top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -999,31 +904,25 @@ Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(59): object "
 Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(59): object "hist2" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 59
 Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(60): object "kb_scan_code" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 60
 Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(61): object "kb_scan_ready" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 61
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(72): object "LCD_RS_signal" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 72
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(73): object "LCD_E_signal" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 73
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(74): object "LCD_ON_signal" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 74
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(75): object "RESET_LED_signal" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 75
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(76): object "SEC_LED_signal" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 76
-Warning (10036): Verilog HDL or VHDL warning at tank_top_level.vhd(77): object "LCD_RW_signal" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(118): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 118
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(122): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 122
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(147): signal "hist0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(147): signal "hist1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(150): signal "hist0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 150
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(150): signal "hist1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 150
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(152): signal "hist0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(152): signal "hist1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(154): signal "hist0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(154): signal "hist1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 154
-Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(146): inferring latch(es) for signal or variable "player_A_fire", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 146
-Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(146): inferring latch(es) for signal or variable "player_A_speed", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 146
-Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(146): inferring latch(es) for signal or variable "player_B_fire", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 146
-Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(146): inferring latch(es) for signal or variable "player_B_speed", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 146
-Info (10041): Inferred latch for "player_B_speed" at tank_top_level.vhd(146) File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 146
-Info (10041): Inferred latch for "player_B_fire" at tank_top_level.vhd(146) File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 146
-Info (10041): Inferred latch for "player_A_speed" at tank_top_level.vhd(146) File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 146
-Info (10041): Inferred latch for "player_A_fire" at tank_top_level.vhd(146) File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 146
-Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:VGA_component" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(138): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(142): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(167): signal "hist0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 167
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(167): signal "hist1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 167
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(170): signal "hist0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(170): signal "hist1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(172): signal "hist0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(172): signal "hist1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(174): signal "hist0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at tank_top_level.vhd(174): signal "hist1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 174
+Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(166): inferring latch(es) for signal or variable "player_A_fire", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 166
+Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(166): inferring latch(es) for signal or variable "player_A_speed", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 166
+Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(166): inferring latch(es) for signal or variable "player_B_fire", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 166
+Warning (10631): VHDL Process Statement warning at tank_top_level.vhd(166): inferring latch(es) for signal or variable "player_B_speed", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 166
+Info (10041): Inferred latch for "player_B_speed" at tank_top_level.vhd(166) File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 166
+Info (10041): Inferred latch for "player_B_fire" at tank_top_level.vhd(166) File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 166
+Info (10041): Inferred latch for "player_A_speed" at tank_top_level.vhd(166) File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 166
+Info (10041): Inferred latch for "player_A_fire" at tank_top_level.vhd(166) File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 166
+Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:VGA_component" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 184
 Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:VGA_component|pixelGenerator:videoGen" File: C:/intelFPGA_lite/18.1/Final_Project/git/VGA_top_level.vhd Line: 83
 Warning (10036): Verilog HDL or VHDL warning at pixelGenerator.vhd(44): object "tank_A_display_2bit" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 44
 Warning (10036): Verilog HDL or VHDL warning at pixelGenerator.vhd(44): object "tank_B_display_2bit" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 44
@@ -1048,23 +947,22 @@ Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(98): signa
 Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(98): signal "pixel_row_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 98
 Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(99): signal "bullet_A_display" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/18.1/Final_Project/git/pixelGenerator.vhd Line: 99
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:VGA_component|VGA_SYNC:videoSync" File: C:/intelFPGA_lite/18.1/Final_Project/git/VGA_top_level.vhd Line: 110
-Info (12128): Elaborating entity "ps2" for hierarchy "ps2:Keyboard" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 191
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:Keyboard" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 211
 Warning (10036): Verilog HDL or VHDL warning at ps2.vhd(56): object "hists" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 56
 Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:Keyboard|keyboard:u1" File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 62
 Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:Keyboard|oneshot:pulser" File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 72
-Info (12128): Elaborating entity "game_logic" for hierarchy "game_logic:logic_component" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 206
+Info (12128): Elaborating entity "game_logic" for hierarchy "game_logic:logic_component" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 226
 Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(67): object "speed_A_updated" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 67
 Warning (10036): Verilog HDL or VHDL warning at game_logic.vhd(67): object "speed_B_updated" assigned a value but never read File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 67
-Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_A" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 247
-Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_B" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 262
-Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_A" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 277
-Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_B" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 292
-Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:score_decoder_A" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 307
-Info (12128): Elaborating entity "de2lcd" for hierarchy "de2lcd:lcd_message" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 319
+Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_A" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 267
+Info (12128): Elaborating entity "tank" for hierarchy "tank:tank_B" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 282
+Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_A" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 297
+Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet_B" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 312
+Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:score_decoder_A" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 327
+Info (12128): Elaborating entity "de2lcd" for hierarchy "de2lcd:lcd_message" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 339
 Warning (10541): VHDL Signal Declaration warning at de2lcd.vhd(8): used implicit default value for signal "SEC_LED" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 8
 Warning (10631): VHDL Process Statement warning at de2lcd.vhd(52): inferring latch(es) for signal or variable "init", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 52
 Info (10041): Inferred latch for "init" at de2lcd.vhd(56) File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 56
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13012): Latch player_B_fire has unsafe behavior File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 48
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2:Keyboard|history1[7] File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 88
 Warning (13012): Latch player_A_fire has unsafe behavior File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 42
@@ -1075,10 +973,25 @@ Warning (13012): Latch player_A_speed has unsafe behavior File: C:/intelFPGA_lit
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ps2:Keyboard|history0[7] File: C:/intelFPGA_lite/18.1/Final_Project/git/ps2.vhd Line: 88
 Info (13000): Registers with preset signals will power-up high File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "de2lcd:lcd_message|DATA_BUS[0]~synth" File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 10
+    Warning (13010): Node "de2lcd:lcd_message|DATA_BUS[1]~synth" File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 10
+    Warning (13010): Node "de2lcd:lcd_message|DATA_BUS[2]~synth" File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 10
+    Warning (13010): Node "de2lcd:lcd_message|DATA_BUS[3]~synth" File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 10
+    Warning (13010): Node "de2lcd:lcd_message|DATA_BUS[4]~synth" File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 10
+    Warning (13010): Node "de2lcd:lcd_message|DATA_BUS[5]~synth" File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 10
+    Warning (13010): Node "de2lcd:lcd_message|DATA_BUS[6]~synth" File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 10
+    Warning (13010): Node "de2lcd:lcd_message|DATA_BUS[7]~synth" File: C:/intelFPGA_lite/18.1/Final_Project/git/de2lcd.vhd Line: 10
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LCD_ON" is stuck at VCC File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 14
+    Warning (13410): Pin "SEC_LED" is stuck at GND File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 14
+    Warning (13410): Pin "LCD_RW" is stuck at GND File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register game_logic:logic_component|score_A_out[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 318
-    Critical Warning (18010): Register game_logic:logic_component|score_B_out[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 318
+    Critical Warning (18010): Register game_logic:logic_component|score_A_out[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 341
+    Critical Warning (18010): Register game_logic:logic_component|score_B_out[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 341
+    Critical Warning (18010): Register game_logic:logic_component|score_A_out[31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 341
+    Critical Warning (18010): Register game_logic:logic_component|score_B_out[31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 341
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][4] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][3] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
@@ -1117,19 +1030,19 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][6] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[0][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
-Info (17049): 155 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clock_50MHZ" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 19
-Info (21057): Implemented 2986 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3305 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 2939 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 104 warnings
-    Info: Peak virtual memory: 671 megabytes
-    Info: Processing ended: Wed Dec 05 22:14:47 2018
+    Info (21059): Implemented 48 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 3244 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 112 warnings
+    Info: Peak virtual memory: 670 megabytes
+    Info: Processing ended: Thu Dec 06 00:21:56 2018
     Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:50
+    Info: Total CPU time (on all processors): 00:00:49
 
 

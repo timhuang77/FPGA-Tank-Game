@@ -220,18 +220,23 @@ architecture behavioral of game_logic is
 
 	--Process for UPDATING BULLET POSITION
 	bullet_A_display <= bullet_A_display_signal;
+	bullet_B_display <= bullet_B_display_signal;
 	
 	bullet_update : process(clk, rst) is
 	variable score_A_incremented : std_logic := '0';
 	variable counter : integer := 0;
+	variable score_B_incremented : std_logic := '0';
+	variable counter2 : integer := 0;
 	begin
 		if (rst = '1') then
 			score_A <= 0;
 			score_B <= 0;
 			score_A_incremented := '0';
+			score_B_incremented := '0';
 			counter := 0;
+			counter2 := 0;
 			bullet_A_display_signal <= '0';
-			bullet_B_display <= '0';
+			bullet_B_display_signal <= '0';
 			bullet_A_fired_out <= '0';
 			bullet_B_fired_out <= '0';
 		elsif (rising_edge(clk)) then
@@ -286,26 +291,44 @@ architecture behavioral of game_logic is
 					bullet_A_fired_out <= '1';
 				end if;
 
-				if (collision_detection(tank_A_pos, bullet_B_pos) = '0') then
-					-- collision detected, bullet A hit tank B
+				--if (collision_detection(tank_A_pos, bullet_B_pos) = '0') then
+				if (score_B_incremented = '1') then
+						counter2 := counter2 + 1;
+						bullet_B_display_signal <= '0';
+						bullet_B_pos_out <= tank_B_pos;
+						bullet_B_fired_out <= '0';
+						if (counter2 = 30) then
+							score_B_incremented := '0';
+							counter2 := 0;
+						end if;
+				elsif((bullet_B_pos(1) - BULLET_HEIGHT/2 < tank_A_pos(1) + TANK_HEIGHT/2) 
+				and (bullet_B_pos(1) + BULLET_HEIGHT/2 > tank_A_pos(1) - TANK_HEIGHT/2)
+				and (bullet_B_pos(0) - BULLET_WIDTH/2 < tank_A_pos(0) + TANK_WIDTH/2)
+				and (bullet_B_pos(0) + BULLET_WIDTH/2 > tank_A_pos(0) - TANK_WIDTH/2)
+				and (score_B_incremented = '0')) then
+					-- collision detected, bullet B hit tank A
 					score_B <= score_B + 1;
-					-- don't show bullet
-					bullet_B_display <= '0';
+					--don't show bullet
+					bullet_B_display_signal <= '0';
+--					bullet_B_fired_out <= '0';
+					bullet_B_fired <= '0';
+					score_B_incremented := '1';
+					bullet_B_pos_out <= tank_B_pos;
 				elsif (bullet_B_fired = '1' and ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= (row_size - 1))) then
 					-- bullet out of bounds, reset conditions
 					--unset bullet fired flag
 					bullet_B_fired_out <= '0';
-					bullet_B_display <= '0';
+					bullet_B_display_signal <= '0';
 					bullet_B_fired <= '0';
 					bullet_B_pos_out <= tank_B_pos;
 				elsif (bullet_B_fired = '0' and player_B_fire = '1') then
 					--player first fires bullet
 					bullet_B_pos_out <= tank_B_pos;
-					bullet_B_display <= '1';
+					bullet_B_display_signal <= '1';
 					bullet_B_fired_out <= '1';
 				elsif (bullet_B_fired = '1') then
 					bullet_B_pos_out <= bullet_B_pos;
-					bullet_B_display <= '1';
+					bullet_B_display_signal <= '1';
 					bullet_B_fired_out <= '1';
 				end if;
 
