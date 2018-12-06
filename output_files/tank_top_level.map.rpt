@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tank_top_level
-Thu Dec 06 00:21:56 2018
+Thu Dec 06 02:08:35 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -54,15 +54,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 06 00:21:56 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 06 02:08:35 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; tank_top_level                              ;
 ; Top-level Entity Name              ; tank_top_level                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,185                                       ;
-;     Total combinational functions  ; 2,485                                       ;
-;     Dedicated logic registers      ; 1,513                                       ;
-; Total registers                    ; 1513                                        ;
+; Total logic elements               ; 3,308                                       ;
+;     Total combinational functions  ; 2,600                                       ;
+;     Dedicated logic registers      ; 1,581                                       ;
+; Total registers                    ; 1581                                        ;
 ; Total pins                         ; 61                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -202,20 +202,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 3,185         ;
+; Estimated Total logic elements              ; 3,308         ;
 ;                                             ;               ;
-; Total combinational functions               ; 2485          ;
+; Total combinational functions               ; 2600          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 707           ;
+;     -- 4 input functions                    ; 730           ;
 ;     -- 3 input functions                    ; 415           ;
-;     -- <=2 input functions                  ; 1363          ;
+;     -- <=2 input functions                  ; 1455          ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 1115          ;
-;     -- arithmetic mode                      ; 1370          ;
+;     -- normal mode                          ; 1168          ;
+;     -- arithmetic mode                      ; 1432          ;
 ;                                             ;               ;
-; Total registers                             ; 1513          ;
-;     -- Dedicated logic registers            ; 1513          ;
+; Total registers                             ; 1581          ;
+;     -- Dedicated logic registers            ; 1581          ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 61            ;
@@ -223,9 +223,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clock_divided ;
-; Maximum fan-out                             ; 1276          ;
-; Total fan-out                               ; 11627         ;
-; Average fan-out                             ; 2.82          ;
+; Maximum fan-out                             ; 1344          ;
+; Total fan-out                               ; 12179         ;
+; Average fan-out                             ; 2.83          ;
 +---------------------------------------------+---------------+
 
 
@@ -234,21 +234,21 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name    ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
-; |tank_top_level                  ; 2485 (141)          ; 1513 (66)                 ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |tank_top_level                                                     ; tank_top_level ; work         ;
+; |tank_top_level                  ; 2600 (141)          ; 1581 (66)                 ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |tank_top_level                                                     ; tank_top_level ; work         ;
 ;    |VGA_top_level:VGA_component| ; 639 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component                         ; VGA_top_level  ; work         ;
 ;       |VGA_SYNC:videoSync|       ; 59 (59)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync      ; VGA_SYNC       ; work         ;
 ;       |pixelGenerator:videoGen|  ; 580 (580)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|VGA_top_level:VGA_component|pixelGenerator:videoGen ; pixelGenerator ; work         ;
 ;    |bullet:bullet_A|             ; 21 (21)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_A                                     ; bullet         ; work         ;
 ;    |bullet:bullet_B|             ; 22 (22)             ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|bullet:bullet_B                                     ; bullet         ; work         ;
 ;    |de2lcd:lcd_message|          ; 136 (136)           ; 107 (107)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|de2lcd:lcd_message                                  ; de2lcd         ; work         ;
-;    |game_logic:logic_component|  ; 1457 (1457)         ; 722 (722)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|game_logic:logic_component                          ; game_logic     ; work         ;
+;    |game_logic:logic_component|  ; 1580 (1580)         ; 790 (790)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|game_logic:logic_component                          ; game_logic     ; work         ;
 ;    |leddcd:score_decoder_A|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|leddcd:score_decoder_A                              ; leddcd         ; work         ;
 ;    |leddcd:score_decoder_B|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|leddcd:score_decoder_B                              ; leddcd         ; work         ;
 ;    |ps2:Keyboard|                ; 19 (0)              ; 52 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|ps2:Keyboard                                        ; ps2            ; work         ;
 ;       |keyboard:u1|              ; 17 (17)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|ps2:Keyboard|keyboard:u1                            ; keyboard       ; work         ;
 ;       |oneshot:pulser|           ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|ps2:Keyboard|oneshot:pulser                         ; oneshot        ; work         ;
-;    |tank:tank_A|                 ; 20 (20)             ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|tank:tank_A                                         ; tank           ; work         ;
-;    |tank:tank_B|                 ; 16 (16)             ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|tank:tank_B                                         ; tank           ; work         ;
+;    |tank:tank_A|                 ; 16 (16)             ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|tank:tank_A                                         ; tank           ; work         ;
+;    |tank:tank_B|                 ; 12 (12)             ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_top_level|tank:tank_B                                         ; tank           ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -639,12 +639,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1513  ;
+; Total registers                              ; 1581  ;
 ; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 2     ;
-; Number of registers using Asynchronous Clear ; 556   ;
+; Number of registers using Asynchronous Clear ; 624   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1226  ;
+; Number of registers using Clock Enable       ; 1292  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -680,18 +680,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; game_logic:logic_component|bullet_B_pos[1][0]            ; 5       ;
 ; game_logic:logic_component|bullet_B_pos[0][31]           ; 3       ;
 ; game_logic:logic_component|bullet_B_pos[0][0]            ; 3       ;
-; tank:tank_A|speed_out[0]                                 ; 4       ;
+; tank:tank_A|speed_out[0]                                 ; 3       ;
 ; tank:tank_A|pos_out[0][0]                                ; 1       ;
 ; bullet:bullet_A|pos_out[1][0]                            ; 2       ;
 ; tank:tank_A|pos_out[1][0]                                ; 1       ;
 ; bullet:bullet_A|pos_out[1][31]                           ; 1       ;
-; tank:tank_B|speed_out[31]                                ; 6       ;
+; tank:tank_B|speed_out[31]                                ; 3       ;
 ; tank:tank_B|pos_out[0][31]                               ; 1       ;
-; tank:tank_B|speed_out[0]                                 ; 4       ;
+; tank:tank_B|speed_out[0]                                 ; 3       ;
 ; tank:tank_B|pos_out[0][0]                                ; 1       ;
 ; bullet:bullet_A|pos_out[0][31]                           ; 1       ;
 ; bullet:bullet_A|pos_out[0][0]                            ; 1       ;
-; tank:tank_A|speed_out[31]                                ; 4       ;
+; tank:tank_A|speed_out[31]                                ; 3       ;
 ; tank:tank_A|pos_out[0][31]                               ; 1       ;
 ; bullet:bullet_B|pos_out[1][31]                           ; 1       ;
 ; bullet:bullet_B|pos_out[1][0]                            ; 2       ;
@@ -699,8 +699,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; bullet:bullet_B|pos_out[0][0]                            ; 1       ;
 ; tank:tank_A|curr_pos[0][8]                               ; 1       ;
 ; tank:tank_A|curr_pos[0][6]                               ; 1       ;
-; tank:tank_A|curr_speed[3]                                ; 1       ;
-; tank:tank_A|curr_speed[1]                                ; 1       ;
+; tank:tank_A|curr_speed[2]                                ; 1       ;
+; tank:tank_A|curr_speed[0]                                ; 1       ;
 ; bullet:bullet_A|curr_pos[1][8]                           ; 1       ;
 ; bullet:bullet_A|curr_pos[1][7]                           ; 1       ;
 ; bullet:bullet_A|curr_pos[1][6]                           ; 1       ;
@@ -708,8 +708,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; tank:tank_A|curr_pos[1][1]                               ; 1       ;
 ; tank:tank_B|curr_pos[0][8]                               ; 1       ;
 ; tank:tank_B|curr_pos[0][6]                               ; 1       ;
-; tank:tank_B|curr_speed[3]                                ; 1       ;
-; tank:tank_B|curr_speed[1]                                ; 1       ;
+; tank:tank_B|curr_speed[2]                                ; 1       ;
+; tank:tank_B|curr_speed[0]                                ; 1       ;
 ; bullet:bullet_A|curr_pos[0][8]                           ; 1       ;
 ; bullet:bullet_A|curr_pos[0][6]                           ; 1       ;
 ; bullet:bullet_B|curr_pos[1][4]                           ; 1       ;
@@ -722,10 +722,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; game_logic:logic_component|tank_B_speed_out[31]          ; 1       ;
 ; game_logic:logic_component|tank_B_speed_out[0]           ; 1       ;
 ; game_logic:logic_component|tank_A_speed_out[31]          ; 1       ;
-; game_logic:logic_component|\speed_update:speed_A_temp[2] ; 1       ;
-; game_logic:logic_component|\speed_update:speed_A_temp[0] ; 1       ;
-; game_logic:logic_component|\speed_update:speed_B_temp[2] ; 1       ;
-; game_logic:logic_component|\speed_update:speed_B_temp[0] ; 1       ;
+; game_logic:logic_component|\speed_update:speed_A_temp[2] ; 2       ;
+; game_logic:logic_component|\speed_update:speed_A_temp[0] ; 2       ;
+; game_logic:logic_component|\speed_update:speed_B_temp[2] ; 2       ;
+; game_logic:logic_component|\speed_update:speed_B_temp[0] ; 2       ;
 ; Total number of inverted registers = 72                  ;         ;
 +----------------------------------------------------------+---------+
 
@@ -735,18 +735,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[0][19]        ;
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][23]        ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync|v_count[3] ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |tank_top_level|de2lcd:lcd_message|CLK_COUNT_400HZ[3]                     ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[21] ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[13] ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[0][29]        ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[0][6]         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_top_level|VGA_top_level:VGA_component|VGA_SYNC:videoSync|v_count[4] ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[7]  ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[29] ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |tank_top_level|de2lcd:lcd_message|CLK_COUNT_400HZ[17]                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|ps2:Keyboard|keyboard:u1|INCNT[3]                         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[1][0]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_A_pos_out[0][31]        ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|bullet_B_pos_out[1][0]         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[2]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[2]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tank_top_level|de2lcd:lcd_message|Selector29                             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_A_temp[0]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tank_top_level|game_logic:logic_component|\speed_update:speed_B_temp[0]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tank_top_level|de2lcd:lcd_message|Selector15                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
@@ -812,27 +812,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 61                          ;
-; cycloneiii_ff         ; 1513                        ;
-;     CLR               ; 100                         ;
+; cycloneiii_ff         ; 1581                        ;
+;     CLR               ; 102                         ;
 ;     ENA               ; 768                         ;
-;     ENA CLR           ; 456                         ;
+;     ENA CLR           ; 522                         ;
 ;     ENA SLD           ; 2                           ;
 ;     SCLR              ; 24                          ;
 ;     plain             ; 163                         ;
 ; cycloneiii_io_obuf    ; 8                           ;
-; cycloneiii_lcell_comb ; 2492                        ;
-;     arith             ; 1370                        ;
-;         2 data inputs ; 1068                        ;
+; cycloneiii_lcell_comb ; 2607                        ;
+;     arith             ; 1432                        ;
+;         2 data inputs ; 1130                        ;
 ;         3 data inputs ; 302                         ;
-;     normal            ; 1122                        ;
+;     normal            ; 1175                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 134                         ;
-;         2 data inputs ; 166                         ;
+;         1 data inputs ; 128                         ;
+;         2 data inputs ; 202                         ;
 ;         3 data inputs ; 113                         ;
-;         4 data inputs ; 707                         ;
+;         4 data inputs ; 730                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.60                       ;
-; Average LUT depth     ; 6.28                        ;
+; Average LUT depth     ; 6.33                        ;
 +-----------------------+-----------------------------+
 
 
@@ -841,7 +841,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -851,7 +851,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Dec 06 00:21:31 2018
+    Info: Processing started: Thu Dec 06 02:08:10 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tank_top_level -c tank_top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -988,10 +988,10 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LCD_RW" is stuck at GND File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register game_logic:logic_component|score_A_out[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 341
-    Critical Warning (18010): Register game_logic:logic_component|score_B_out[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 341
-    Critical Warning (18010): Register game_logic:logic_component|score_A_out[31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 341
-    Critical Warning (18010): Register game_logic:logic_component|score_B_out[31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 341
+    Critical Warning (18010): Register game_logic:logic_component|score_A_out[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 376
+    Critical Warning (18010): Register game_logic:logic_component|score_B_out[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 376
+    Critical Warning (18010): Register game_logic:logic_component|score_A_out[31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 376
+    Critical Warning (18010): Register game_logic:logic_component|score_B_out[31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/game_logic.vhd Line: 376
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][4] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[1][3] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
@@ -1002,9 +1002,7 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register tank:tank_A|curr_pos[0][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
     Critical Warning (18010): Register tank:tank_A|curr_pos[0][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
     Critical Warning (18010): Register tank:tank_A|curr_pos[0][6] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_speed[3] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_speed[1] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_A|curr_speed[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_A|curr_speed[2] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
     Critical Warning (18010): Register tank:tank_A|curr_pos[0][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_B|curr_pos[0][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
@@ -1016,9 +1014,7 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register tank:tank_B|curr_pos[0][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
     Critical Warning (18010): Register tank:tank_B|curr_pos[0][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
     Critical Warning (18010): Register tank:tank_B|curr_pos[0][6] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_speed[3] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_speed[1] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
-    Critical Warning (18010): Register tank:tank_B|curr_speed[0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
+    Critical Warning (18010): Register tank:tank_B|curr_speed[2] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
     Critical Warning (18010): Register tank:tank_B|curr_pos[0][0] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/tank.vhd Line: 34
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][31] will power up to Low File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
     Critical Warning (18010): Register bullet:bullet_A|curr_pos[1][8] will power up to High File: C:/intelFPGA_lite/18.1/Final_Project/git/bullet.vhd Line: 35
@@ -1034,14 +1030,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clock_50MHZ" File: C:/intelFPGA_lite/18.1/Final_Project/git/tank_top_level.vhd Line: 19
-Info (21057): Implemented 3305 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3488 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 48 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 3244 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 112 warnings
-    Info: Peak virtual memory: 670 megabytes
-    Info: Processing ended: Thu Dec 06 00:21:56 2018
+    Info (21061): Implemented 3427 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 108 warnings
+    Info: Peak virtual memory: 672 megabytes
+    Info: Processing ended: Thu Dec 06 02:08:35 2018
     Info: Elapsed time: 00:00:25
     Info: Total CPU time (on all processors): 00:00:49
 

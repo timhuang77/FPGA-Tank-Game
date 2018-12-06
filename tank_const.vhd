@@ -13,7 +13,7 @@ package tank_const is
 	constant TANK_A_INIT_POS_Y : integer := 480 - TANK_HEIGHT;
 	constant TANK_B_INIT_POS_X : integer := 320;
 	constant TANK_B_INIT_POS_Y : integer := 0 + TANK_HEIGHT;
-	constant TANK_INIT_SPEED : integer := 10;
+	constant TANK_INIT_SPEED : integer := 5;
 	constant DIVIDE_CONSTANT : integer := 200000;
 	
 	

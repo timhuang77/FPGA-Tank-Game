@@ -65,41 +65,76 @@ architecture behavioral of game_logic is
 	speed_update : process(clk, rst) is
 		variable speed_A_temp, speed_B_temp : integer := DEFAULT_TANK_SPEED;
 		variable speed_A_updated, speed_B_updated : std_logic := '0';
+		variable speed_A_incremented, speed_B_incremented : std_logic := '0';
+		variable counter, counter2 : integer := 0;
+		variable max_A_speed_flag, max_B_speed_flag : std_logic := '0';
 	begin
 		if (rst = '1') then
 			speed_A_updated := '0';
 			speed_B_updated := '0';
+			max_A_speed_flag := '0';
+			max_B_speed_flag := '0';
 			speed_A_temp := DEFAULT_TANK_SPEED;
 			speed_B_temp := DEFAULT_TANK_SPEED;
+			counter := 0;
+			counter2 := 0;
+			speed_A_incremented := '0';
+			speed_B_incremented := '0';
 		elsif (rising_edge(clk)) then
 			--check only every other cycle
 			if (global_write_enable = '1') then
 				speed_A_temp := tank_A_speed_in;
 				speed_B_temp := tank_B_speed_in;
-
-				if (player_A_speed = '1') then --read state
-					if (speed_A_temp >= 3*DEFAULT_TANK_SPEED) then
+				
+				if(speed_A_incremented = '1') then
+					counter := counter + 1;
+					if (counter = 10) then
+						counter := 0;
+						speed_A_incremented := '0';
+					end if;
+				elsif (player_A_speed = '1' and speed_A_incremented = '0') then --read state
+--					if (speed_A_temp > 3*DEFAULT_TANK_SPEED) then
+					if (max_A_speed_flag = '1') then
 						speed_A_temp := DEFAULT_TANK_SPEED;
 						speed_A_updated := '1';
+						speed_A_incremented := '1';
+						max_A_speed_flag := '0';
 					else
 						speed_A_temp := speed_A_temp + DEFAULT_TANK_SPEED;
 						speed_A_updated := '1';
+						speed_A_incremented := '1';
 					end if;
 				end if;
-
-				if (player_B_speed = '1') then --read state
-					if (speed_B_temp >= 3*DEFAULT_TANK_SPEED) then
+				
+				if(speed_B_incremented = '1') then
+					counter2 := counter2 + 1;
+					if (counter2 = 10) then
+						counter2 := 0;
+						speed_B_incremented := '0';
+					end if;
+				elsif (player_B_speed = '1' and speed_B_incremented = '0') then --read state
+--					if (speed_B_temp >= 3*DEFAULT_TANK_SPEED) then
+					if (max_B_speed_flag = '1') then
 						speed_B_temp := DEFAULT_TANK_SPEED;
 						speed_B_updated := '1';
+						speed_B_incremented := '1';
+						max_B_speed_flag := '0';
 					else
 						speed_B_temp := speed_B_temp + DEFAULT_TANK_SPEED;
 						speed_B_updated := '1';
+						speed_B_incremented := '1';
 					end if;
 				end if;
 			else								--write state
 
 				tank_A_speed_out <= speed_A_temp;
+				if (speed_A_temp = 3*DEFAULT_TANK_SPEED) then
+					max_A_speed_flag := '1';
+				end if;
 				tank_B_speed_out <= speed_B_temp;
+				if (speed_B_temp = 3*DEFAULT_TANK_SPEED) then
+					max_B_speed_flag := '1';
+				end if;
 
 			end if;
 			if (player_A_speed = '0') then
