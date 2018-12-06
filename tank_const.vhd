@@ -2,10 +2,10 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 package tank_const is
-	constant MAX_SCORE : integer := 5;
+	constant MAX_SCORE : integer := 3;
 	constant TANK_WIDTH : integer := 50;
 	constant TANK_HEIGHT : integer := 30;
-	constant DEFAULT_TANK_SPEED : integer := 10;
+	constant DEFAULT_TANK_SPEED : integer := 5;
 	constant BULLET_WIDTH : integer := 4;
 	constant BULLET_HEIGHT : integer := 8;
 	constant TANK_WIDTH_BUFFER : integer := 5;

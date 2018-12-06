@@ -124,6 +124,28 @@ set_location_assignment PIN_Y2 -to clk
 set_location_assignment PIN_R24 -to reset_n
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_H5 -to keyboard_data
+set_location_assignment PIN_G6 -to keyboard_clk
+set_location_assignment PIN_M21 -to B_fire_pb_n
+set_location_assignment PIN_M23 -to A_fire_pb_n
+set_location_assignment PIN_L26 -to keyboard_test
+set_location_assignment PIN_W22 -to keyboard_test2
+set_location_assignment PIN_AA17 -to segments_out_A[0]
+set_location_assignment PIN_AB16 -to segments_out_A[1]
+set_location_assignment PIN_AA16 -to segments_out_A[2]
+set_location_assignment PIN_AB17 -to segments_out_A[3]
+set_location_assignment PIN_AB15 -to segments_out_A[4]
+set_location_assignment PIN_AA15 -to segments_out_A[5]
+set_location_assignment PIN_AC17 -to segments_out_A[6]
+set_location_assignment PIN_AB19 -to segments_out_B[0]
+set_location_assignment PIN_AA19 -to segments_out_B[1]
+set_location_assignment PIN_AG21 -to segments_out_B[2]
+set_location_assignment PIN_AH21 -to segments_out_B[3]
+set_location_assignment PIN_AE19 -to segments_out_B[4]
+set_location_assignment PIN_AF19 -to segments_out_B[5]
+set_location_assignment PIN_AE18 -to segments_out_B[6]
+set_global_assignment -name VHDL_FILE de2lcd.vhd
+set_global_assignment -name VHDL_FILE leddcd.vhd
 set_global_assignment -name VHDL_FILE ps2.vhd
 set_global_assignment -name VHDL_FILE oneshot.vhd
 set_global_assignment -name VHDL_FILE keyboard.vhd
@@ -137,8 +159,4 @@ set_global_assignment -name VHDL_FILE pixelGenerator.vhd
 set_global_assignment -name VHDL_FILE game_logic.vhd
 set_global_assignment -name VHDL_FILE game_components.vhd
 set_global_assignment -name VHDL_FILE bullet.vhd
-set_location_assignment PIN_H5 -to keyboard_data
-set_location_assignment PIN_G6 -to keyboard_clk
-set_location_assignment PIN_M21 -to B_fire_pb_n
-set_location_assignment PIN_M23 -to A_fire_pb_n
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

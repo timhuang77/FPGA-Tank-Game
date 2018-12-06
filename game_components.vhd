@@ -20,6 +20,24 @@ package game_components is
 		);
 	end component bram;
 	
+	component leddcd is
+		port(
+			data_in : in std_logic_vector(3 downto 0);
+			segments_out : out std_logic_vector(6 downto 0)
+		);
+	end component leddcd;
+	
+	component de2lcd is
+		port(
+		 reset, clk_50Mhz				: IN	STD_LOGIC;
+		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED		: OUT	STD_LOGIC;
+		 LCD_RW						: BUFFER STD_LOGIC;
+		 DATA_BUS				: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 input_reader			: IN STD_LOGIC;
+		 no_winner				: IN STD_LOGIC
+		);
+	end component de2lcd;
+	
 	component VGA_top_level is
 		port(
 				CLOCK_50 										: in std_logic;

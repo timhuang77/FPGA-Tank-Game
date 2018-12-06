@@ -116,7 +116,59 @@
 					"strict" : false
 				},
 				{
-					"name" : "B_fire_pb_n",
+					"name" : "segments_out_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segments_out_B[6]",
 					"strict" : false
 				},
 				{
@@ -124,11 +176,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "A_fire_pb_n",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "keyboard_data",
+					"strict" : false
+				},
+				{
+					"name" : "keyboard_clk",
 					"strict" : false
 				}
 			]

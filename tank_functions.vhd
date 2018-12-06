@@ -55,15 +55,23 @@ package body tank_functions is
 		begin
 			if (bullet_pos(1) + BULLET_HEIGHT/2 > tank_pos(1) - TANK_HEIGHT/2) then
 				top_collision := '1';
+			else 
+				top_collision := '0';
 			end if;
 			if (bullet_pos(1) - BULLET_HEIGHT/2 < tank_pos(1) + TANK_HEIGHT/2) then
 				bottom_collision := '1';
-			end if;
-			if (bullet_pos(0) + BULLET_WIDTH/2 > tank_pos(0) - TANK_WIDTH/2) then
-				left_collision := '1';
+			else
+				bottom_collision := '0';
 			end if;
 			if (bullet_pos(0) - BULLET_WIDTH/2 < tank_pos(0) + TANK_WIDTH/2) then
+				left_collision := '1';
+			else
+				left_collision := '0';
+			end if;
+			if (bullet_pos(0) + BULLET_WIDTH/2 > tank_pos(0) - TANK_WIDTH/2) then
 				right_collision := '1';
+			else
+				right_collision := '0';
 			end if;
 
 			if (((top_collision or bottom_collision) and (left_collision or right_collision)) = '1') then

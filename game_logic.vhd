@@ -49,47 +49,50 @@ architecture behavioral of game_logic is
 	signal speed_A_updated, speed_B_updated : std_logic := '0';
 	signal collision_count_A, collision_count_B : integer := 0;
 	signal tank_A_pos, tank_B_pos : position;
-	signal tank_A_speed, tank_B_speed : integer := 10;
+	signal tank_A_speed, tank_B_speed : integer := 5;
 	-- signal tank_A_dir, tank_B_dir : std_logic := '0';
 		--left: 0
 		--right: 1
 	signal bullet_A_fired, bullet_B_fired : std_logic;
 	signal bullet_A_pos, bullet_B_pos : position;
 	signal score_A, score_B : integer := 0;
+	signal bullet_A_display_signal, bullet_B_display_signal : std_logic;
 
 	begin
 
 
 	--Process for UDPATING TANK SPEED
 	speed_update : process(clk, rst) is
-		variable speed_A_temp, speed_B_temp : integer;
+		variable speed_A_temp, speed_B_temp : integer := DEFAULT_TANK_SPEED;
 		variable speed_A_updated, speed_B_updated : std_logic := '0';
 	begin
 		if (rst = '1') then
 			speed_A_updated := '0';
 			speed_B_updated := '0';
+			speed_A_temp := DEFAULT_TANK_SPEED;
+			speed_B_temp := DEFAULT_TANK_SPEED;
 		elsif (rising_edge(clk)) then
 			--check only every other cycle
 			if (global_write_enable = '1') then
 				speed_A_temp := tank_A_speed_in;
 				speed_B_temp := tank_B_speed_in;
 
-				if (player_A_speed = '1' and speed_A_updated = '0') then --read state
-					if (speed_A_temp >= 40) then
-						speed_A_temp := 10;
+				if (player_A_speed = '1') then --read state
+					if (speed_A_temp >= 3*DEFAULT_TANK_SPEED) then
+						speed_A_temp := DEFAULT_TANK_SPEED;
 						speed_A_updated := '1';
 					else
-						speed_A_temp := speed_A_temp + 10;
+						speed_A_temp := speed_A_temp + DEFAULT_TANK_SPEED;
 						speed_A_updated := '1';
 					end if;
 				end if;
 
-				if (player_B_speed = '1' and speed_B_updated = '0') then --read state
-					if (speed_B_temp >= 40) then
-						speed_B_temp := 10;
+				if (player_B_speed = '1') then --read state
+					if (speed_B_temp >= 3*DEFAULT_TANK_SPEED) then
+						speed_B_temp := DEFAULT_TANK_SPEED;
 						speed_B_updated := '1';
 					else
-						speed_B_temp := speed_B_temp + 10;
+						speed_B_temp := speed_B_temp + DEFAULT_TANK_SPEED;
 						speed_B_updated := '1';
 					end if;
 				end if;
@@ -199,14 +202,35 @@ architecture behavioral of game_logic is
 
 		end if;
 	end process;
+	
+--	--Timer to make sure bullet hit only counts once
+--	process(clk, rst, score_A_incremented)
+--	variable counter : integer := 0;
+--	begin
+--		if (rising_edge(clk)) then
+--			if (score_A_incremented = '1' and counter < 25000000) then
+--				counter := counter + 1;
+--			else
+--				score_A_incremented <= '0';
+--				counter := 0;
+--			end if;
+--		end if;
+--	end process;
 
 
 	--Process for UPDATING BULLET POSITION
+	bullet_A_display <= bullet_A_display_signal;
+	
 	bullet_update : process(clk, rst) is
-		variable bullet_A_temp, bullet_B_tmep : integer;
+	variable score_A_incremented : std_logic := '0';
+	variable counter : integer := 0;
 	begin
 		if (rst = '1') then
-			bullet_A_display <= '0';
+			score_A <= 0;
+			score_B <= 0;
+			score_A_incremented := '0';
+			counter := 0;
+			bullet_A_display_signal <= '0';
 			bullet_B_display <= '0';
 			bullet_A_fired_out <= '0';
 			bullet_B_fired_out <= '0';
@@ -220,38 +244,54 @@ architecture behavioral of game_logic is
 				bullet_A_pos(0) <= bullet_A_pos_in(0);
 				bullet_B_pos(0) <= bullet_B_pos_in(0);
 			else 								--write state
-				-- if (collision_detection(tank_B_pos, bullet_A_pos) = '1') then
-					-- -- collision detected, bullet A hit tank B
-					-- score_A <= score_A + 1;
-					-- --don't show bullet
-					-- bullet_A_display <= '0';
-				-- els
-				if (bullet_A_fired = '1' and ((bullet_A_pos(1) + BULLET_HEIGHT/2 + 1) <= 0)) then
+				--if (collision_detection(tank_B_pos, bullet_A_pos) = '0') then
+				if (score_A_incremented = '1') then
+						counter := counter + 1;
+						bullet_A_display_signal <= '0';
+						bullet_A_pos_out <= tank_A_pos;
+						bullet_A_fired_out <= '0';
+						if (counter = 30) then
+							score_A_incremented := '0';
+							counter := 0;
+						end if;
+				elsif((bullet_A_pos(1) - BULLET_HEIGHT/2 < tank_B_pos(1) + TANK_HEIGHT/2) 
+				and (bullet_A_pos(1) + BULLET_HEIGHT/2 > tank_B_pos(1) - TANK_HEIGHT/2)
+				and (bullet_A_pos(0) - BULLET_WIDTH/2 < tank_B_pos(0) + TANK_WIDTH/2)
+				and (bullet_A_pos(0) + BULLET_WIDTH/2 > tank_B_pos(0) - TANK_WIDTH/2)
+				and (score_A_incremented = '0')) then
+					-- collision detected, bullet A hit tank B
+					score_A <= score_A + 1;
+					--don't show bullet
+					bullet_A_display_signal <= '0';
+--					bullet_A_fired_out <= '0';
+					bullet_A_fired <= '0';
+					score_A_incremented := '1';
+					bullet_A_pos_out <= tank_A_pos;
+				elsif (bullet_A_fired = '1' and ((bullet_A_pos(1) + BULLET_HEIGHT/2 + 1) <= 0)) then
 					-- bullet out of bounds, reset conditions
 					--unset bullet fired flag
 					bullet_A_fired_out <= '0';
-					bullet_A_display <= '0';
+					bullet_A_display_signal <= '0';
 					bullet_A_fired <= '0';
 					bullet_A_pos_out <= tank_A_pos;
 				elsif (bullet_A_fired = '0' and player_A_fire = '1') then
 					--player first fires bullet
 					bullet_A_pos_out <= tank_A_pos;
-					bullet_A_display <= '1';
+					bullet_A_display_signal <= '1';
 					bullet_A_fired_out <= '1';
 				elsif (bullet_A_fired = '1') then
 					--bullet already fired
 					bullet_A_pos_out <= bullet_A_pos;
-					bullet_A_display <= '1';
+					bullet_A_display_signal <= '1';
 					bullet_A_fired_out <= '1';
 				end if;
 
-				-- if (collision_detection(tank_A_pos, bullet_B_pos) = '1') then
-					-- -- collision detected, bullet A hit tank B
-					-- score_B <= score_B + 1;
-					-- -- don't show bullet
-					-- bullet_B_display <= '0';
-				-- els
-				if (bullet_B_fired = '1' and ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= (row_size - 1))) then
+				if (collision_detection(tank_A_pos, bullet_B_pos) = '0') then
+					-- collision detected, bullet A hit tank B
+					score_B <= score_B + 1;
+					-- don't show bullet
+					bullet_B_display <= '0';
+				elsif (bullet_B_fired = '1' and ((bullet_B_pos(1) + BULLET_HEIGHT/2) >= (row_size - 1))) then
 					-- bullet out of bounds, reset conditions
 					--unset bullet fired flag
 					bullet_B_fired_out <= '0';

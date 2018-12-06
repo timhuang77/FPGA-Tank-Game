@@ -3,111 +3,255 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock_divided'
-Slack : -6.757
-TNS   : -3041.323
+Slack : -9.488
+TNS   : -4822.462
+
+Type  : Slow 1200mV 85C Model Setup 'ps2:Keyboard|history0[0]'
+Slack : -6.051
+TNS   : -15.295
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.870
-TNS   : -67.716
+Slack : -4.130
+TNS   : -81.175
+
+Type  : Slow 1200mV 85C Model Setup 'ps2:Keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -2.801
+TNS   : -41.232
 
 Type  : Slow 1200mV 85C Model Setup 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.565
-TNS   : -74.766
+Slack : -2.734
+TNS   : -89.027
+
+Type  : Slow 1200mV 85C Model Setup 'ps2:Keyboard|keyboard:u1|scan_ready'
+Slack : -1.456
+TNS   : -13.141
+
+Type  : Slow 1200mV 85C Model Hold 'ps2:Keyboard|history0[0]'
+Slack : -0.064
+TNS   : -0.064
+
+Type  : Slow 1200mV 85C Model Hold 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
+Slack : 0.386
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock_divided'
 Slack : 0.386
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ps2:Keyboard|keyboard:u1|keyboard_clk_filtered'
 Slack : 0.404
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.654
+Type  : Slow 1200mV 85C Model Hold 'ps2:Keyboard|keyboard:u1|scan_ready'
+Slack : 0.469
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'ps2:Keyboard|keyboard:u1|ready_set'
+Slack : -1.796
+TNS   : -1.796
+
+Type  : Slow 1200mV 85C Model Removal 'ps2:Keyboard|keyboard:u1|ready_set'
+Slack : 2.251
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -46.690
+TNS   : -62.110
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divided'
 Slack : -1.285
-TNS   : -1065.265
+TNS   : -1524.010
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.285
 TNS   : -57.825
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:Keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -1.285
+TNS   : -29.555
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:Keyboard|keyboard:u1|scan_ready'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:Keyboard|keyboard:u1|ready_set'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2:Keyboard|history0[0]'
+Slack : -0.155
+TNS   : -1.017
+
 Type  : Slow 1200mV 0C Model Setup 'clock_divided'
-Slack : -5.966
-TNS   : -2697.868
+Slack : -8.552
+TNS   : -4314.826
+
+Type  : Slow 1200mV 0C Model Setup 'ps2:Keyboard|history0[0]'
+Slack : -5.581
+TNS   : -14.080
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.495
-TNS   : -57.478
+Slack : -3.690
+TNS   : -68.798
+
+Type  : Slow 1200mV 0C Model Setup 'ps2:Keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -2.471
+TNS   : -35.844
 
 Type  : Slow 1200mV 0C Model Setup 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.257
-TNS   : -63.695
+Slack : -2.407
+TNS   : -76.664
+
+Type  : Slow 1200mV 0C Model Setup 'ps2:Keyboard|keyboard:u1|scan_ready'
+Slack : -1.167
+TNS   : -10.108
+
+Type  : Slow 1200mV 0C Model Hold 'ps2:Keyboard|history0[0]'
+Slack : -0.077
+TNS   : -0.077
 
 Type  : Slow 1200mV 0C Model Hold 'clock_divided'
 Slack : 0.338
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.355
+Slack : 0.339
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.597
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ps2:Keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ps2:Keyboard|keyboard:u1|scan_ready'
+Slack : 0.431
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'ps2:Keyboard|keyboard:u1|ready_set'
+Slack : -1.496
+TNS   : -1.496
+
+Type  : Slow 1200mV 0C Model Removal 'ps2:Keyboard|keyboard:u1|ready_set'
+Slack : 2.002
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -46.690
+TNS   : -62.110
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divided'
 Slack : -1.285
-TNS   : -1065.265
+TNS   : -1524.010
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.285
 TNS   : -57.825
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:Keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -1.285
+TNS   : -29.555
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:Keyboard|keyboard:u1|scan_ready'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:Keyboard|keyboard:u1|ready_set'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2:Keyboard|history0[0]'
+Slack : -0.169
+TNS   : -0.590
+
 Type  : Fast 1200mV 0C Model Setup 'clock_divided'
-Slack : -2.805
-TNS   : -1125.813
+Slack : -4.294
+TNS   : -1832.122
+
+Type  : Fast 1200mV 0C Model Setup 'ps2:Keyboard|history0[0]'
+Slack : -2.832
+TNS   : -6.876
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.494
-TNS   : -16.844
+Slack : -1.624
+TNS   : -19.503
+
+Type  : Fast 1200mV 0C Model Setup 'ps2:Keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -0.925
+TNS   : -8.248
 
 Type  : Fast 1200mV 0C Model Setup 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -0.704
-TNS   : -14.936
+Slack : -0.805
+TNS   : -21.139
+
+Type  : Fast 1200mV 0C Model Setup 'ps2:Keyboard|keyboard:u1|scan_ready'
+Slack : -0.286
+TNS   : -2.343
+
+Type  : Fast 1200mV 0C Model Hold 'ps2:Keyboard|history0[0]'
+Slack : 0.048
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock_divided'
-Slack : 0.174
+Slack : 0.173
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.182
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2:Keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : 0.180
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.297
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2:Keyboard|keyboard:u1|scan_ready'
+Slack : 0.211
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ps2:Keyboard|keyboard:u1|ready_set'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Fast 1200mV 0C Model Removal 'ps2:Keyboard|keyboard:u1|ready_set'
+Slack : 1.227
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -39.061
+TNS   : -51.869
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divided'
 Slack : -1.000
-TNS   : -829.000
+TNS   : -1186.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_top_level:VGA_component|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.000
 TNS   : -45.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:Keyboard|keyboard:u1|keyboard_clk_filtered'
+Slack : -1.000
+TNS   : -23.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:Keyboard|keyboard:u1|scan_ready'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:Keyboard|keyboard:u1|ready_set'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2:Keyboard|history0[0]'
+Slack : 0.096
+TNS   : 0.000
 
 ------------------------------------------------------------
